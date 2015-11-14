@@ -14,8 +14,8 @@ public class LoginActivity extends AppCompatActivity {
     TextView text;
 
     @Override
-    protected void onCreate(Bundle savedInstaOverride nceState) {
-        super.onCreate(savedInstanceState);Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         loginBtn = (Button)findViewById(R.id.btnLoginLogin);
