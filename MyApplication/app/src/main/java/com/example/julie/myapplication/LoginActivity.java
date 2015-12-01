@@ -7,7 +7,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-//привет, Юлечка!
+
+
+
 public class LoginActivity extends AppCompatActivity {
 
     Button loginBtn, singupBtn;
@@ -18,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginBtn = (Button)findViewById(R.id.btnLoginLogin);
+        loginBtn = (Button)findViewById(R.id.btnLogin);
         singupBtn = (Button)findViewById(R.id.btnLoginSingup);
 
         View.OnClickListener lst = new View.OnClickListener() {
