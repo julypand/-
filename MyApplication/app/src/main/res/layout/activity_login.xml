@@ -39,7 +39,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="@string/login_enterEmail" />
+                android:hint="@string/login_enterEmail"
+                android:height="50dp"
+                android:text="hello" />
         </android.support.design.widget.TextInputLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -60,7 +62,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="@string/login_password"/>
+                android:hint="@string/login_password"
+                android:height="50dp" />
         </android.support.design.widget.TextInputLayout>
 
 

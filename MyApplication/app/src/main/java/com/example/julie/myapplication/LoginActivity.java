@@ -12,7 +12,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button loginBtn, singupBtn;
+    Button loginBtn;
+    TextView singupText;
     TextView text;
 
     @Override
@@ -21,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         loginBtn = (Button)findViewById(R.id.btnLogin);
-        singupBtn = (Button)findViewById(R.id.btnLoginSingup);
+        singupText = (TextView)findViewById(R.id.btnLoginSingup);
 
         View.OnClickListener lst = new View.OnClickListener() {
             @Override
@@ -31,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
-        singupBtn.setOnClickListener(lst);
+        singupText.setOnClickListener(lst);
     }
 
     @Override
