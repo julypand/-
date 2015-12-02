@@ -1,5 +1,6 @@
 package com.example.julie.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,7 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         loginBtn = (Button)findViewById(R.id.btnLogin);
-        singupText = (TextView)findViewById(R.id.btnLoginSingup);
+        singupText = (TextView)findViewById(R.id.tvLoginSingup);
+        final Intent intent = new Intent(this, SignupActivity.class);
 
         View.OnClickListener lst = new View.OnClickListener() {
             @Override
@@ -32,7 +34,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+
+
         singupText.setOnClickListener(lst);
+        singupText.setOnClickListener(new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            startActivity(intent);
+        }
+        });
     }
 
     @Override

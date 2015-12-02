@@ -20,75 +20,49 @@
         <!--  Email Label -->
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text="@string/login_textLogin"
-            android:id="@+id/tvLogin"
-            android:layout_weight="1" />
-
         <android.support.design.widget.TextInputLayout
-            android:background="@color/iron"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1">
+            android:layout_marginBottom="8dp">
 
-            <EditText android:id="@+id/etLoginEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="@string/login_enterEmail"
-                android:height="50dp"
-                android:text="hello" />
+        <EditText android:id="@+id/etLoginEmail"
+            style = "@style/EditText"
+            android:inputType="textEmailAddress"
+            android:hint="@string/login_enterEmail" />
         </android.support.design.widget.TextInputLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text="@string/login_textPassword"
-            android:id="@+id/tvPassword"
-            android:layout_weight="1" />
-        <!--  Password Label -->
 
+
+        <!--  Password Label -->
         <android.support.design.widget.TextInputLayout
-            android:background="@color/iron"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1">
-            <EditText android:id="@+id/etLoginPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/login_password"
-                android:height="50dp" />
+            android:layout_marginBottom="8dp">
+        <EditText android:id="@+id/etLoginPassword"
+            style="@style/EditText"
+            android:inputType="textPassword"
+            android:hint="@string/password"/>
         </android.support.design.widget.TextInputLayout>
 
 
         <android.support.v7.widget.AppCompatButton
-            android:background="@color/button"
+            style ="@style/Button"
+
             android:id="@+id/btnLogin"
-            android:layout_width="336dp"
-            android:layout_height="0dp"
-            android:padding="12dp"
-            android:text="@string/login_loginButton"
 
+            android:text="@string/loginButton" />
 
-            android:focusable="false"
-            android:clickable="false"
-            android:layout_weight="1" />
-
-        <TextView android:id="@+id/btnLoginSingup"
+        <TextView android:id="@+id/tvLoginSingup"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="24dp"
-            android:text="@string/login_singupButton"
+            android:text="@string/singupText"
             android:gravity="center"
             android:textSize="16dip"
             android:layout_marginTop="20dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:clickable="true" />
 
     </LinearLayout>
 </ScrollView>

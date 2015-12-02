@@ -14,5 +14,6 @@
     <color name="aluminum">#999999</color>
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
+    <color name="editText">#f4f2f2</color>
     <color name="white">#FFFFFF</color>
 </resources>

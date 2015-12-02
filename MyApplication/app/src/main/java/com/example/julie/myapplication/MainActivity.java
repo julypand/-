@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn;
+    Button btnLogin;
+    Button btnSignUp;
+
     TextView text;
 
     @Override
@@ -20,18 +22,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text = (TextView) findViewById(R.id.textView);
-        btn = (Button) findViewById(R.id.button);
-        final Intent intent = new Intent(this, LoginActivity.class);
 
-        View.OnClickListener listener = new View.OnClickListener(){
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        final Intent intentLogin = new Intent(this, LoginActivity.class);
+        final Intent intentSignUp = new Intent(this, SignupActivity.class);
+
+
+
+        btnLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                startActivity(intent);
+                startActivity(intentLogin);
             }
-        };
-
-        btn.setOnClickListener(listener);
+        });
+        btnSignUp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(intentSignUp);
+            }
+        });
     }
 
     @Override
