@@ -93,6 +93,8 @@ public class SignupActivity extends AppCompatActivity {
     public void onSignupSuccess() {
         signUpBtn.setEnabled(true);
         setResult(RESULT_OK, null);
+        final Intent intentView = new Intent(this,ViewActivity.class); //TODO: CHANGE THIS! IT IS SHIT! II IS ONLY TEST
+        startActivity(intentView);
         finish();
     }
 

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnLogin;
     Button btnSignUp;
+    Button btnTeleport;
 
     TextView text;
 
@@ -25,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
+
+        btnTeleport = (Button) findViewById(R.id.btnMagic);
         final Intent intentLogin = new Intent(this, LoginActivity.class);
         final Intent intentSignUp = new Intent(this, SignupActivity.class);
+
+
+        final Intent intentTeleport = new Intent(this, ViewActivity.class);
 
 
 
@@ -40,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 startActivity(intentSignUp);
+            }
+        });
+        btnTeleport.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(intentTeleport);
             }
         });
     }

@@ -32,7 +32,20 @@
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginBottom">24dp</item>
     </style>
+    <style name="ButtonDay" parent="Button">
+        <item name="android:layout_margin">3dp</item>
 
+
+    </style>
+    <style name = "Cell">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:background">@color/primary</item>
+
+
+    </style>
 
 
 

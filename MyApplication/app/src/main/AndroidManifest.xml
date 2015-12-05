@@ -22,6 +22,10 @@
         </activity>
         <activity android:name=".SignupActivity" >
         </activity>
+        <activity android:name=".ViewActivity" >
+        </activity>
+        <activity android:name=".ListClassesActivity" >
+        </activity>
     </application>
 
 </manifest>
