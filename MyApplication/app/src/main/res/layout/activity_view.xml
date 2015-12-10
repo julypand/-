@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_margin = "10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin = "8dp"
+            android:textSize="20dp"
+            android:text="@string/choose"
+            android:id="@+id/text_choose" />
+        <TableRow>
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/ButtonDay"
+                android:id="@+id/btnMonday"
+               android:text="@string/monday"/>
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/ButtonDay"
+                android:id="@+id/btnTuesday"
+                android:text="@string/tuesday"/>
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/ButtonDay"
+                android:id="@+id/btnWednesday"
+                android:text="@string/wednesday"/>
+
+        </TableRow>
+        <TableRow>
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/ButtonDay"
+                android:id="@+id/btnThursday"
+                android:text="@string/thursday"/>
+
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/ButtonDay"
+                android:id="@+id/btnFriday"
+                android:text="@string/friday"/>
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/ButtonDay"
+                android:id="@+id/btnSaturday"
+                android:text="@string/saturday"/>
+        </TableRow>
+
+
+    </TableLayout>
+</ScrollView>

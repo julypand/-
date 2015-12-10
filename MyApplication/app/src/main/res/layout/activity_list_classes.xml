@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+
+    <TableLayout
+        android:id="@+id/tableClasses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/jumbo"
+        android:stretchColumns="*">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/iron"
+            android:textSize="30dp"
+            android:text="Today"
+            android:id="@+id/tvDay" />
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content"    >
+            <TextView
+                style =  "@style/Cell"
+                android:text="FROM" />
+            <TextView
+                style =  "@style/Cell"
+                android:text="LESSON" />
+            <TextView
+                style =  "@style/Cell"
+                android:text="ROOM" />
+        </TableRow>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Xui"
+                android:id="@+id/createNewNode"
+                android:layout_column="1" />
+
+    </TableLayout>
+
+
+</ScrollView>
