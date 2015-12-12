@@ -4,7 +4,7 @@
     <string name="app_name">My Application</string>
     <string name="title_activity_login">Activity Login</string>
     <string name="hello">Hello!</string>
-    <string name = "create_account_text">If you are her for the first time, you can create account.</string>
+    <string name = "create_account_text">If you are here for the first time, you can create account.</string>
     <string name = "login_text">or</string>
 
 
@@ -29,7 +29,7 @@
     <string name="signup_title">Sign up, please!</string>
     <string name="signup_name">Name</string>
     <string name="signup_surname">Surname</string>
-    <string name="createButton">Create Account</string>
+    <string name="createButton">Create an account</string>
     <string name="signup_course">Course</string>
     <string name="signup_group">Group</string>
     <string name="back_text">Already a member? Login</string>

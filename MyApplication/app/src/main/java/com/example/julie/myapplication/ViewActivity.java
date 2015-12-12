@@ -44,5 +44,11 @@ public class ViewActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onBackPressed() {
+        ViewActivity.this.finish();
+        //startActivity(new Intent(this, MainActivity.class));
+    }
 }
 

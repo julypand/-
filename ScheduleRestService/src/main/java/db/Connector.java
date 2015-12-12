@@ -46,4 +46,58 @@ public class Connector {
         }
         return list;
     }
+
+    public String getPassword(String email){
+        Statement st = null;
+        ResultSet rs = null;
+        ArrayList<String> list = new ArrayList<String>();
+        try{
+            st = con.createStatement();
+            rs = st.executeQuery("select email from users");
+            while(rs.next()) {
+                list.add(rs.getString(1));
+            }
+            if(list.contains(email)){
+                st = con.createStatement();
+                rs = st.executeQuery("select password from users where email=\'" + email + "\'");
+
+                while(rs.next()){
+                    return rs.getString(1);
+                }
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean isUserContainedAndAdding(User user){
+        Statement st = null;
+        ResultSet rs = null;
+        try{
+            st = con.createStatement();
+            rs = st.executeQuery("select email from users");
+            while(rs.next()) {
+                if (rs.getString(1).equals(user.getEmail()))
+                    return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        addUser(user);
+        return false;
+    }
+
+    private void addUser (User user){
+        Statement st = null;
+        try {
+            st = con.createStatement();
+            st.executeUpdate("insert into users (name, surname, course, groupe, email, password) " +
+                    "values ('" + user.getName() + "\', \'" + user.getSurname() + "\', \'" + user.getCourse() +
+                    "\', \'" + user.getGroup() + "\', \'" + user.getEmail() + "\', \'" + user.getPassword() + "')");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

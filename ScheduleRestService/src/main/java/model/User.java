@@ -11,7 +11,7 @@ public class User {
     private int group;
     private String email;
     private String password;
-    private Schedule schedule;
+    //private Schedule schedule;
 
     public User(){}
 
@@ -78,11 +78,11 @@ public class User {
         this.password = password;
     }
 
-    public Schedule getSchedule() {
+    /*public Schedule getSchedule() {
         return schedule;
     }
 
     public void setSchedule(Schedule schedule) {
         this.schedule = schedule;
-    }
+    }*/
 }
