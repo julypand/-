@@ -77,7 +77,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        new RequestTask().execute("http://192.168.1.5:8080/users/signup");
+        new RequestTask().execute("http://192.168.1.2:8080/users/signup");
     }
 
 
@@ -117,16 +117,27 @@ public class SignupActivity extends AppCompatActivity {
         } else {
             surnameText.setError(null);
         }
-        if (course.isEmpty()) {
+        if (course.isEmpty() ) {
             courseText.setError("enter course");
             valid = false;
-        } else {
+
+        }
+        else if (Integer.parseInt(course) > 5){
+            courseText.setError("enter right course");
+            valid = false;
+        }
+        else {
             courseText.setError(null);
         }
         if (group.isEmpty()) {
             groupText.setError("enter group");
             valid = false;
-        } else {
+        }
+        else if (Integer.parseInt(group) > 4){
+            courseText.setError("enter right group");
+            valid = false;
+        }
+        else {
             groupText.setError(null);
         }
 

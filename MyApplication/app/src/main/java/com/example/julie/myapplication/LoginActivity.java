@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        new RequestTask().execute("http://192.168.1.5:8080/users/login");
+        new RequestTask().execute("http://192.168.1.2:8080/users/login");
         /*final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Login...");
