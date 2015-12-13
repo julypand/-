@@ -8,14 +8,14 @@ public class User {
     private String name;
     private String surname;
     private int course;
-    private int group;
+    private String group;
     private String email;
     private String password;
     //private Schedule schedule;
 
     public User(){}
 
-    public User(String name, String surname, int course, int group, String email, String password/*, Schedule schedule*/){
+    public User(String name, String surname, int course,String group, String email, String password/*, Schedule schedule*/){
         setName(name);
         setSurname(surname);
         setCourse(course);
@@ -54,11 +54,11 @@ public class User {
         this.course = course;
     }
 
-    public int getGroup() {
+    public String getGroup() {
         return group;
     }
 
-    public void setGroup(int group) {
+    public void setGroup(String group) {
         this.group = group;
     }
 

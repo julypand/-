@@ -8,14 +8,11 @@ import model.User;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by Julie on 05.12.2015.
- */
 public class ScheduleDAOImpl implements ScheduleDAO{
 
     private Connector conn = new Connector("com.mysql.jdbc.Driver",
-            "jdbc:mysql://localhost:3306/people",
-            "root", "password");
+            "jdbc:mysql://localhost:3306/schedule",
+            "root", "root");
 
     public ArrayList<User> getAllUsers() {
         return conn.getAllUsers();
