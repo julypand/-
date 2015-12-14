@@ -32,17 +32,5 @@
                 style =  "@style/Cell"
                 android:text="ROOM" />
         </TableRow>
-
-
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Xui"
-                android:id="@+id/createNewNode"
-                android:layout_column="1" />
-
     </TableLayout>
-
-
 </ScrollView>
