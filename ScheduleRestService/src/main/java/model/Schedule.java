@@ -1,8 +1,6 @@
 package model;
 
-/**
- * Created by Julie on 05.12.2015.
- */
+
 public class Schedule {
 
     private Day[] days = null; //new Day[6];

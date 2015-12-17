@@ -2,22 +2,16 @@ package web.rest;
 
 import model.Lesson;
 import model.User;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import service.ScheduleService;
 import service.impl.ScheduleServiceImpl;
 import web.ScheduleWebService;
-
-import java.awt.*;
 import java.util.ArrayList;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 
-/**
- * Created by Julie on 05.12.2015.
- */
 @Path("/users")
 public class RESTScheduleWebService implements ScheduleWebService {
 
@@ -30,21 +24,6 @@ public class RESTScheduleWebService implements ScheduleWebService {
         return scheduleService.getAllUsers();
     }
 
-    /*@POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    @Override
-    public ArrayList<User> some(String msg) {
-        System.out.println("POST: " + msg);
-        try {
-            JSONObject child = new JSONObject(msg);
-            String password = child.getString("password");
-            String email = child.getString("email");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return scheduleService.getAllUsers();
-    }*/
 
     @Path("/login")
     @POST
@@ -52,7 +31,7 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Produces(MediaType.APPLICATION_JSON)
     @Override
     public String getPassword(String email) {
-        JSONObject child = null;
+        JSONObject child;
         String emailtwo = null;
 
         try {
@@ -73,7 +52,7 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Produces(MediaType.APPLICATION_JSON)
     @Override
     public String checkEmail(User user) {
-        JSONObject child = null;
+        JSONObject child;
         String email = null;
         try {
             child = new JSONObject(user);
@@ -94,20 +73,18 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Produces(MediaType.APPLICATION_JSON)
     @Override
     public ArrayList<Lesson> getDaySchedule(String mas){
-        System.out.println("HERE");
-        ArrayList<Lesson> list = new ArrayList<Lesson>();
-        JSONObject child = null;
-        int d = 0, g = 0;
+        ArrayList<Lesson> lessons;
+        JSONObject child;
+        int day = 0, group = 0;
         try {
             child = new JSONObject(mas);
-            d = child.getInt("day");
-            g = child.getInt("group");
-            System.out.println("REST: " + d + ", " + g);
+            day = child.getInt("day");
+            group = child.getInt("group");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        list = scheduleService.getClassesSelectedDay(d, g);
-        System.out.println(list);
-        return list/*new String("{\"email\":\"  HELLO FROM REST  \"}")*/;
+        lessons = scheduleService.getClassesSelectedDay(day, group);
+        System.out.println(lessons);
+        return lessons;
     }
 }

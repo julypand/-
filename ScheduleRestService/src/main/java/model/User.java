@@ -1,8 +1,6 @@
 package model;
 
-/**
- * Created by Julie on 05.12.2015.
- */
+
 public class User {
 
     private String name;
@@ -11,7 +9,6 @@ public class User {
     private String group;
     private String email;
     private String password;
-    //private Schedule schedule;
 
     public User(){}
 

@@ -13,7 +13,7 @@ public class ScheduleDAOImpl implements ScheduleDAO{
 
     private Connector conn = new Connector("com.mysql.jdbc.Driver",
             "jdbc:mysql://localhost:3306/schedule",
-            "root", "password");
+            "root", "root");
 
     public ArrayList<User> getAllUsers() {
         return conn.getAllUsers();

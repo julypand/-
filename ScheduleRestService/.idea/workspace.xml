@@ -26,35 +26,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b7f4b79-5a18-46c0-b576-cc9c8ba66f4b" name="Default" comment="Edit">
-      <change type="NEW" beforePath="" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\surefire\surefirebooter2056718238167125750.jar" />
-      <change type="NEW" beforePath="" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\surefire\surefire5955064437505920601tmp" />
-      <change type="NEW" beforePath="" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\surefire\surefire3724385208277728082tmp" />
-      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefire758952812343389388tmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefire8917969314752505440tmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefirebooter3863249023368364941.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefirebooter2851651816891918628.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefire6350264715905274860tmp" afterPath="" />
-      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefire8461409155723381641tmp" afterPath="" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\web\rest\RESTScheduleWebService.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\web\rest\RESTScheduleWebService.class" />
+      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefire7033062913615042406tmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefire982848600642433674tmp" afterPath="" />
+      <change type="DELETED" beforePath="D:\natalie.yearwork\kursovaya\ScheduleRestService\target\surefire\surefirebooter1641543005392689376.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/db/Connector.class" afterPath="$PROJECT_DIR$/target/classes/db/Connector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/db/Connector.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/db/Connector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Day.class" afterPath="$PROJECT_DIR$/target/classes/model/Day.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Day.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Day.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Lesson.class" afterPath="$PROJECT_DIR$/target/classes/model/Lesson.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Lesson.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Lesson.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/web/rest/RESTScheduleWebService.class" afterPath="$PROJECT_DIR$/target/classes/web/rest/RESTScheduleWebService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/rest/RESTScheduleWebService.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/rest/RESTScheduleWebService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Schedule.class" afterPath="$PROJECT_DIR$/target/classes/model/Schedule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Schedule.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Schedule.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/ScheduleDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/ScheduleDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/dao/impl/ScheduleDAOImpl.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/dao/impl/ScheduleDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/ScheduleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/ScheduleServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/impl/ScheduleServiceImpl.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/impl/ScheduleServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/User.class" afterPath="$PROJECT_DIR$/target/classes/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/db/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/db/Connector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/app.iml" afterPath="$PROJECT_DIR$/../MyApplication/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\model\User.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\model\User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\maven-archiver\pom.properties" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\maven-archiver\pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\META-INF\MANIFEST.MF" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\META-INF\MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\db\Connector.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\db\Connector.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\META-INF\maven\schedule\schedule\pom.properties" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\META-INF\maven\schedule\schedule\pom.properties" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\model\User.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\model\User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Day.java" afterPath="$PROJECT_DIR$/src/main/java/model/Day.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Lesson.java" afterPath="$PROJECT_DIR$/src/main/java/model/Lesson.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" afterPath="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\db\Connector.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\db\Connector.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\dao\impl\ScheduleDAOImpl.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\dao\impl\ScheduleDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\dao\impl\ScheduleDAOImpl.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT\WEB-INF\classes\dao\impl\ScheduleDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\web\rest\RESTScheduleWebService.class" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\classes\web\rest\RESTScheduleWebService.class" />
-      <change type="MODIFICATION" beforePath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT.war" afterPath="C:\Users\Julie\Documents\GitHub\kursovaya\ScheduleRestService\target\schedule-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" afterPath="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/app.iml" afterPath="$PROJECT_DIR$/../MyApplication/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScheduleRestService.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,46 +86,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6268657">
+              <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1052#1058#0" expanded="true" />
-                <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-                <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-                <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-                <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-                <element signature="e#4655#4663#0" expanded="true" />
-                <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-                <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-                <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-                <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-                <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-                <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-                <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-                <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-                <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-                <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-                <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-                <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-                <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-                <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+                <element signature="e#1579#1587#0" expanded="true" />
+                <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+                <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+                <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+                <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+                <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+                <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+                <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+                <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RESTScheduleWebService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
+      <file leaf-file-name="ScheduleDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.615942">
-              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2800#2808#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RESTScheduleWebService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduleServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduleService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,10 +159,30 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduleDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,21 +207,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/model/Day.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/AES.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Classes.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Class.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/Connector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Day.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Lesson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/Connector.java" />
       </list>
     </option>
   </component>
@@ -190,9 +243,24 @@
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="schedule-rest-service" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -227,10 +295,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-6" />
+    <option name="y" value="1" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -286,7 +354,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,24 +381,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheduleRestService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheduleRestService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -917,46 +967,48 @@
       <workItem from="1450185173088" duration="2298000" />
       <workItem from="1450203325297" duration="1732000" />
       <workItem from="1450338677480" duration="14944000" />
+      <workItem from="1450366822855" duration="563000" />
+      <workItem from="1450371431243" duration="5480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87056000" />
+    <option name="totallyTimeSpent" value="93099000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-6" y="1" width="1382" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27895597" sideWeight="0.38653556" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16414523" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27895597" sideWeight="0.6134645" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36215335" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27895597" sideWeight="0.38653556" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16414523" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2776886" sideWeight="0.6134645" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905295" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -976,7 +1028,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -991,26 +1043,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1019,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,7 +1083,6 @@
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1059,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,26 +1114,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1104,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,7 +1147,6 @@
           <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1132,26 +1157,15 @@
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1169,7 +1183,6 @@
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1180,26 +1193,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1210,7 +1212,6 @@
           <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1221,26 +1222,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1251,7 +1241,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1262,26 +1251,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1292,7 +1270,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1303,26 +1280,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1333,7 +1299,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1344,26 +1309,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1374,7 +1328,6 @@
           <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1385,26 +1338,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1415,7 +1357,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1426,26 +1367,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1456,7 +1386,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1467,26 +1396,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1497,7 +1415,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1508,26 +1425,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1538,7 +1444,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1549,26 +1454,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>
@@ -1579,22 +1473,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Day.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1619,14 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1635,10 +1506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Day.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1646,7 +1517,49 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Lesson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28428093">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1654,7 +1567,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1664,75 +1597,28 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57246375">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38405797">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45169082">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6268657">
+          <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1052#1058#0" expanded="true" />
-            <element signature="method#getPassword#0;class#Connector#0" expanded="false" />
-            <element signature="method#getGroupID#0;class#Connector#0" expanded="false" />
-            <element signature="method#isUserContainedAndAdding#0;class#Connector#0" expanded="false" />
-            <element signature="method#addUser#0;class#Connector#0" expanded="false" />
-            <element signature="e#4655#4663#0" expanded="true" />
-            <marker date="1450364358903" expanded="true" signature="1208:1226" placeholder="SELECT * FRO..user..." />
-            <marker date="1450364358903" expanded="true" signature="1748:1770" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="1982:2037" placeholder="select passw..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2507" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2509" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2469:2524" placeholder="select group..user..." />
-            <marker date="1450364358903" expanded="true" signature="2971:2993" placeholder="select email..user..." />
-            <marker date="1450364358903" expanded="true" signature="3445:3579" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1450364358903" expanded="true" signature="3776:4036" placeholder="insert into ..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4854" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4871" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4873" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4888" placeholder="select * fro..class..." />
-            <marker date="1450364358903" expanded="true" signature="4806:4890" placeholder="select * fro..class..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.615942">
-          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2800#2808#0" expanded="true" />
+            <element signature="e#1579#1587#0" expanded="true" />
+            <marker date="1450373866587" expanded="true" signature="1152:1170" placeholder="SELECT * FRO..user..." />
+            <marker date="1450373866587" expanded="true" signature="1678:1700" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="1912:1967" placeholder="select passw..user..." />
+            <marker date="1450373866587" expanded="true" signature="2383:2438" placeholder="select group..user..." />
+            <marker date="1450373866587" expanded="true" signature="2871:2893" placeholder="select email..user..." />
+            <marker date="1450373866587" expanded="true" signature="3344:3478" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1450373866587" expanded="true" signature="3675:3935" placeholder="insert into ..." />
+            <marker date="1450373866587" expanded="true" signature="4691:4773" placeholder="select * fro..class..." />
           </folding>
         </state>
       </provider>

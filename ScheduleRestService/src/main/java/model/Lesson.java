@@ -2,9 +2,7 @@ package model;
 
 import java.sql.Time;
 
-/**
- * Created by Julie on 17.12.2015.
- */
+
 public class Lesson {
     String name;
     String room;

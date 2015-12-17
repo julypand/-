@@ -7,9 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
-/**
- * Created by Julie on 05.12.2015.
- */
+
 public class Connector {
     private Connection con = null;
 
@@ -34,8 +32,8 @@ public class Connector {
 
     public ArrayList<User> getAllUsers(){
         ArrayList<User> list = new ArrayList<User>();
-        Statement st = null;
-        ResultSet rs = null;
+        Statement st;
+        ResultSet rs;
         try {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM user");
@@ -48,8 +46,8 @@ public class Connector {
     }
 
     public String getPassword(String email){
-        Statement st = null;
-        ResultSet rs = null;
+        Statement st;
+        ResultSet rs;
         ArrayList<String> list = new ArrayList<String>();
         try{
             st = con.createStatement();
@@ -60,11 +58,9 @@ public class Connector {
             if(list.contains(email)){
                 st = con.createStatement();
                 rs = st.executeQuery("select password from user where email=\'" + email + "\'");
-
                 while(rs.next()){
                     return rs.getString(1);
                 }
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -73,8 +69,8 @@ public class Connector {
     }
 
     public int getGroupID(String email){
-        Statement st = null;
-        ResultSet rs = null;
+        Statement st;
+        ResultSet rs;
         int result = 0;
         try{
             st = con.createStatement();
@@ -91,8 +87,8 @@ public class Connector {
     }
 
     public boolean isUserContainedAndAdding(User user){
-        Statement st = null;
-        ResultSet rs = null;
+        Statement st;
+        ResultSet rs;
         try{
             st = con.createStatement();
             rs = st.executeQuery("select email from user");
@@ -111,7 +107,6 @@ public class Connector {
         Statement st = null;
         ResultSet rs = null;
         try {
-
             st = con.createStatement();
             String query = "SELECT * FROM student_group WHERE group_name = \'" +
                     user.getGroup() + "\' AND course=\'" + user.getCourse() + "\'";
@@ -144,13 +139,12 @@ public class Connector {
 
     public ArrayList<Lesson> getClassesSelectedDay(int day, int group){
         ArrayList<Lesson> list = new ArrayList<Lesson>();
-        Statement st = null;
-        ResultSet rs = null;
+        Statement st;
+        ResultSet rs;
         try{
             st = con.createStatement();
             String query = "select * from class where day_id=\'" + day + "\' AND schedule_id=\'" + group + "\'";
             rs = st.executeQuery(query);
-            System.out.println("List of classes: ");
             while(rs.next()){
                 list.add(new Lesson(rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5)));
             }
