@@ -13,8 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -69,13 +67,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(){
         Log.d("LoginActivity", "Login");
-
         if(!validate()){
             onLoginFailed();
             return;
         }
-
-        new RequestTask().execute("http://192.168.0.136:8080/users/login");
+        new RequestTask().execute("http://192.168.0.101:8080/users/login");
     }
 
     private boolean validate(){
@@ -108,27 +104,18 @@ public class LoginActivity extends AppCompatActivity {
     private void onLoginSuccess(){
         loginBtn.setEnabled(true);
         setResult(RESULT_OK, null);
-
-        if (!emailText.getText().toString().equals("julia@gmail.com") || !passwordText.getText().toString().equals("julie")) {
-            Toast.makeText(getBaseContext(), "You are not signed", Toast.LENGTH_LONG).show();
-            return;
-        }
         LoginActivity.this.finish();
         startActivity(new Intent(this, ViewActivity.class));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_login, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -175,10 +162,6 @@ public class LoginActivity extends AppCompatActivity {
                 bw.flush();
                 bw.close();
                 os.close();
-
-                //get FROM server
-                /*int responseCode = connection.getResponseCode();
-                System.out.println("Response code: " + responseCode);*/
 
                 connection.getInputStream();
                 br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -246,7 +229,6 @@ public class LoginActivity extends AppCompatActivity {
             JSONObject child = new JSONObject(msg);
             String password = child.getString("password");
             group_id = child.getInt("group_id");
-            System.out.println("GROUP: " + group_id);
             result = password;
         } catch (JSONException e) {
             e.printStackTrace();

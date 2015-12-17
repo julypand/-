@@ -44,12 +44,10 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         signUpBtn = (Button)findViewById(R.id.btnSignUp);
         backText = (TextView)findViewById(R.id.tvLogin);
-
         nameText = (EditText)findViewById(R.id.etSignUpName);
         surnameText = (EditText)findViewById(R.id.etSignUpSurname);
         courseText = (EditText)findViewById(R.id.etSignUpCourse);
         groupText = (EditText)findViewById(R.id.etSignUpGroup);
-
         emailText = (EditText)findViewById(R.id.etSignUpEmail);
         passwordText = (EditText)findViewById(R.id.etSignUpPassword);
 
@@ -71,13 +69,11 @@ public class SignupActivity extends AppCompatActivity {
 
     private void signup() {
         Log.d("SignupActivity", "Signup");
-
         if (!validate()) {
             onSignupFailed();
             return;
         }
-
-        new RequestTask().execute("http://192.168.0.136:8080/users/signup");
+        new RequestTask().execute("http://192.168.0.101:8080/users/signup");
     }
 
 
@@ -208,10 +204,6 @@ public class SignupActivity extends AppCompatActivity {
                 bw.close();
                 os.close();
 
-                //get FROM server
-                /*int responseCode = connection.getResponseCode();
-                System.out.println("Response code: " + responseCode);*/
-
                 connection.getInputStream();
                 br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 String line = null;
@@ -242,7 +234,7 @@ public class SignupActivity extends AppCompatActivity {
         protected void onPreExecute(){
             pDialog.setTitle("Please, wait..");
             pDialog.setIndeterminate(true);
-            pDialog.setMessage("Login...");
+            pDialog.setMessage("SignUp...");
             pDialog.show();
             super.onPreExecute();
         }

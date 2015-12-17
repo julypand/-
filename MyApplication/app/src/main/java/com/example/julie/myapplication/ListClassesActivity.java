@@ -1,15 +1,11 @@
 package com.example.julie.myapplication;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -31,16 +27,17 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.List;
 
-import model.AES;
+
 import model.Lesson;
 
 public class ListClassesActivity extends AppCompatActivity {
     TableLayout tableClasses;
     String day;
     TextView today;
-    int group = 0, day_id = 0;
-    //ArrayList<Lesson> lessons = new ArrayList<Lesson>();
+    int group, day_id;
+    ArrayList<Lesson> lessons = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +46,12 @@ public class ListClassesActivity extends AppCompatActivity {
 
         day = getIntent().getStringExtra("day");
         group = getIntent().getIntExtra("group", 0);
-        day_id = getIntent().getIntExtra("day_id", 0);
-
-        System.out.println("LIST CLASSES GROUP: " + group + ", " + day_id);
+        day_id = getIntent().getIntExtra("day_id", Integer.parseInt(day.substring(0,1)));
 
         tableClasses = (TableLayout) this.findViewById( R.id.tableClasses);
         today = (TextView)findViewById(R.id.tvDay);
         today.setText(day);
-
-        new RequestTask().execute("http://192.168.0.136:8080/users/classes");
+        new RequestTask().execute("http://192.168.0.101:8080/users/classes");
     }
 
     private class RequestTask extends AsyncTask<String, Void, Void> {
@@ -108,7 +102,7 @@ public class ListClassesActivity extends AppCompatActivity {
                     sb.append(System.getProperty("line.separator"));
                 }
                 msgFromServer = sb.toString();
-                System.out.println(msgFromServer);
+
                 br.close();
 
             } catch (MalformedURLException e) {
@@ -145,26 +139,42 @@ public class ListClassesActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), error, Toast.LENGTH_LONG).show();
             }
             else{
-                System.out.println("VIEW: " + parseJSON(msgFromServer));
-                Toast.makeText(getBaseContext(), "message", Toast.LENGTH_LONG).show();
-                //final Intent intent = new Intent(ViewActivity.this, ListClassesActivity.class);
-                //intent.putExtra("day", btnText);
-                //intent.putExtra("lessons", parseJSON(msgFromServer));
-                //startActivity(intent);
+               Toast.makeText(getBaseContext(), "Ok", Toast.LENGTH_LONG).show();
+                ArrayList<Lesson> lessons = new ArrayList<>();
+                parseJSON(msgFromServer,lessons);
+                for(Lesson les : lessons)
+                    addLesson(les);
+
+
             }
         }
     }
-
-    private ArrayList<Lesson> parseJSON(String msg){
-        ArrayList<Lesson> list = new ArrayList<Lesson>();
-
+    private void parseJSON(String msg, ArrayList<Lesson> less){
         try {
             JSONArray parent = new JSONArray(msg);
             for (int i = 0; i < parent.length(); ++i){
                 JSONObject child = parent.getJSONObject(i);
                 String name = child.getString("name");
                 String room = child.getString("room");
-                Time timeStart = Time.valueOf(child.getString("timeStart")); //////////MAY BE AN ERROR
+                Time timeStart = Time.valueOf(child.getString("timeStart"));
+                Time timeEnd = Time.valueOf(child.getString("timeEnd"));
+                less.add(new Lesson(name, room, timeStart, timeEnd));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+     /*private ArrayList<Lesson> parseJSON(String msg){
+        ArrayList<Lesson> list = new ArrayList<>();
+        try {
+            JSONArray parent = new JSONArray(msg);
+            for (int i = 0; i < parent.length(); ++i){
+                JSONObject child = parent.getJSONObject(i);
+                String name = child.getString("name");
+                String room = child.getString("room");
+                Time timeStart = Time.valueOf(child.getString("timeStart"));
                 Time timeEnd = Time.valueOf(child.getString("timeEnd"));
                 list.add(new Lesson(name, room, timeStart, timeEnd));
             }
@@ -173,9 +183,35 @@ public class ListClassesActivity extends AppCompatActivity {
         }
         return list;
     }
-
+*/
     public void onStart() {
         super.onStart();
+    }
+
+
+    void addLesson(Lesson les){
+        TableRow row = new TableRow(getApplicationContext());
+        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+
+        TextView timeText = new TextView(getApplicationContext());
+        TextView nameText = new TextView(getApplicationContext());
+        TextView roomText = new TextView(getApplicationContext());
+
+        setStyle(timeText,les.getTimeStart().toString() + " - " + les.getTimeEnd().toString());
+        setStyle(nameText,les.getName());
+        setStyle(roomText,les.getRoom());
+        row.addView(timeText);
+        row.addView(nameText);
+        row.addView(roomText);
+        tableClasses.addView(row);
+    }
+
+
+    void setStyle(TextView tv, String str){
+        tv.setGravity(Gravity.CENTER);
+        tv.setBackgroundColor(Color.WHITE);
+        tv.setPadding(1, 1, 1, 1);
+        tv.setText(str);
     }
 
 
