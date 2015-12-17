@@ -1,11 +1,10 @@
 package com.example.julie.myapplication;
 
 import android.app.ProgressDialog;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.view.ContextThemeWrapper;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -26,9 +25,8 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
-
 
 import model.Lesson;
 
@@ -144,8 +142,6 @@ public class ListClassesActivity extends AppCompatActivity {
                 parseJSON(msgFromServer,lessons);
                 for(Lesson les : lessons)
                     addLesson(les);
-
-
             }
         }
     }
@@ -165,41 +161,20 @@ public class ListClassesActivity extends AppCompatActivity {
         }
     }
 
-
-     /*private ArrayList<Lesson> parseJSON(String msg){
-        ArrayList<Lesson> list = new ArrayList<>();
-        try {
-            JSONArray parent = new JSONArray(msg);
-            for (int i = 0; i < parent.length(); ++i){
-                JSONObject child = parent.getJSONObject(i);
-                String name = child.getString("name");
-                String room = child.getString("room");
-                Time timeStart = Time.valueOf(child.getString("timeStart"));
-                Time timeEnd = Time.valueOf(child.getString("timeEnd"));
-                list.add(new Lesson(name, room, timeStart, timeEnd));
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return list;
-    }
-*/
     public void onStart() {
         super.onStart();
     }
 
 
     void addLesson(Lesson les){
-        TableRow row = new TableRow(getApplicationContext());
-        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
-
-        TextView timeText = new TextView(getApplicationContext());
-        TextView nameText = new TextView(getApplicationContext());
-        TextView roomText = new TextView(getApplicationContext());
-
-        setStyle(timeText,les.getTimeStart().toString() + " - " + les.getTimeEnd().toString());
-        setStyle(nameText,les.getName());
-        setStyle(roomText,les.getRoom());
+        TableRow row = new TableRow(new ContextThemeWrapper(ListClassesActivity.this,R.style.Table));
+        TextView timeText = new TextView(new ContextThemeWrapper(ListClassesActivity.this,R.style.CellSchedule));
+        TextView nameText = new TextView(new ContextThemeWrapper(ListClassesActivity.this,R.style.CellSchedule));
+        TextView roomText = new TextView(new ContextThemeWrapper(ListClassesActivity.this,R.style.CellSchedule));
+        SimpleDateFormat format=new SimpleDateFormat("HH:mm");
+        timeText.setText(format.format(les.getTimeStart()) + " - " + format.format(les.getTimeEnd()));
+        nameText.setText(les.getName());
+        roomText.setText(les.getRoom());
         row.addView(timeText);
         row.addView(nameText);
         row.addView(roomText);
@@ -207,12 +182,6 @@ public class ListClassesActivity extends AppCompatActivity {
     }
 
 
-    void setStyle(TextView tv, String str){
-        tv.setGravity(Gravity.CENTER);
-        tv.setBackgroundColor(Color.WHITE);
-        tv.setPadding(1, 1, 1, 1);
-        tv.setText(str);
-    }
 
 
 

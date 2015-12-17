@@ -13,7 +13,7 @@
 
 
     <!-- Login -->
-
+    <string name="login">Login, please!</string>
     <string name="login_textLogin">Login:</string>
     <string name="login_textPassword">Password:</string>
     <string name="login_title">Enter the system</string>
@@ -42,6 +42,11 @@
     <string name="friday">5.Friday</string>
     <string name="saturday">6.Saturday</string>
     <string name="choose">Choose day:</string>
+
+    <!--  List Classes -->
+    <string name="time">TIME</string>
+    <string name="lesson">LESSON</string>
+    <string name="room">ROOM</string>
 
 
 

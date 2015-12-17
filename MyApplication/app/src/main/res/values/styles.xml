@@ -43,6 +43,17 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">1dp</item>
         <item name="android:background">@color/primary</item>
+    </style>
+    <style name = "CellSchedule" parent="Cell">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/oil</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name = "Table">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/jumbo</item>
+        <item name="android:stretchColumns">*</item>
 
 
     </style>
