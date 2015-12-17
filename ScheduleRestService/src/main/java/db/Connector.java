@@ -1,6 +1,6 @@
 package db;
 
-import model.Schedule;
+import model.Lesson;
 import model.User;
 
 import java.sql.*;
@@ -72,6 +72,24 @@ public class Connector {
         return null;
     }
 
+    public int getGroupID(String email){
+        Statement st = null;
+        ResultSet rs = null;
+        int result = 0;
+        try{
+            st = con.createStatement();
+            rs = st.executeQuery("select group_id from user where email=\'" + email + "\'");
+            if(rs.next()) {
+                result = rs.getInt(1);
+                System.out.println(rs.getInt(1));
+            }
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+        return result;
+    }
+
     public boolean isUserContainedAndAdding(User user){
         Statement st = null;
         ResultSet rs = null;
@@ -122,5 +140,24 @@ public class Connector {
                 e.printStackTrace();
             }
         }
+    }
+
+    public ArrayList<Lesson> getClassesSelectedDay(int day, int group){
+        ArrayList<Lesson> list = new ArrayList<Lesson>();
+        Statement st = null;
+        ResultSet rs = null;
+        try{
+            st = con.createStatement();
+            String query = "select * from class where day_id=\'" + day + "\' AND schedule_id=\'" + group + "\'";
+            rs = st.executeQuery(query);
+            System.out.println("List of classes: ");
+            while(rs.next()){
+                list.add(new Lesson(rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5)));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }

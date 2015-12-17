@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView singupText;
     TextView text;
     EditText emailText, passwordText;
+    int group_id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,19 +75,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        new RequestTask().execute("http://192.168.1.2:8080/users/login");
-        /*final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Login...");
-        progressDialog.show();*/
-
-        /*new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        onLoginSuccess();
-                        progressDialog.dismiss();
-                    }
-                }, 3000);*/
+        new RequestTask().execute("http://192.168.0.136:8080/users/login");
     }
 
     private boolean validate(){
@@ -238,8 +227,10 @@ public class LoginActivity extends AppCompatActivity {
                 AES.setKey(password);
                 AES.decrypt(parseJSON(msgFromServer).trim());
                 if(AES.getDecryptedString().equals(password)){
+                    Intent intent = new Intent(LoginActivity.this, ViewActivity.class);
+                    intent.putExtra("group", group_id);
                     LoginActivity.this.finish();
-                    startActivity(new Intent(LoginActivity.this, ViewActivity.class));
+                    startActivity(intent);
                 }
                 else{
                     Toast.makeText(getBaseContext(), "Incorrect e-mail or password. Try again", Toast.LENGTH_LONG).show();
@@ -252,9 +243,11 @@ public class LoginActivity extends AppCompatActivity {
     private String parseJSON(String msg){
         String result = "";
         try {
-                JSONObject child = new JSONObject(msg);
-                String password = child.getString("password");
-                result = password;
+            JSONObject child = new JSONObject(msg);
+            String password = child.getString("password");
+            group_id = child.getInt("group_id");
+            System.out.println("GROUP: " + group_id);
+            result = password;
         } catch (JSONException e) {
             e.printStackTrace();
         }

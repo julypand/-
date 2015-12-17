@@ -77,7 +77,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        new RequestTask().execute("http://192.168.1.2:8080/users/signup");
+        new RequestTask().execute("http://192.168.0.136:8080/users/signup");
     }
 
 
@@ -258,6 +258,7 @@ public class SignupActivity extends AppCompatActivity {
             else{
                 if(parseJSON(msgFromServer)){
                     Toast.makeText(getBaseContext(), "Successful signing!", Toast.LENGTH_LONG).show();
+
                     SignupActivity.this.finish();
                     startActivity(new Intent(SignupActivity.this, ViewActivity.class));
                 }
