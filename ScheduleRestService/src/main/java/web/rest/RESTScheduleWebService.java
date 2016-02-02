@@ -24,7 +24,6 @@ public class RESTScheduleWebService implements ScheduleWebService {
         return scheduleService.getAllUsers();
     }
 
-
     @Path("/login")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -32,16 +31,16 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Override
     public String getPassword(String email) {
         JSONObject child;
-        String emailtwo = null;
+        String mail = null;
 
         try {
             child = new JSONObject(email);
-            emailtwo = child.getString("email");
+            mail = child.getString("email");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        int group_id = scheduleService.getGroupID(emailtwo);
-        String str = ("{\"password\":\"" + scheduleService.getPassword(emailtwo) + "\",\"group_id\":\"" + group_id + "\"}");
+        int group_id = scheduleService.getGroupID(mail);
+        String str = ("{\"password\":\"" + scheduleService.getPassword(mail) + "\",\"group_id\":\"" + group_id + "\"}");
         System.out.println(str);
         return str;
     }
@@ -75,10 +74,11 @@ public class RESTScheduleWebService implements ScheduleWebService {
     public ArrayList<Lesson> getDaySchedule(String mas){
         ArrayList<Lesson> lessons;
         JSONObject child;
-        int day = 0, group = 0;
+        String day = "Monday";
+        int  group = 0;
         try {
             child = new JSONObject(mas);
-            day = child.getInt("day");
+            day = child.getString("day");
             group = child.getInt("group");
         } catch (JSONException e) {
             e.printStackTrace();

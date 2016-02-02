@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
             onLoginFailed();
             return;
         }
-        new RequestTask().execute("http://192.168.0.101:8080/users/login");
+        new RequestTask().execute("http://192.168.100.7:8080/users/login");
     }
 
     private boolean validate(){

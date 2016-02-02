@@ -30,7 +30,7 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     }
 
     @Override
-    public ArrayList<Lesson> getClassesSelectedDay(int day, int group) {
+    public ArrayList<Lesson> getClassesSelectedDay(String day, int group) {
         return conn.getClassesSelectedDay(day, group);
     }
 

@@ -44,12 +44,12 @@ public class ListClassesActivity extends AppCompatActivity {
 
         day = getIntent().getStringExtra("day");
         group = getIntent().getIntExtra("group", 0);
-        day_id = getIntent().getIntExtra("day_id", Integer.parseInt(day.substring(0,1)));
+        //day_id = getIntent().getIntExtra("day_id", Integer.parseInt(day.substring(0,1)));
 
         tableClasses = (TableLayout) this.findViewById( R.id.tableClasses);
         today = (TextView)findViewById(R.id.tvDay);
         today.setText(day);
-        new RequestTask().execute("http://192.168.0.101:8080/users/classes");
+        new RequestTask().execute("http://192.168.100.7:8080/users/classes");
     }
 
     private class RequestTask extends AsyncTask<String, Void, Void> {
@@ -77,7 +77,7 @@ public class ListClassesActivity extends AppCompatActivity {
 
                 //json user
                 JSONObject jsonParam = new JSONObject();
-                jsonParam.put("day", day_id);
+                jsonParam.put("day", day);
                 jsonParam.put("group", group);
 
                 //forward TO server

@@ -29,9 +29,9 @@ public class Connector {
             e.printStackTrace();
         }
     }
-
+    // Login
     public ArrayList<User> getAllUsers(){
-        ArrayList<User> list = new ArrayList<User>();
+        ArrayList<User> list = new ArrayList<>();
         Statement st;
         ResultSet rs;
         try {
@@ -48,16 +48,16 @@ public class Connector {
     public String getPassword(String email){
         Statement st;
         ResultSet rs;
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
         try{
             st = con.createStatement();
-            rs = st.executeQuery("select email from user");
+            rs = st.executeQuery("SELECT email FROM user");
             while(rs.next()) {
                 list.add(rs.getString(1));
             }
             if(list.contains(email)){
                 st = con.createStatement();
-                rs = st.executeQuery("select password from user where email=\'" + email + "\'");
+                rs = st.executeQuery("SELECT password FROM user WHERE email=\'" + email + "\'");
                 while(rs.next()){
                     return rs.getString(1);
                 }
@@ -74,7 +74,7 @@ public class Connector {
         int result = 0;
         try{
             st = con.createStatement();
-            rs = st.executeQuery("select group_id from user where email=\'" + email + "\'");
+            rs = st.executeQuery("SELECT group_id FROM user WHERE email=\'" + email + "\'");
             if(rs.next()) {
                 result = rs.getInt(1);
                 System.out.println(rs.getInt(1));
@@ -86,12 +86,13 @@ public class Connector {
         return result;
     }
 
+    //SignUp
     public boolean isUserContainedAndAdding(User user){
         Statement st;
         ResultSet rs;
         try{
             st = con.createStatement();
-            rs = st.executeQuery("select email from user");
+            rs = st.executeQuery("SELECT email FROM user");
             while(rs.next()) {
                 if (rs.getString(1).equals(user.getEmail()))
                     return true;
@@ -115,8 +116,8 @@ public class Connector {
                 int group_id = rs.getInt(1);
 
                 st = con.createStatement();
-                st.executeUpdate("insert into user (name, surname, email, password, group_id) " +
-                        "values ('" + user.getName() + "\', \'" + user.getSurname() + "\', \'"
+                st.executeUpdate("INSERT INTO user (name, surname, email, password, group_id) " +
+                        "VALUES ('" + user.getName() + "\', \'" + user.getSurname() + "\', \'"
                         + user.getEmail() + "\', \'" + user.getPassword() + "\', \'" + group_id + "')");
             } else {
                 //TODO handle the case, when such group and course doesn't exist
@@ -137,13 +138,14 @@ public class Connector {
         }
     }
 
-    public ArrayList<Lesson> getClassesSelectedDay(int day, int group){
-        ArrayList<Lesson> list = new ArrayList<Lesson>();
+    // Schedule
+    public ArrayList<Lesson> getClassesSelectedDay(String day, int group){
+        ArrayList<Lesson> list = new ArrayList<>();
         Statement st;
         ResultSet rs;
         try{
             st = con.createStatement();
-            String query = "select * from class where day_id=\'" + day + "\' AND schedule_id=\'" + group + "\'";
+            String query = "SELECT * FROM class WHERE day =\'" + day + "\' AND schedule_id=\'" + group + "\'";
             rs = st.executeQuery(query);
             while(rs.next()){
                 list.add(new Lesson(rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5)));

@@ -73,7 +73,7 @@ public class SignupActivity extends AppCompatActivity {
             onSignupFailed();
             return;
         }
-        new RequestTask().execute("http://192.168.0.101:8080/users/signup");
+        new RequestTask().execute("http://192.168.100.7:8080/users/signup");
     }
 
 

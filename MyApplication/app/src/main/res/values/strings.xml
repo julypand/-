@@ -7,6 +7,7 @@
     <string name = "create_account_text">If you are here for the first time, you can create account.</string>
     <string name = "login_text">or</string>
     <string name="action_settings">Settings</string>
+    <string name="ip">http://192.168.0.101:8080</string>
 
     <!-- Login -->
     <string name="login">Login, please!</string>
@@ -30,12 +31,12 @@
     <string name="back_text">Already a member? Login</string>
 
     <!-- View -->
-    <string name="monday">1.Monday</string>
-    <string name="tuesday">2.Tuesday</string>
-    <string name="wednesday">3.Wednesday</string>
-    <string name="thursday">4.Thursday</string>
-    <string name="friday">5.Friday</string>
-    <string name="saturday">6.Saturday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
     <string name="choose">Choose day:</string>
 
     <!--  List Classes -->

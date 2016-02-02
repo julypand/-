@@ -1,6 +1,6 @@
 /.idea/workspace.xml
 /.idea/libraries
 /target/maven-archiver
-/target/schedule-1.0-SNAPSHOT/META-INF/MANIFEST.MF
-/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties
+/target/schedule-1.0-SNAPSHOT
 /target/surefire
+/target/classes
