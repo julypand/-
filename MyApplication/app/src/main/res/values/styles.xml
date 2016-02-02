@@ -1,8 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-
-
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
@@ -11,19 +9,19 @@
         <item name="colorControlHighlight">@color/white</item>
         <item name="android:textColorHint">@color/base</item>
     </style>
-    <style name="EditText" parent="android:Widget.EditText">
 
+    <!-- EdiText theme. -->
+    <style name="EditText" parent="android:Widget.EditText">
         <item name ="android:background">@color/editText</item>
         <item name ="android:layout_width">match_parent</item>
         <item name ="android:layout_height">38dp</item>
         <item name ="android:layout_marginTop">8dp</item>
         <item name ="android:layout_marginBottom">8dp</item>
-
         <item name="android:textColor">@color/oil</item>
-
     </style>
-    <style name="Button" parent="android:Widget.Button">
 
+    <!-- Button theme. -->
+    <style name="Button" parent="android:Widget.Button">
         <item name ="android:background">@color/button</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -32,6 +30,8 @@
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:layout_marginBottom">24dp</item>
     </style>
+
+    <!-- Base application theme. -->
     <style name="ButtonDay" parent="Button">
         <item name="android:layout_margin">3dp</item>
 
