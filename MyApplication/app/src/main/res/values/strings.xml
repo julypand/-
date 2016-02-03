@@ -20,6 +20,7 @@
     <string name="singupText">No account yet? Create one!</string>
     <string name="login_enterEmail">Enter your e-mail</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="saveLogin">Remember me</string>
 
     <!-- SignUp -->
     <string name="signup_title">Sign up, please!</string>

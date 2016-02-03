@@ -1,7 +1,8 @@
 package com.example.julie.myapplication;
 
-import android.content.DialogInterface;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,11 +15,17 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnLogin;
     Button btnSignUp;
-
-    TextView text;
+    SharedPreferences loginPreferences;
+    Boolean isSaveLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+        isSaveLogin = loginPreferences.getBoolean("saveLogin", false);
+        if(isSaveLogin){
+            MainActivity.this.finish();
+            startActivity(new Intent(this, ViewActivity.class));
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
