@@ -1,28 +1,46 @@
 package model;
 
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 
 /**
  * Created by Julie on 17.12.2015.
  */
 public class Lesson {
+    String day;
     String name;
     String room;
-    Time timeStart;
-    Time timeEnd;
+    String timeStart;
+    String timeEnd;
 
     Lesson(){}
 
-    public Lesson(String name, String room, Time timeStart, Time timeEnd){
+    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd){
+        setDay(day);
+        setName(name);
+        setRoom(room);
+        String ts = convert(timeStart);
+        String te = convert(timeEnd);
+        setTimeStart(ts);
+        setTimeEnd(te);
+    }
+    public Lesson(String day, String name, String room, String timeStart, String timeEnd){
+        setDay(day);
         setName(name);
         setRoom(room);
         setTimeStart(timeStart);
         setTimeEnd(timeEnd);
     }
-
     public String toString(){
-        return new String("Name: " + this.getName() + ", room: " + this.getRoom() + ", timeStart: " +
+        return new String("Day: " + this.getDay() + "Name: " + this.getName() + ", room: " + this.getRoom() + ", timeStart: " +
                 this.getTimeStart() + ", timeEnd: " + this.getTimeEnd());
+    }
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
     }
 
     public String getName() {
@@ -41,19 +59,24 @@ public class Lesson {
         this.room = room;
     }
 
-    public Time getTimeStart() {
+    public String getTimeStart() {
         return timeStart;
     }
 
-    public void setTimeStart(Time timeStart) {
+    public void setTimeStart(String timeStart) {
         this.timeStart = timeStart;
     }
 
-    public Time getTimeEnd() {
+    public String getTimeEnd() {
         return timeEnd;
     }
 
-    public void setTimeEnd(Time timeEnd) {
+    public void setTimeEnd(String timeEnd) {
         this.timeEnd = timeEnd;
+    }
+
+    public String convert(Time time){
+        SimpleDateFormat format=new SimpleDateFormat("HH:mm");
+        return format.format(time);
     }
 }

@@ -4,6 +4,7 @@ import java.sql.Time;
 
 
 public class Lesson {
+    String day;
     String name;
     String room;
     Time timeStart;
@@ -11,11 +12,19 @@ public class Lesson {
 
     Lesson(){}
 
-    public Lesson(String name, String room, Time timeStart, Time timeEnd){
+    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd){
+        setDay(day);
         setName(name);
         setRoom(room);
         setTimeStart(timeStart);
         setTimeEnd(timeEnd);
+    }
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day= day;
     }
 
     public String getName() {

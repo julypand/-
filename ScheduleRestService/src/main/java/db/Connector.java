@@ -139,16 +139,16 @@ public class Connector {
     }
 
     // Schedule
-    public ArrayList<Lesson> getClassesSelectedDay(String day, int group){
+    public ArrayList<Lesson> getClasses(int group){
         ArrayList<Lesson> list = new ArrayList<>();
         Statement st;
         ResultSet rs;
         try{
             st = con.createStatement();
-            String query = "SELECT * FROM class WHERE day =\'" + day + "\' AND schedule_id=\'" + group + "\'";
+            String query = "SELECT * FROM class WHERE  schedule_id=\'" + group + "\'";
             rs = st.executeQuery(query);
             while(rs.next()){
-                list.add(new Lesson(rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5)));
+                list.add(new Lesson(rs.getString(7),rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5)));
             }
 
         } catch (SQLException e) {

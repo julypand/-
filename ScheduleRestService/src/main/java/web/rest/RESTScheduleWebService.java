@@ -71,19 +71,17 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Override
-    public ArrayList<Lesson> getDaySchedule(String mas){
+    public ArrayList<Lesson> getSchedule(String mas){
         ArrayList<Lesson> lessons;
         JSONObject child;
-        String day = "Monday";
         int  group = 0;
         try {
             child = new JSONObject(mas);
-            day = child.getString("day");
             group = child.getInt("group");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        lessons = scheduleService.getClassesSelectedDay(day, group);
+        lessons = scheduleService.getClasses(group);
         System.out.println(lessons);
         return lessons;
     }

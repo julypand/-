@@ -24,8 +24,8 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    public ArrayList<Lesson> getClassesSelectedDay(String day, int group) {
-        return scheduleDAO.getClassesSelectedDay(day, group);
+    public ArrayList<Lesson> getClasses(int group) {
+        return scheduleDAO.getClasses(group);
     }
 
     @Override
