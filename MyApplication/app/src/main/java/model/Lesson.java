@@ -3,19 +3,18 @@ package model;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by Julie on 17.12.2015.
- */
+
 public class Lesson {
     String day;
     String name;
     String room;
     String timeStart;
     String timeEnd;
+    String type;
 
     Lesson(){}
 
-    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd){
+    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd, String type){
         setDay(day);
         setName(name);
         setRoom(room);
@@ -23,17 +22,19 @@ public class Lesson {
         String te = convert(timeEnd);
         setTimeStart(ts);
         setTimeEnd(te);
+        setType(type);
     }
-    public Lesson(String day, String name, String room, String timeStart, String timeEnd){
+    public Lesson(String day, String name, String room, String timeStart, String timeEnd, String type){
         setDay(day);
         setName(name);
         setRoom(room);
         setTimeStart(timeStart);
         setTimeEnd(timeEnd);
+        setType(type);
     }
     public String toString(){
         return new String("Day: " + this.getDay() + "Name: " + this.getName() + ", room: " + this.getRoom() + ", timeStart: " +
-                this.getTimeStart() + ", timeEnd: " + this.getTimeEnd());
+                this.getTimeStart() + ", timeEnd: " + this.getTimeEnd() +  ", type: " + this.getType()) ;
     }
     public String getDay() {
         return day;
@@ -74,6 +75,15 @@ public class Lesson {
     public void setTimeEnd(String timeEnd) {
         this.timeEnd = timeEnd;
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getType() {
+        return type;
+    }
+
+
 
     public String convert(Time time){
         SimpleDateFormat format=new SimpleDateFormat("HH:mm");

@@ -44,5 +44,6 @@
     <string name="time">TIME</string>
     <string name="lesson">LESSON</string>
     <string name="room">ROOM</string>
+    <string name="type">TYPE</string>
 
 </resources>

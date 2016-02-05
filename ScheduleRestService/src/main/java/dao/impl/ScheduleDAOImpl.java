@@ -30,6 +30,11 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     }
 
     @Override
+    public String getType(int type_id) {
+        return conn.getType(type_id);
+    }
+
+    @Override
     public ArrayList<Lesson> getClasses(int group) {
         return conn.getClasses(group);
     }

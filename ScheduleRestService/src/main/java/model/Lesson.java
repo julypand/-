@@ -9,15 +9,17 @@ public class Lesson {
     String room;
     Time timeStart;
     Time timeEnd;
+    String type;
 
     Lesson(){}
 
-    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd){
+    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd, String type){
         setDay(day);
         setName(name);
         setRoom(room);
         setTimeStart(timeStart);
         setTimeEnd(timeEnd);
+        setType(type);
     }
     public String getDay() {
         return day;
@@ -57,5 +59,13 @@ public class Lesson {
 
     public void setTimeEnd(Time timeEnd) {
         this.timeEnd = timeEnd;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type= type;
     }
 }

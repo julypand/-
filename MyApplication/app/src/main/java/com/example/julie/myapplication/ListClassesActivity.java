@@ -1,14 +1,13 @@
 package com.example.julie.myapplication;
 
-
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import model.HelperDB;
 import model.Lesson;
@@ -37,42 +36,29 @@ public class ListClassesActivity extends AppCompatActivity {
 
     void writeDaySchedule(String day){
         dbHelper = new HelperDB(this,"schedule",null,1);
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day);
+        addLessons(lessonsOfDay);
 
-        Cursor c = db.query("schedule", null, null, null, null, null, null);
-        if (c.moveToFirst()) {
-            int dayColIndex = c.getColumnIndex("day");
-            int nameColIndex = c.getColumnIndex("name");
-            int roomColIndex = c.getColumnIndex("room");
-            int timestartColIndex = c.getColumnIndex("stime");
-            int timeendColIndex = c.getColumnIndex("etime");
-
-            do {
-                if(c.getString(dayColIndex).equals(day))
-                    addLesson(new Lesson(c.getString(dayColIndex),
-                            c.getString(nameColIndex),
-                            c.getString(roomColIndex),
-                            c.getString(timestartColIndex),
-                            c.getString(timeendColIndex)));
-
-            } while (c.moveToNext());
-
-            c.close();
-        }
     }
 
 
-    void addLesson(Lesson les) {
-        TableRow row = new TableRow(new ContextThemeWrapper(ListClassesActivity.this, R.style.Table));
-        TextView timeText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
-        TextView nameText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
-        TextView roomText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
-        timeText.setText(les.getTimeStart() + " - " + les.getTimeEnd());
-        nameText.setText(les.getName());
-        roomText.setText(les.getRoom());
-        row.addView(timeText);
-        row.addView(nameText);
-        row.addView(roomText);
-        tableClasses.addView(row);
+    void addLessons(ArrayList<Lesson> lessons) {
+        for(Lesson les : lessons) {
+            TableRow row = new TableRow(new ContextThemeWrapper(ListClassesActivity.this, R.style.Table));
+            TextView timeText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
+            TextView nameText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
+            TextView roomText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
+            TextView typeText = new TextView(new ContextThemeWrapper(ListClassesActivity.this, R.style.CellSchedule));
+
+            timeText.setText(les.getTimeStart() + " - " + les.getTimeEnd());
+            nameText.setText(les.getName());
+            roomText.setText(les.getRoom());
+            typeText.setText(les.getType());
+            row.addView(timeText);
+            row.addView(nameText);
+            row.addView(roomText);
+            row.addView(typeText);
+            tableClasses.addView(row);
+        }
     }
 }

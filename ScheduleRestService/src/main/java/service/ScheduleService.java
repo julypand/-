@@ -9,6 +9,7 @@ public interface ScheduleService {
     ArrayList<User> getAllUsers();
     String getPassword(String email);
     boolean isUserContainedAndAdding(User user);
+    String getType(int type_id);
     ArrayList<Lesson> getClasses(int group);
     int getGroupID(String email);
 }

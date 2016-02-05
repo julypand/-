@@ -139,6 +139,22 @@ public class Connector {
     }
 
     // Schedule
+    public String getType(int id){
+        String type = "lecture";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM type WHERE  id=\'" + id + "\'";
+            rs = st.executeQuery(query);
+            while(rs.next()){
+                type = rs.getString(2);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return type;
+    }
     public ArrayList<Lesson> getClasses(int group){
         ArrayList<Lesson> list = new ArrayList<>();
         Statement st;
@@ -148,7 +164,7 @@ public class Connector {
             String query = "SELECT * FROM class WHERE  schedule_id=\'" + group + "\'";
             rs = st.executeQuery(query);
             while(rs.next()){
-                list.add(new Lesson(rs.getString(7),rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5)));
+               list.add(new Lesson(rs.getString(7),rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(8))));
             }
 
         } catch (SQLException e) {

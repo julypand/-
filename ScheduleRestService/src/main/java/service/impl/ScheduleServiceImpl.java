@@ -32,6 +32,9 @@ public class ScheduleServiceImpl implements ScheduleService {
     public int getGroupID(String email) {
         return scheduleDAO.getGroupID(email);
     }
+    public String getType(int type_id) {
+        return scheduleDAO.getType(type_id);
+    }
 
     public ArrayList<User> getAllUsers() {
         return scheduleDAO.getAllUsers();

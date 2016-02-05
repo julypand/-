@@ -28,6 +28,9 @@
             <TextView
                 style =  "@style/Cell"
                 android:text="@string/room" />
+            <TextView
+                style =  "@style/Cell"
+                android:text="@string/type" />
         </TableRow>
 
     </TableLayout>

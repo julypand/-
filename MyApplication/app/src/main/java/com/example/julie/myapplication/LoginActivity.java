@@ -1,11 +1,8 @@
 package com.example.julie.myapplication;
 
 import android.app.ProgressDialog;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,9 +47,9 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
     int group_id = 0;
+    HelperDB dbHelper;
 
     ArrayList<Lesson> lessons = new ArrayList<>();
-    //HelperDB dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +64,6 @@ public class LoginActivity extends AppCompatActivity {
         saveLoginCheckBox = (CheckBox)findViewById(R.id.cbSaveLogin);
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         loginPrefEditor = loginPreferences.edit();
-
-        //dbHelper = new HelperDB(this,"schedule",null,1);
 
         final Intent intent = new Intent(this, SignupActivity.class);
 
@@ -252,8 +247,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
-
     @Override
     public void onBackPressed() {
         LoginActivity.this.finish();
@@ -377,9 +370,12 @@ public class LoginActivity extends AppCompatActivity {
                 String room = child.getString("room");
                 Time timeStart = Time.valueOf(child.getString("timeStart"));
                 Time timeEnd = Time.valueOf(child.getString("timeEnd"));
-                less.add(new Lesson(day,name, room, timeStart, timeEnd));
+                String type =child.getString("type");
+                less.add(new Lesson(day,name, room, timeStart, timeEnd, type));
             }
-            addToLocalDB(less);
+            dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            dbHelper.addToLocalDB(less);
+            dbHelper.close();
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -388,26 +384,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onStart() {
         super.onStart();
-    }
-
-    void addToLocalDB(ArrayList<Lesson> lessons){
-        ContentValues cv = new ContentValues();
-        HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        for(Lesson l : lessons) {
-            cv.put("etime", l.getTimeEnd());
-            cv.put("stime", l.getTimeStart());
-            cv.put("room", l.getRoom());
-            cv.put("name", l.getName());
-            cv.put("day", l.getDay());
-            try {
-                long newRowID = db.insertOrThrow("schedule", null, cv);
-            } catch (SQLException ex) {
-                Toast.makeText(getBaseContext(), "Something Wrong! Time to debug this!", Toast.LENGTH_LONG).show();
-                String mes = ex.getMessage();
-            }
-        }
-        dbHelper.close();
     }
 
 }
