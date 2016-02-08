@@ -44,7 +44,7 @@
         <item name="android:background">@color/primary</item>
     </style>
     <style name = "CellSchedule" parent="Cell">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@drawable/shape</item>
         <item name="android:textColor">@color/oil</item>
         <item name="android:textSize">14dp</item>
     </style>

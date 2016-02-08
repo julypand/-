@@ -4,6 +4,7 @@
     <color name="primary_dark">#bbdbe9</color>
     <color name="primary_darker">#a3c0cc</color>
     <color name="button">#6a9eebe6</color>
+    <color name="toolbar">#6a9eebe6</color>
     <color name="accent">#FFFFFF</color>
 
     <color name="black">#000000</color>
@@ -14,6 +15,6 @@
     <color name="aluminum">#999999</color>
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
-    <color name="editText">#f4f2f2</color>
+    <color name="editText">#edeaea</color>
     <color name="white">#FFFFFF</color>
 </resources>

@@ -4,9 +4,8 @@
     <string name="app_name">Schedule</string>
     <string name="title_activity_login">Activity Login</string>
     <string name="hello">Hello!</string>
-    <string name = "create_account_text">If you are here for the first time, you can create account.</string>
+    <string name = "create_account_text">If you are here for the first time, you can</string>
     <string name = "login_text">or</string>
-    <string name="action_settings">Settings</string>
     <string name="ip">http://192.168.0.101:8080</string>
 
     <!-- Login -->
@@ -45,5 +44,10 @@
     <string name="lesson">LESSON</string>
     <string name="room">ROOM</string>
     <string name="type">TYPE</string>
+
+    <!--  Menu -->
+    <string name="refresh">Refresh</string>
+    <string name="logoff">Log off</string>
+    <string name="settings">Settings</string>
 
 </resources>
