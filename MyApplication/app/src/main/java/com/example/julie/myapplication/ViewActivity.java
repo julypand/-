@@ -3,6 +3,7 @@ package com.example.julie.myapplication;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import model.HelperDB;
+import model.RequestTaskClasses;
 
 
 public class ViewActivity extends AppCompatActivity {
@@ -99,6 +103,12 @@ public class ViewActivity extends AppCompatActivity {
             loginPrefEditor.commit();
             ViewActivity.this.finish();
             startActivity(new Intent(this, MainActivity.class));
+        }
+        if(id == R.id.refresh){
+            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            db.execSQL("DELETE FROM schedule");
+            //new RequestTaskClasses(context).execute(getResources().getString(R.string.ip) + "/users/classes");
         }
         return super.onOptionsItemSelected(item);
     }
