@@ -1,5 +1,6 @@
 package model;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -28,12 +29,14 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
     private ProgressDialog pDialog;
     private int group;
     private Context context;
+    private Activity activity;
     HelperDB dbHelper;
     String error = null;
     String msgFromServer = null;
     ArrayList<Lesson> lessons = new ArrayList<>();
 
-    public RequestTaskClasses(Context context, ProgressDialog pDialog, int group){
+    public RequestTaskClasses(Activity activity,Context context, ProgressDialog pDialog, int group){
+        this.setActivity(activity);
         this.setpDialog(pDialog);
         this.setGroup(group);
         this.setContext(context);
@@ -143,6 +146,14 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public Activity getActivity() {
+        return activity;
+    }
+
+    public void setActivity(Activity activity) {
+        this.activity = activity;
     }
 
     public ProgressDialog getpDialog() {

@@ -13,10 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import java.util.ArrayList;
 
-
-import model.Lesson;
 import model.RequestTaskLogin;
 
 
@@ -26,10 +23,9 @@ public class LoginActivity extends AppCompatActivity {
     TextView singupText;
     EditText emailText, passwordText;
     CheckBox saveLoginCheckBox;
-    int group_id = 0;
-
-
-    ArrayList<Lesson> lessons = new ArrayList<>();
+    String email, password;
+    boolean isSaveLogin;
+    String ip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,17 +65,18 @@ public class LoginActivity extends AppCompatActivity {
             onLoginFailed();
             return;
         }
-
-        //TODO: CHANGE
-        new RequestTaskLogin(LoginActivity.this,getBaseContext(),new ProgressDialog(LoginActivity.this, R.style.AppTheme),emailText.getText().toString(),passwordText.getText().toString(),saveLoginCheckBox.isChecked()).execute(getResources().getString(R.string.ip) + "/users/login");
+        ProgressDialog pDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme);
+        isSaveLogin = saveLoginCheckBox.isSaveEnabled();
+        ip =  getResources().getString(R.string.ip);
+        new RequestTaskLogin(LoginActivity.this, getBaseContext(), pDialog ,email,password,isSaveLogin).execute(ip + "/users/login");
 
     }
 
     private boolean validate(){
         boolean valid = true;
 
-        String email = emailText.getText().toString();
-        String password = passwordText.getText().toString();
+        email = emailText.getText().toString();
+        password = passwordText.getText().toString();
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             emailText.setError("enter a valid email address");

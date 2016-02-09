@@ -37,6 +37,10 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     private int group;
     public SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
+    private boolean isSaveLogin;
+    String error = null;
+    String msgFromServer = null;
+
 
     public RequestTaskLogin(Activity activity, Context context, ProgressDialog pDialog,String email, String password, boolean isSaveLogin){
         this.setActivity(activity);
@@ -45,12 +49,8 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         this.setPassword(password);
         this.setIsSaveLogin(isSaveLogin);
         this.setContext(context);
-
     }
 
-    private boolean isSaveLogin;
-    String error = null;
-    String msgFromServer = null;
 
     @Override
     protected Void doInBackground(String... params) {
@@ -92,6 +92,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             msgFromServer = sb.toString();
             br.close();
 
+
         } catch (MalformedURLException e) {
 
             e.printStackTrace();
@@ -105,6 +106,8 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             e.printStackTrace();
             error = e.getMessage().toString();
         }
+
+
         return null;
     }
 
@@ -133,12 +136,13 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                 else {
                     loginPrefEditor.putBoolean("saveLogin", false);
                 }
+                loginPrefEditor.putInt("group", group);
                 loginPrefEditor.commit();
-                new RequestTaskClasses(context, pDialog, group).execute(context.getResources().getString(R.string.ip) + "/users/classes");
+                RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(),new ProgressDialog(getActivity(), R.style.AppTheme), group);
+                rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
                 Intent intent = new Intent(getActivity(), ViewActivity.class);
                 getActivity().finish();
                 getActivity().startActivity(intent);
-
             }
             else{
                 Toast.makeText(getContext(), "Incorrect e-mail or password. Try again", Toast.LENGTH_LONG).show();

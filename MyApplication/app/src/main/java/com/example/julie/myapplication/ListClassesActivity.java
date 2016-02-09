@@ -1,5 +1,6 @@
 package com.example.julie.myapplication;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
@@ -18,14 +19,17 @@ public class ListClassesActivity extends AppCompatActivity {
     TextView today;
     int group;
     HelperDB dbHelper;
+    SharedPreferences loginPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_classes);
 
+        loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+
         day = getIntent().getStringExtra("day");
-        group = getIntent().getIntExtra("group", 0);
+        group =  loginPreferences.getInt("group",1);
 
         tableClasses = (TableLayout) this.findViewById(R.id.tableClasses);
         today = (TextView) findViewById(R.id.tvDay);
@@ -38,7 +42,6 @@ public class ListClassesActivity extends AppCompatActivity {
         dbHelper = new HelperDB(this,"schedule",null,1);
         ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day);
         addLessons(lessonsOfDay);
-
     }
 
 

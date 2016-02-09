@@ -1,6 +1,7 @@
 package com.example.julie.myapplication;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,6 +22,7 @@ public class ViewActivity extends AppCompatActivity {
     Button btnMonday, btnTuesday, btnWednesday, btnThursday, btnFriday, btnSaturday;
     SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
+    String ip;
     int group = 0;
 
 
@@ -90,14 +92,13 @@ public class ViewActivity extends AppCompatActivity {
     public void goDay(String day){
         final Intent intent = new Intent(ViewActivity.this, ListClassesActivity.class);
         intent.putExtra("day", day);
-        intent.putExtra("group", group);
         startActivity(intent);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         int id = item.getItemId();
         if(id == R.id.logoff){
-            loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
             loginPrefEditor = loginPreferences.edit();
             loginPrefEditor.putBoolean("saveLogin", false);
             loginPrefEditor.commit();
@@ -108,7 +109,9 @@ public class ViewActivity extends AppCompatActivity {
             HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             db.execSQL("DELETE FROM schedule");
-            //new RequestTaskClasses(context).execute(getResources().getString(R.string.ip) + "/users/classes");
+            ProgressDialog pDialog = new ProgressDialog(ViewActivity.this, R.style.AppTheme);
+            group = loginPreferences.getInt("group",1);
+            new RequestTaskClasses(ViewActivity.this,getBaseContext(),pDialog,group).execute(getResources().getString(R.string.ip) + "/users/classes");
         }
         return super.onOptionsItemSelected(item);
     }

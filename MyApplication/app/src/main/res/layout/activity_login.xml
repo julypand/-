@@ -50,18 +50,15 @@
             android:hint="@string/password"/>
         </android.support.design.widget.TextInputLayout>
 
-
-        <android.support.v7.widget.AppCompatButton
-            style ="@style/Button"
-
-            android:id="@+id/btnLogin"
-
-            android:text="@string/loginButton" />
-
         <CheckBox android:id="@+id/cbSaveLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/saveLogin"/>
+
+        <android.support.v7.widget.AppCompatButton
+            style ="@style/Button"
+            android:id="@+id/btnLogin"
+            android:text="@string/loginButton" />
 
         <TextView android:id="@+id/tvLoginSingup"
             android:layout_width="fill_parent"
