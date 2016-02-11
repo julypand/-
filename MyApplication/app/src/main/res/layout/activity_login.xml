@@ -7,7 +7,6 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.julie.myapplication.LoginActivity">
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

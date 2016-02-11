@@ -2,11 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="false">
+    android:fillViewport="false"
+    android:orientation="vertical">
 
-    <TableLayout
-        android:id="@+id/tableClasses"
-        style="@style/Table">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/iron"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_left"
+            android:id="@+id/btnleft" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -15,7 +26,22 @@
             android:background="@color/iron"
             android:textSize="30dp"
             android:text="Today"
-            android:id="@+id/tvDay" />
+            android:id="@+id/tvDay"
+            android:layout_column="1"
+            android:layout_weight="0.98" />
+
+        <Button
+            android:layout_width="49dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_right"
+            android:id="@+id/btnright"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableClasses"
+        style="@style/Table">
 
         <TableRow android:layout_width="match_parent"
             android:layout_height="wrap_content"    >
@@ -34,4 +60,5 @@
         </TableRow>
 
     </TableLayout>
+
 </LinearLayout>

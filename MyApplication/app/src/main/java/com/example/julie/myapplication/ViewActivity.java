@@ -47,37 +47,37 @@ public class ViewActivity extends AppCompatActivity {
         btnMonday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                  goDay(getResources().getString(R.string.monday));
+                  goDay(0);
             }
         });
         btnTuesday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goDay(getResources().getString(R.string.tuesday));
+                goDay(1);
             }
         });
         btnWednesday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goDay(getResources().getString(R.string.wednesday));
+                goDay(2);
             }
         });
         btnThursday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goDay(getResources().getString(R.string.thursday));
+                goDay(3);
             }
         });
         btnFriday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goDay(getResources().getString(R.string.friday));
+                goDay(4);
             }
         });
         btnSaturday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goDay(getResources().getString(R.string.saturday));
+                goDay(5);
             }
         });
 
@@ -89,9 +89,9 @@ public class ViewActivity extends AppCompatActivity {
         return true;
     }
 
-    public void goDay(String day){
+    public void goDay(int day_id){
         final Intent intent = new Intent(ViewActivity.this, ListClassesActivity.class);
-        intent.putExtra("day", day);
+        intent.putExtra("day_id", day_id);
         startActivity(intent);
     }
     @Override
