@@ -90,7 +90,7 @@ public class ViewActivity extends AppCompatActivity {
     }
 
     public void goDay(int day_id){
-        final Intent intent = new Intent(ViewActivity.this, ListClassesActivity.class);
+        final Intent intent = new Intent(ViewActivity.this, ClassesListActivity.class);
         intent.putExtra("day_id", day_id);
         startActivity(intent);
     }
