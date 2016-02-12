@@ -109,7 +109,7 @@ public class Connector {
         ResultSet rs = null;
         try {
             st = con.createStatement();
-            String query = "SELECT * FROM student_group WHERE group_name = \'" +
+            String query = "SELECT * FROM student_group WHERE name_group = \'" +
                     user.getGroup() + "\' AND course=\'" + user.getCourse() + "\'";
             rs = st.executeQuery(query);
             if (rs.next()) {

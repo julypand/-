@@ -4,12 +4,18 @@
     android:layout_height="match_parent"
     android:fillViewport="false"
     android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:background="@color/toolbar"
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"/>
+    </android.support.design.widget.AppBarLayout>
 
     <TableLayout
         android:layout_width="match_parent"

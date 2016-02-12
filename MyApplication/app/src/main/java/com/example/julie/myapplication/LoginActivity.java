@@ -65,10 +65,10 @@ public class LoginActivity extends AppCompatActivity {
             onLoginFailed();
             return;
         }
-        ProgressDialog pDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme);
+
         isSaveLogin = saveLoginCheckBox.isSaveEnabled();
         ip =  getResources().getString(R.string.ip);
-        new RequestTaskLogin(LoginActivity.this, getBaseContext(), pDialog ,email,password,isSaveLogin).execute(ip + "/users/login");
+        new RequestTaskLogin(LoginActivity.this, getBaseContext(), email,password,isSaveLogin).execute(ip + "/users/login");
 
     }
 

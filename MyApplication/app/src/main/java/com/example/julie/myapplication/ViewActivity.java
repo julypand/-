@@ -109,9 +109,8 @@ public class ViewActivity extends AppCompatActivity {
             HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             db.execSQL("DELETE FROM schedule");
-            ProgressDialog pDialog = new ProgressDialog(ViewActivity.this, R.style.AppTheme);
             group = loginPreferences.getInt("group",1);
-            new RequestTaskClasses(ViewActivity.this,getBaseContext(),pDialog,group).execute(getResources().getString(R.string.ip) + "/users/classes");
+            new RequestTaskClasses(ViewActivity.this,getBaseContext(),group).execute(getResources().getString(R.string.ip) + "/users/classes");
         }
         return super.onOptionsItemSelected(item);
     }

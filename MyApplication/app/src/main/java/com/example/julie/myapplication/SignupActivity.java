@@ -27,17 +27,15 @@ import java.net.ProtocolException;
 import java.net.URL;
 
 import model.AES;
+import model.RequestTaskSignUp;
+import model.User;
 
 public class SignupActivity extends AppCompatActivity {
     Button signUpBtn;
     TextView backText;
-    EditText nameText;
-    EditText surnameText;
-    EditText courseText;
-    EditText groupText;
-    EditText emailText;
-    EditText passwordText;
-
+    EditText nameText, surnameText,emailText,passwordText,courseText,groupText;
+    String name, surname, email, password, course, group;
+    String ip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,14 +71,16 @@ public class SignupActivity extends AppCompatActivity {
             onSignupFailed();
             return;
         }
-        new RequestTask().execute("http://192.168.100.7:8080/users/signup");
+        User user = new User(name,surname,Integer.valueOf(course),Integer.valueOf(group),email,password);
+        ip = getResources().getString(R.string.ip);
+        new RequestTaskSignUp(SignupActivity.this, getBaseContext(), user).execute(ip + "/users/signup");
     }
 
 
     public void onSignupSuccess() {
         signUpBtn.setEnabled(true);
         setResult(RESULT_OK, null);
-        final Intent intentView = new Intent(this,ViewActivity.class);
+        final Intent intentView = new Intent(this,MainActivity.class);
         startActivity(intentView);
         finish();
     }
@@ -93,12 +93,12 @@ public class SignupActivity extends AppCompatActivity {
     public boolean validate() {
         boolean valid = true;
 
-        String name = nameText.getText().toString();
-        String surname = surnameText.getText().toString();
-        String course = courseText.getText().toString();
-        String group = groupText.getText().toString();
-        String email = emailText.getText().toString();
-        String password = passwordText.getText().toString();
+        name = nameText.getText().toString();
+        surname = surnameText.getText().toString();
+        course = courseText.getText().toString();
+        group = groupText.getText().toString();
+        email = emailText.getText().toString();
+        password = passwordText.getText().toString();
 
         if (name.isEmpty() || name.length() < 3) {
             nameText.setError("at least 3 characters");
@@ -152,125 +152,6 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         return valid;
-    }
-
-    private class RequestTask extends AsyncTask<String, Void, Void>{
-
-        ProgressDialog pDialog = new ProgressDialog(SignupActivity.this, R.style.AppTheme);
-        String name = nameText.getText().toString();
-        String surname = surnameText.getText().toString();
-        String course = courseText.getText().toString();
-        String group = groupText.getText().toString();
-        String email = emailText.getText().toString();
-        String password = passwordText.getText().toString();
-        String error = null;
-        String msgFromServer = null;
-
-        @Override
-        protected Void doInBackground(String... params) {
-            BufferedReader br = null;
-            OutputStream os = null;
-            BufferedWriter bw = null;
-            StringBuilder sb = new StringBuilder();
-            URL url = null;
-
-            try{
-                url = new URL(params[0]); //1
-                HttpURLConnection connection = (HttpURLConnection)url.openConnection(); //2
-                connection.setRequestMethod("POST");
-                connection.setDoOutput(true);
-                connection.setDoInput(true);
-                connection.setRequestProperty("Content-Type", "application/json");
-                connection.connect();
-
-                //encrypt password
-                AES.setKey(password);
-                AES.encrypt(password.trim());
-
-                //json user
-                JSONObject jsonParam = new JSONObject();
-                jsonParam.put("name", name);
-                jsonParam.put("surname", surname);
-                jsonParam.put("course", course);
-                jsonParam.put("group", group);
-                jsonParam.put("email", email);
-                jsonParam.put("password", AES.getEncryptedString());
-
-                //forward TO server
-                os = connection.getOutputStream();
-                bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-                bw.write(jsonParam.toString());
-                bw.flush();
-                bw.close();
-                os.close();
-
-                connection.getInputStream();
-                br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                String line = null;
-                while((line = br.readLine()) != null){
-                    sb.append(line);
-                    sb.append(System.getProperty("line.separator"));
-                }
-                msgFromServer = sb.toString();
-                br.close();
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-                error = e.getMessage().toString();
-            } catch (ProtocolException e) {
-                e.printStackTrace();
-                error = e.getMessage().toString();
-            } catch (IOException e) {
-                e.printStackTrace();
-                error = e.getMessage().toString();
-            } catch (JSONException e) {
-                e.printStackTrace();
-                error = e.getMessage().toString();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPreExecute(){
-            pDialog.setTitle("Please, wait..");
-            pDialog.setIndeterminate(true);
-            pDialog.setMessage("SignUp...");
-            pDialog.show();
-            super.onPreExecute();
-        }
-
-        @Override
-        protected void onPostExecute(Void result){
-            super.onPostExecute(result);
-            pDialog.dismiss();
-
-            if(error != null){
-                Toast.makeText(getBaseContext(), error, Toast.LENGTH_LONG).show();
-            }
-            else{
-                if(parseJSON(msgFromServer)){
-                    Toast.makeText(getBaseContext(), "Successful signing!", Toast.LENGTH_LONG).show();
-
-                    SignupActivity.this.finish();
-                    startActivity(new Intent(SignupActivity.this, ViewActivity.class));
-                }
-                else{
-                    Toast.makeText(getBaseContext(), "Someboby has that e-mail. Change it.", Toast.LENGTH_LONG).show();
-                }
-            }
-        }
-    }
-
-    private boolean parseJSON(String msg){
-        try {
-            JSONObject child = new JSONObject(msg);
-            String email = child.getString("email");
-            if (email.equals("null"))
-                return false;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return true;
     }
 
     @Override

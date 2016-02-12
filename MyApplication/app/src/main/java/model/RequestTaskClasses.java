@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 
 
+import com.example.julie.myapplication.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,9 +37,9 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
     String msgFromServer = null;
     ArrayList<Lesson> lessons = new ArrayList<>();
 
-    public RequestTaskClasses(Activity activity,Context context, ProgressDialog pDialog, int group){
+    public RequestTaskClasses(Activity activity,Context context,int group){
         this.setActivity(activity);
-        this.setpDialog(pDialog);
+        this.setpDialog();
         this.setGroup(group);
         this.setContext(context);
     }
@@ -104,9 +106,9 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
 
     @Override
     protected void onPreExecute(){
-        pDialog.setTitle("Please, wait..");
+        pDialog.setTitle(getActivity().getResources().getString(R.string.wait));
         pDialog.setIndeterminate(true);
-        pDialog.setMessage("Load schedule...");
+        pDialog.setMessage(getActivity().getResources().getString(R.string.load_schedule));
         pDialog.show();
         super.onPreExecute();
     }
@@ -120,8 +122,8 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
             Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(getContext(), "Load Schedule Successfully!", Toast.LENGTH_LONG).show();
             parseJSONLessons(msgFromServer, lessons);
+            Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_schedule), Toast.LENGTH_LONG).show();
 
         }
     }
@@ -160,8 +162,8 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
         return pDialog;
     }
 
-    public void setpDialog(ProgressDialog pDialog) {
-        this.pDialog = pDialog;
+    public void setpDialog() {
+        this.pDialog = new ProgressDialog(getActivity(), R.style.AppTheme);
     }
 
     public int getGroup() {

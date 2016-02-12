@@ -4,9 +4,9 @@
     <string name="app_name">Schedule</string>
     <string name="title_activity_login">Activity Login</string>
     <string name="hello">Hello!</string>
-    <string name = "create_account_text">If you are here for the first time, you can</string>
-    <string name = "login_text">or</string>
-    <string name="ip">http://192.168.0.101:8080</string>
+    <string name="create_account_text">If you are here for the first time, you can</string>
+    <string name="login_text">or</string>
+    <string name="ip">http://192.168.100.7:8080</string>
 
     <!-- Login -->
     <string name="login">Login, please!</string>
@@ -40,6 +40,7 @@
     <string name="choose">Choose day:</string>
 
     <!--  List Classes -->
+    <string name="title_activity_classes_list">List Classes</string>
     <string name="time">TIME</string>
     <string name="lesson">LESSON</string>
     <string name="room">ROOM</string>
@@ -49,5 +50,22 @@
     <string name="refresh">Refresh</string>
     <string name="logoff">Log off</string>
     <string name="settings">Settings</string>
+
+    <!--  Schedule List -->
+    <string name="title_activity_schedule_list">List Schedules</string>
+
+    <!-- Dialog Windows -->
+    <string name="wait">Please, wait..</string>
+    <string name="login_wait">Login..</string>
+    <string name="incorrent_email">Incorrect e-mail or password. Try again!</string>
+    <string name="signup_wait">SignUp...</string>
+    <string name="success_signup">Successful signing!</string>
+    <string name="change_email">Somebody has that e-mail. Change it!</string>
+
+    <string name="load_schedule">Load schedule...</string>
+    <string name="success_schedule">Load Schedule Successfully!</string>
+
+
+
 
 </resources>

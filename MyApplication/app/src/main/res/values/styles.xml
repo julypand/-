@@ -5,24 +5,24 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="android:windowBackground">@color/primary</item>
-         <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
         <item name="colorControlHighlight">@color/white</item>
         <item name="android:textColorHint">@color/base</item>
     </style>
 
     <!-- EdiText theme. -->
     <style name="EditText" parent="android:Widget.EditText">
-        <item name ="android:background">@color/editText</item>
-        <item name ="android:layout_width">match_parent</item>
-        <item name ="android:layout_height">38dp</item>
-        <item name ="android:layout_marginTop">8dp</item>
-        <item name ="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@color/editText</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
         <item name="android:textColor">@color/oil</item>
     </style>
 
     <!-- Buttons theme. -->
     <style name="Button" parent="android:Widget.Button">
-        <item name ="android:background">@color/button</item>
+        <item name="android:background">@color/button</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">12dp</item>
@@ -36,23 +36,29 @@
     </style>
 
     <!-- Cell & Table theme. -->
-    <style name = "Cell">
+    <style name="Cell">
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">1dp</item>
         <item name="android:background">@color/primary</item>
     </style>
-    <style name = "CellSchedule" parent="Cell">
+
+    <style name="CellSchedule" parent="Cell">
         <item name="android:background">@drawable/shape</item>
         <item name="android:textColor">@color/oil</item>
         <item name="android:textSize">14dp</item>
     </style>
-    <style name = "Table">
+
+    <style name="Table">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/jumbo</item>
         <item name="android:stretchColumns">*</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

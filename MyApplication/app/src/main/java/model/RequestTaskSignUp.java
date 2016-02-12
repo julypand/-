@@ -4,13 +4,10 @@ package model;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.example.julie.myapplication.R;
-import com.example.julie.myapplication.ViewActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,33 +20,24 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 
-public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
-
+public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
 
     private ProgressDialog pDialog;
-    private Context context;
+    private User user;
     private Activity activity;
-    private String email;
-    private String password;
-    private int group;
-    public SharedPreferences loginPreferences;
-    SharedPreferences.Editor loginPrefEditor;
-    private boolean isSaveLogin;
+    private Context context;
     String error = null;
     String msgFromServer = null;
 
-
-    public RequestTaskLogin(Activity activity, Context context, String email, String password, boolean isSaveLogin){
+    public  RequestTaskSignUp(Activity activity, Context context, User user){
         this.setActivity(activity);
-        this.setpDialog();
-        this.setEmail(email);
-        this.setPassword(password);
-        this.setIsSaveLogin(isSaveLogin);
         this.setContext(context);
+        this.setpDialog();
+        this.setUser(user);
     }
-
 
     @Override
     protected Void doInBackground(String... params) {
@@ -58,6 +46,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         BufferedWriter bw;
         StringBuilder sb = new StringBuilder();
         URL url;
+
 
         try{
             url = new URL(params[0]);
@@ -68,10 +57,18 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
-            //json email+password
+            //encrypt password
+            AES.setKey(user.getPassword());
+            AES.encrypt(user.getPassword().trim());
 
+            //json user
             JSONObject jsonParam = new JSONObject();
-            jsonParam.put("email", getEmail());
+            jsonParam.put("name", user.getName());
+            jsonParam.put("surname", user.getSurname());
+            jsonParam.put("course", user.getCourse());
+            jsonParam.put("group", user.getGroup());
+            jsonParam.put("email", user.getEmail());
+            jsonParam.put("password", AES.getEncryptedString());
 
             //forward TO server
             os = connection.getOutputStream();
@@ -91,22 +88,19 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             msgFromServer = sb.toString();
             br.close();
 
-
         } catch (MalformedURLException e) {
-
+            e.printStackTrace();
+            error = e.getMessage().toString();
+        } catch (ProtocolException e) {
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (IOException e) {
-
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (JSONException e) {
-
             e.printStackTrace();
             error = e.getMessage().toString();
         }
-
-
         return null;
     }
 
@@ -114,7 +108,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     protected void onPreExecute(){
         pDialog.setTitle(getActivity().getResources().getString(R.string.wait));
         pDialog.setIndeterminate(true);
-        pDialog.setMessage(getActivity().getResources().getString(R.string.login_wait));
+        pDialog.setMessage(getActivity().getResources().getString(R.string.signup_wait));
         pDialog.show();
         super.onPreExecute();
     }
@@ -124,44 +118,32 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         super.onPostExecute(result);
         pDialog.dismiss();
 
-            AES.setKey(getPassword());
-            AES.decrypt(parseJSON(msgFromServer).trim());
-            if(AES.getDecryptedString().equals(getPassword())){
-                loginPreferences = context.getSharedPreferences("loginPrefs", context.MODE_PRIVATE);
-                loginPrefEditor = loginPreferences.edit();
-                if(isSaveLogin) {
-                    loginPrefEditor.putBoolean("saveLogin", true);
-                }
-                else {
-                    loginPrefEditor.putBoolean("saveLogin", false);
-                }
-                loginPrefEditor.putInt("group", group);
-                loginPrefEditor.commit();
-                RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), group);
-                rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
-                Intent intent = new Intent(getActivity(), ViewActivity.class);
-                getActivity().finish();
-                getActivity().startActivity(intent);
+        if(error != null){
+            Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
+        }
+        else{
+            if(parseJSON(msgFromServer)){
+                Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_signup), Toast.LENGTH_LONG).show();
+
             }
             else{
-                Toast.makeText(getContext(), getActivity().getResources().getString(R.string.incorrent_email), Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), getActivity().getResources().getString(R.string.change_email), Toast.LENGTH_LONG).show();
             }
         }
+    }
 
 
-    private String parseJSON(String msg){
-        String result = "";
+    private boolean parseJSON(String msg){
         try {
             JSONObject child = new JSONObject(msg);
-            String password = child.getString("password");
-            group= child.getInt("group_id");
-            result = password;
+            String email = child.getString("email");
+            if (email.equals("null"))
+                return false;
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return result;
+        return true;
     }
-
 
     public Activity getActivity() {
         return activity;
@@ -171,25 +153,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         this.activity = activity;
     }
 
-    public void setpDialog() {
-        this.pDialog = new ProgressDialog(getActivity(), R.style.AppTheme);
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
     public Context getContext() {
         return context;
     }
@@ -198,7 +161,19 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         this.context = context;
     }
 
-    public void setIsSaveLogin(boolean isSaveLogin) {
-        this.isSaveLogin = isSaveLogin;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public ProgressDialog getpDialog() {
+        return pDialog;
+    }
+
+    public void setpDialog() {
+        this.pDialog = new ProgressDialog(getActivity(), R.style.AppTheme);
     }
 }
