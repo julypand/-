@@ -4,13 +4,11 @@ package model;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.example.julie.myapplication.R;
-import com.example.julie.myapplication.ScheduleListActivity;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
@@ -123,9 +121,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                 loginPrefEditor.commit();
                 RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), user);
                 rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
-                Intent intent = new Intent(getActivity(), ScheduleListActivity.class);//
-                getActivity().finish();
-                getActivity().startActivity(intent);
+
             }
             else{
                 Toast.makeText(getContext(), getActivity().getResources().getString(R.string.incorrent_email), Toast.LENGTH_LONG).show();

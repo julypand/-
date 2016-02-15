@@ -3,7 +3,6 @@ package com.example.julie.myapplication;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,12 +26,11 @@ public class MainActivity extends AppCompatActivity {
         isSaveLogin = loginPreferences.getBoolean("saveLogin", false);
         if(isSaveLogin){
             MainActivity.this.finish();
-            startActivity(new Intent(this, ViewActivity.class));
+            startActivity(new Intent(this, ScheduleListActivity.class));
         }
         else {
             dbHelper = new HelperDB(this,"schedule",null,1);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
-            db.execSQL("DELETE FROM schedule");
+            dbHelper.clear();
             dbHelper.close();
         }
         super.onCreate(savedInstanceState);

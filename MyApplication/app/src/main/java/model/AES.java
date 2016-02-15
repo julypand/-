@@ -11,9 +11,7 @@ import java.util.Random;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-/**
- * Created by Julie on 10.12.2015.
- */
+
 public class AES {
     private static SecretKeySpec secretKey;
     private static byte[] key;

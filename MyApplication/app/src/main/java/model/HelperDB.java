@@ -73,7 +73,7 @@ public class HelperDB extends SQLiteOpenHelper {
 
         }
         public int getIdSchedule(String name){
-
+                int id = 0;
                 SQLiteDatabase db = this.getReadableDatabase();
                 Cursor c = db.query("schedule", null, null, null, null, null, null);
                 if (c.moveToFirst()) {
@@ -82,13 +82,14 @@ public class HelperDB extends SQLiteOpenHelper {
 
                         do {
                                 if (c.getString(nameColIndex).equals(name)) {
-                                        return c.getInt(idColIndex);
+                                        id = c.getInt(idColIndex);
                                 }
 
                         } while (c.moveToNext());
                         c.close();
                 }
-                return 0;
+
+                return id;
 
         }
 
@@ -99,7 +100,6 @@ public class HelperDB extends SQLiteOpenHelper {
                 Cursor c = db.query("schedule", null, null, null, null, null, null);
                 if (c.moveToFirst()) {
                         int nameColIndex = c.getColumnIndex("name");
-
                         do {
                                 String name = c.getString(nameColIndex);
                                 names.add(name);
@@ -114,7 +114,7 @@ public class HelperDB extends SQLiteOpenHelper {
         public ArrayList<Lesson> readScheduleOfDay(String day, String schedule_name) {
                 ArrayList<Lesson> lessons = new ArrayList<>();
                 SQLiteDatabase db = this.getReadableDatabase();
-                Cursor c = db.query("schedule", null, null, null, null, null, null);
+                Cursor c = db.query("lesson", null, null, null, null, null, null);
                 int schedule_id = getIdSchedule(schedule_name);
                 if (c.moveToFirst()) {
                         int idColIndex = c.getColumnIndex("id_schedule");
@@ -139,6 +139,11 @@ public class HelperDB extends SQLiteOpenHelper {
                 }
                 return lessons;
 
+        }
+        public void clear(){
+                SQLiteDatabase db = this.getWritableDatabase();
+                db.execSQL("DELETE FROM schedule");
+                db.execSQL("DELETE FROM lesson");
         }
 }
 

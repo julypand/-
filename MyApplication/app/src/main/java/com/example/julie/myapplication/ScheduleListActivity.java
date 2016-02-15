@@ -1,6 +1,7 @@
 package com.example.julie.myapplication;
 
 
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,15 +14,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+
 
 import java.util.ArrayList;
 
+import model.HelperDB;
 import model.RecyclerViewAdapter;
+import model.RequestTaskClasses;
+import model.User;
 
 public class ScheduleListActivity extends AppCompatActivity {
     SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
+    String ip;
+    HelperDB dbHelper;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -37,7 +43,7 @@ public class ScheduleListActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new RecyclerViewAdapter(getDataSet());
+        mAdapter = new RecyclerViewAdapter(getDataSet(),ScheduleListActivity.this);
         mRecyclerView.setAdapter(mAdapter);
 
 
@@ -67,23 +73,18 @@ public class ScheduleListActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         }
         if(id == R.id.refresh){
-            //HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
-            //SQLiteDatabase db = dbHelper.getWritableDatabase();
-            //db.execSQL("DELETE FROM schedule");
-            //ProgressDialog pDialog = new ProgressDialog(ScheduleListActivity.this, R.style.AppTheme);
-            //group = loginPreferences.getInt("group",1);
-            //new RequestTaskClasses(ViewActivity.this,getBaseContext(),pDialog,group).execute(getResources().getString(R.string.ip) + "/users/classes");
+            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            dbHelper.clear();
+            String email = loginPreferences.getString("email", "");
+            ip = getResources().getString(R.string.ip);
+            new RequestTaskClasses(ScheduleListActivity.this,getBaseContext(),new User(email)).execute(ip + "/users/classes");
         }
         return super.onOptionsItemSelected(item);
     }
     private ArrayList<String> getDataSet() {
+        dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
+        return dbHelper.getNameSchedules();
 
-        ArrayList results = new ArrayList<TextView>();
-        for (int index = 0; index < 20; index++) {
-            String obj = "Some Primary Text " + index;
-            results.add(index, obj);
-        }
-        return results;
     }
 
 

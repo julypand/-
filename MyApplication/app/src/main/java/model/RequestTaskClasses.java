@@ -3,10 +3,11 @@ package model;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 import com.example.julie.myapplication.R;
+import com.example.julie.myapplication.ScheduleListActivity;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
@@ -101,10 +102,10 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
         }
         else{
             dbHelper = new HelperDB(getContext(),"schedule",null,1);
-            //SQLiteDatabase db = dbHelper.getWritableDatabase();
             dbHelper.addToLocalDB(user.getSchedules());
-            //TODO add to local db
-            //parseJSONLessons(msgFromServer, schedules);
+            Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
+            getActivity().finish();
+            getActivity().startActivity(intent);
             Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_schedule), Toast.LENGTH_LONG).show();
 
         }

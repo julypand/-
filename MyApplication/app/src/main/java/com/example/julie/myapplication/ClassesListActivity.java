@@ -28,7 +28,7 @@ import model.Lesson;
 public class ClassesListActivity extends AppCompatActivity {
     TableLayout tableClasses;
     int day_id;
-    int group;
+    static String name_schedule;
     SharedPreferences loginPreferences;
     static String[] week = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 
@@ -42,9 +42,10 @@ public class ClassesListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_classes_list);
 
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+        name_schedule = loginPreferences.getString("name_schedule","");
+
 
         day_id = getIntent().getIntExtra("day_id", 0);
-        group =  loginPreferences.getInt("group", 1);
 
         tableClasses = (TableLayout) this.findViewById(R.id.tableClasses);
 
@@ -99,6 +100,7 @@ public class ClassesListActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_classes_list, container, false);
             day_id = getArguments().getInt(ARG_SECTION_NUMBER)-1;
+
             String day = week[day_id];
             today = (TextView) rootView.findViewById(R.id.tvDay);
             btnLeft = (Button) rootView.findViewById(R.id.btnleft);
@@ -107,7 +109,6 @@ public class ClassesListActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     int day_right_id = (day_id + 1) % 6;
-
                     goDay(day_right_id);
                 }
             });
@@ -121,7 +122,7 @@ public class ClassesListActivity extends AppCompatActivity {
 
             today.setText(day);
             tableClasses = (TableLayout) rootView.findViewById(R.id.tableClasses);
-            writeDaySchedule(day);
+            writeDaySchedule(day,name_schedule);
             return rootView;
         }
         public void goDay(int day_id){
@@ -131,9 +132,9 @@ public class ClassesListActivity extends AppCompatActivity {
         }
 
 
-        void writeDaySchedule(String day){
+        void writeDaySchedule(String day,String name_schedule){
             HelperDB dbHelper = new HelperDB(getActivity().getBaseContext(),"schedule",null,1);
-            ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day);
+            ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day,name_schedule);
             addLessons(lessonsOfDay);
         }
 

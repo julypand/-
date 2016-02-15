@@ -1,48 +1,60 @@
 package model;
 
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.julie.myapplication.R;
+import com.example.julie.myapplication.ViewActivity;
 
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView
         .Adapter<RecyclerViewAdapter
         .DataObjectHolder> {
-    private static String LOG_TAG = "MyRecyclerViewAdapter";
+
     private ArrayList<String> mDataset;
-    private static MyClickListener myClickListener;
+    private static Activity activity;
 
     public static class DataObjectHolder extends RecyclerView.ViewHolder
             implements View
             .OnClickListener {
         TextView label;
-        TextView dateTime;
 
-        public DataObjectHolder(View itemView) {
+
+        public DataObjectHolder(View itemView,Activity _activity) {
             super(itemView);
             label = (TextView) itemView.findViewById(R.id.textView);
+            activity = _activity;
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            myClickListener.onItemClick(getPosition(), v);
+            Intent intent = new Intent(activity, ViewActivity.class);
+            SharedPreferences loginPreferences = activity.getSharedPreferences("loginPrefs", activity.MODE_PRIVATE);
+            SharedPreferences.Editor loginPrefEditor = loginPreferences.edit();
+            loginPrefEditor.putString("name_schedule", label.getText().toString());
+            loginPrefEditor.commit();
+
+            intent.putExtra("name_schedule", label.getText());
+            activity.finish();
+            activity.startActivity(intent);
         }
     }
 
-    public void setOnItemClickListener(MyClickListener myClickListener) {
-        this.myClickListener = myClickListener;
-    }
 
-    public RecyclerViewAdapter(ArrayList<String> myDataset) {
+
+    public RecyclerViewAdapter(ArrayList<String> myDataset, Activity _activity) {
         mDataset = myDataset;
+        activity = _activity;
+
     }
 
     @Override
@@ -51,7 +63,7 @@ public class RecyclerViewAdapter extends RecyclerView
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycle_item, parent, false);
 
-        DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
+        DataObjectHolder dataObjectHolder = new DataObjectHolder(view,activity);
         return dataObjectHolder;
     }
 
