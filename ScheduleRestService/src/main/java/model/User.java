@@ -1,6 +1,9 @@
 package model;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class User {
 
     private String name;
@@ -9,23 +12,29 @@ public class User {
     private String group;
     private String email;
     private String password;
+    private HashMap<String,ArrayList<Lesson>> schedules;
 
     public User(){}
 
-    public User(String name, String surname, int course,String group, String email, String password/*, Schedule schedule*/){
+    public User(String name, String surname, int course,String group, String email, String password, HashMap<String,ArrayList<Lesson>> schedules){
         setName(name);
         setSurname(surname);
         setCourse(course);
         setGroup(group);
         setEmail(email);
         setPassword(password);
-        /*setSchedule(schedule);*/
+        setSchedules(schedules);
+    }
+    public User(String name, String surname, int course,String group, String email, String password){
+        setName(name);
+        setSurname(surname);
+        setCourse(course);
+        setGroup(group);
+        setEmail(email);
+        setPassword(password);
+        setSchedules(new HashMap<String, ArrayList<Lesson>>());
     }
 
-    public String toString(){
-        return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +
-                + this.getCourse() + ", group: " + this.getGroup() + ", email: " + this.getEmail());
-    }
 
     public String getName() {
         return name;
@@ -75,11 +84,11 @@ public class User {
         this.password = password;
     }
 
-    /*public Schedule getSchedule() {
-        return schedule;
+    public HashMap<String, ArrayList<Lesson>> getSchedules() {
+        return schedules;
     }
 
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
-    }*/
+    public void setSchedules(HashMap<String, ArrayList<Lesson>> schedules) {
+        this.schedules = schedules;
+    }
 }

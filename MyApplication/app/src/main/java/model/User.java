@@ -1,8 +1,9 @@
 package model;
 
-/**
- * Created by Julie on 12.12.2015.
- */
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
 public class User {
 
     private String name;
@@ -11,23 +12,45 @@ public class User {
     private int group;
     private String email;
     private String password;
-    //private Schedule schedule;
+    private HashMap<String,ArrayList<Lesson>> schedules = new HashMap<>();
 
     public User(){}
 
-    public User(String name, String surname, int course, int group, String email, String password/*, Schedule schedule*/){
+    public User(String name, String surname, int course, int group, String email, String password, HashMap<String,ArrayList<Lesson>> schedules){
         setName(name);
         setSurname(surname);
         setCourse(course);
         setGroup(group);
         setEmail(email);
         setPassword(password);
-        /*setSchedule(schedule);*/
+        setSchedules(schedules);
+    }
+    public User(String email){
+        setEmail(email);
     }
 
     public String toString(){
         return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +
                 + this.getCourse() + ", group: " + this.getGroup() + ", email: " + this.getEmail());
+    }
+
+    public void addLesson(String name_schedule, Lesson lesson){
+        if(getSchedules().containsKey(name_schedule))
+            getSchedules().get(name_schedule).add(lesson);
+    }
+
+    public void addSchedule(String name,ArrayList<Lesson> lessons){
+        getSchedules().put(name,lessons);
+    }
+    public void addSchedule(String name){
+        getSchedules().put(name,new ArrayList<Lesson>());
+    }
+    public void deleteSchedule(String name){
+        getSchedules().remove(name);
+    }
+
+    public ArrayList<Lesson> getSchedule(String name){
+        return getSchedules().get(name);
     }
 
     public String getName() {
@@ -78,11 +101,11 @@ public class User {
         this.password = password;
     }
 
-    /*public Schedule getSchedule() {
-        return schedule;
+    public HashMap<String,ArrayList<Lesson>> getSchedules() {
+        return schedules;
     }
 
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
-    }*/
+    public void setSchedules(HashMap<String,ArrayList<Lesson>> schedules) {
+        this.schedules = schedules;
+    }
 }

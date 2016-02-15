@@ -10,10 +10,9 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.example.julie.myapplication.R;
-import com.example.julie.myapplication.ViewActivity;
+import com.example.julie.myapplication.ScheduleListActivity;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -31,14 +30,12 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     private ProgressDialog pDialog;
     private Context context;
     private Activity activity;
-    private String email;
-    private String password;
-    private int group;
+    private String email, password;
+    private User user;
     public SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
     private boolean isSaveLogin;
     String error = null;
-    String msgFromServer = null;
 
 
     public RequestTaskLogin(Activity activity, Context context, String email, String password, boolean isSaveLogin){
@@ -68,27 +65,18 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
-            //json email+password
-
-            JSONObject jsonParam = new JSONObject();
-            jsonParam.put("email", getEmail());
-
             //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-            bw.write(jsonParam.toString());
-            bw.flush();
+            ObjectMapper mapper = new ObjectMapper();
+
+            mapper.writeValue(bw, new User(getEmail()));
             bw.close();
             os.close();
 
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            String line = null;
-            while((line = br.readLine()) != null){
-                sb.append(line);
-                sb.append(System.getProperty("line.separator"));
-            }
-            msgFromServer = sb.toString();
+            user = mapper.readValue(br,User.class);
             br.close();
 
 
@@ -97,10 +85,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (IOException e) {
-
-            e.printStackTrace();
-            error = e.getMessage().toString();
-        } catch (JSONException e) {
 
             e.printStackTrace();
             error = e.getMessage().toString();
@@ -125,21 +109,21 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         pDialog.dismiss();
 
             AES.setKey(getPassword());
-            AES.decrypt(parseJSON(msgFromServer).trim());
+            AES.decrypt(user.getPassword().trim());
             if(AES.getDecryptedString().equals(getPassword())){
                 loginPreferences = context.getSharedPreferences("loginPrefs", context.MODE_PRIVATE);
                 loginPrefEditor = loginPreferences.edit();
+                loginPrefEditor.putString("email",email);
                 if(isSaveLogin) {
                     loginPrefEditor.putBoolean("saveLogin", true);
                 }
                 else {
                     loginPrefEditor.putBoolean("saveLogin", false);
                 }
-                loginPrefEditor.putInt("group", group);
                 loginPrefEditor.commit();
-                RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), group);
+                RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), user);
                 rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
-                Intent intent = new Intent(getActivity(), ViewActivity.class);
+                Intent intent = new Intent(getActivity(), ScheduleListActivity.class);//
                 getActivity().finish();
                 getActivity().startActivity(intent);
             }
@@ -149,18 +133,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         }
 
 
-    private String parseJSON(String msg){
-        String result = "";
-        try {
-            JSONObject child = new JSONObject(msg);
-            String password = child.getString("password");
-            group= child.getInt("group_id");
-            result = password;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
 
 
     public Activity getActivity() {

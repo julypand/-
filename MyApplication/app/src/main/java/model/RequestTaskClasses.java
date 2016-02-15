@@ -5,13 +5,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
-
-
 import com.example.julie.myapplication.R;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -23,24 +21,22 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.sql.Time;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
 
     private ProgressDialog pDialog;
-    private int group;
+    private User user;
     private Context context;
     private Activity activity;
     HelperDB dbHelper;
     String error = null;
-    String msgFromServer = null;
-    ArrayList<Lesson> lessons = new ArrayList<>();
 
-    public RequestTaskClasses(Activity activity,Context context,int group){
+    public RequestTaskClasses(Activity activity,Context context,User user){
         this.setActivity(activity);
         this.setpDialog();
-        this.setGroup(group);
+        this.setUser(user);
         this.setContext(context);
     }
 
@@ -49,7 +45,6 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
         BufferedReader br;
         OutputStream os;
         BufferedWriter bw;
-        StringBuilder sb = new StringBuilder();
         URL url;
 
         try{
@@ -61,32 +56,19 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
-            //json user
-            JSONObject jsonParam = new JSONObject();
-            jsonParam.put("group", group);
-
-            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-            bw.write(jsonParam.toString());
-            bw.flush();
+            ObjectMapper mapper = new ObjectMapper();
+
+            mapper.writeValue(bw, user);
             bw.close();
             os.close();
 
-            //get FROM server
-            int responseCode = connection.getResponseCode();
-            System.out.println("Response code: " + responseCode);
-
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            String line = null;
-            while((line = br.readLine()) != null){
-                sb.append(line);
-                sb.append(System.getProperty("line.separator"));
-            }
-            msgFromServer = sb.toString();
-
+            user = mapper.readValue(br,User.class);
             br.close();
+
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -95,9 +77,6 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (IOException e) {
-            e.printStackTrace();
-            error = e.getMessage().toString();
-        } catch (JSONException e) {
             e.printStackTrace();
             error = e.getMessage().toString();
         }
@@ -116,39 +95,21 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
     @Override
     protected void onPostExecute(Void result){
         super.onPostExecute(result);
-        pDialog.dismiss();
+        //pDialog.dismiss();
 
         if(error != null){
             Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
         else{
-            parseJSONLessons(msgFromServer, lessons);
+
+            //TODO add to local db
+            //parseJSONLessons(msgFromServer, schedules);
             Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_schedule), Toast.LENGTH_LONG).show();
 
         }
     }
 
-    private void parseJSONLessons(String msg, ArrayList<Lesson> less){
-        try {
-            JSONArray parent = new JSONArray(msg);
-            for (int i = 0; i < parent.length(); ++i){
-                JSONObject child = parent.getJSONObject(i);
-                String day = child.getString("day");
-                String name = child.getString("name");
-                String room = child.getString("room");
-                Time timeStart = Time.valueOf(child.getString("timeStart"));
-                Time timeEnd = Time.valueOf(child.getString("timeEnd"));
-                String type =child.getString("type");
-                less.add(new Lesson(day,name, room, timeStart, timeEnd, type));
-            }
-            dbHelper = new HelperDB(getContext(),"schedule",null,1);
-            dbHelper.addToLocalDB(less);
-            dbHelper.close();
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
 
     public Activity getActivity() {
         return activity;
@@ -166,12 +127,12 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
         this.pDialog = new ProgressDialog(getActivity(), R.style.AppTheme);
     }
 
-    public int getGroup() {
-        return group;
+    public User getUser() {
+        return user;
     }
 
-    public void setGroup(int group) {
-        this.group = group;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Context getContext() {

@@ -110,7 +110,7 @@ public class ViewActivity extends AppCompatActivity {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             db.execSQL("DELETE FROM schedule");
             group = loginPreferences.getInt("group",1);
-            new RequestTaskClasses(ViewActivity.this,getBaseContext(),group).execute(getResources().getString(R.string.ip) + "/users/classes");
+            //new RequestTaskClasses(ViewActivity.this,getBaseContext()).execute(getResources().getString(R.string.ip) + "/users/classes");
         }
         return super.onOptionsItemSelected(item);
     }

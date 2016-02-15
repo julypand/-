@@ -4,13 +4,13 @@ package model;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+import com.example.julie.myapplication.MainActivity;
 import com.example.julie.myapplication.R;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -29,8 +29,8 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
     private User user;
     private Activity activity;
     private Context context;
+    boolean isSuccessfulSignUp;
     String error = null;
-    String msgFromServer = null;
 
     public  RequestTaskSignUp(Activity activity, Context context, User user){
         this.setActivity(activity);
@@ -57,35 +57,23 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
-            //encrypt password
-            AES.setKey(user.getPassword());
-            AES.encrypt(user.getPassword().trim());
 
-            //json user
-            JSONObject jsonParam = new JSONObject();
-            jsonParam.put("name", user.getName());
-            jsonParam.put("surname", user.getSurname());
-            jsonParam.put("course", user.getCourse());
-            jsonParam.put("group", user.getGroup());
-            jsonParam.put("email", user.getEmail());
-            jsonParam.put("password", AES.getEncryptedString());
-
-            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-            bw.write(jsonParam.toString());
-            bw.flush();
+            ObjectMapper mapper = new ObjectMapper();
+
+            AES.setKey(user.getPassword());
+            AES.encrypt(user.getPassword().trim());
+            user.setPassword(AES.getEncryptedString());
+
+            mapper.writeValue(bw, user);
+
             bw.close();
             os.close();
 
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            String line = null;
-            while((line = br.readLine()) != null){
-                sb.append(line);
-                sb.append(System.getProperty("line.separator"));
-            }
-            msgFromServer = sb.toString();
+            isSuccessfulSignUp = mapper.readValue(br, boolean.class);
             br.close();
 
         } catch (MalformedURLException e) {
@@ -95,9 +83,6 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (IOException e) {
-            e.printStackTrace();
-            error = e.getMessage().toString();
-        } catch (JSONException e) {
             e.printStackTrace();
             error = e.getMessage().toString();
         }
@@ -122,8 +107,11 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
             Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
         else{
-            if(parseJSON(msgFromServer)){
+            if(isSuccessfulSignUp){
                 Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_signup), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                getActivity().finish();
+                getActivity().startActivity(intent);
 
             }
             else{
@@ -133,17 +121,7 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
     }
 
 
-    private boolean parseJSON(String msg){
-        try {
-            JSONObject child = new JSONObject(msg);
-            String email = child.getString("email");
-            if (email.equals("null"))
-                return false;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return true;
-    }
+
 
     public Activity getActivity() {
         return activity;

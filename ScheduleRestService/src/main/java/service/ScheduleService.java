@@ -4,12 +4,14 @@ import model.Lesson;
 import model.User;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface ScheduleService {
     ArrayList<User> getAllUsers();
     String getPassword(String email);
     boolean isUserContainedAndAdding(User user);
     String getType(int type_id);
-    ArrayList<Lesson> getClasses(int group);
+    HashMap<String,ArrayList<Lesson>> getSchedules(User user);
+    ArrayList<Lesson> getClasses(int schedule_id);
     int getGroupID(String email);
 }

@@ -7,6 +7,7 @@ import model.User;
 import service.ScheduleService;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class ScheduleServiceImpl implements ScheduleService {
@@ -24,8 +25,12 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    public ArrayList<Lesson> getClasses(int group) {
-        return scheduleDAO.getClasses(group);
+    public ArrayList<Lesson> getClasses(int schedule_id) {
+        return scheduleDAO.getClasses(schedule_id);
+    }
+    @Override
+    public HashMap<String,ArrayList<Lesson>> getSchedules(User user){
+        return scheduleDAO.getSchedules(user);
     }
 
     @Override

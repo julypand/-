@@ -25,8 +25,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import model.AES;
+import model.Lesson;
 import model.RequestTaskSignUp;
 import model.User;
 
@@ -71,7 +74,7 @@ public class SignupActivity extends AppCompatActivity {
             onSignupFailed();
             return;
         }
-        User user = new User(name,surname,Integer.valueOf(course),Integer.valueOf(group),email,password);
+        User user = new User(name,surname,Integer.valueOf(course),Integer.valueOf(group),email,password,new HashMap<String,ArrayList<Lesson>>());
         ip = getResources().getString(R.string.ip);
         new RequestTaskSignUp(SignupActivity.this, getBaseContext(), user).execute(ip + "/users/signup");
     }

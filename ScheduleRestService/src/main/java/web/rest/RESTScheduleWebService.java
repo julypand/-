@@ -2,12 +2,11 @@ package web.rest;
 
 import model.Lesson;
 import model.User;
-import org.json.JSONException;
-import org.json.JSONObject;
 import service.ScheduleService;
 import service.impl.ScheduleServiceImpl;
 import web.ScheduleWebService;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -29,20 +28,12 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Override
-    public String getPassword(String email) {
-        JSONObject child;
-        String mail = null;
+    public User getUser(User user) { // TODO passing user is clumsy. Think of just passing email only. Through query params?
 
-        try {
-            child = new JSONObject(email);
-            mail = child.getString("email");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        int group_id = scheduleService.getGroupID(mail);
-        String str = ("{\"password\":\"" + scheduleService.getPassword(mail) + "\",\"group_id\":\"" + group_id + "\"}");
-        System.out.println(str);
-        return str;
+        String email = user.getEmail();
+        String password = scheduleService.getPassword(email);
+        user.setPassword(password);
+        return user;
     }
 
     @Path("/signup")
@@ -50,20 +41,13 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Override
-    public String checkEmail(User user) {
-        JSONObject child;
-        String email = null;
-        try {
-            child = new JSONObject(user);
-            email = child.getString("email");
-
-            if (scheduleService.isUserContainedAndAdding(user)) {
-                return new String("{\"email\":\"" + null + "\"}");
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
+    public boolean checkEmail(User user) {
+        String email = user.getEmail();
+        if(!scheduleService.isUserContainedAndAdding(user)){
+            return true;
         }
-        return new String("{\"email\":\"" + email + "\"}");
+        return false;
+
     }
 
     @Path("/classes")
@@ -71,18 +55,9 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Override
-    public ArrayList<Lesson> getSchedule(String mas){
-        ArrayList<Lesson> lessons;
-        JSONObject child;
-        int  group = 0;
-        try {
-            child = new JSONObject(mas);
-            group = child.getInt("group");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        lessons = scheduleService.getClasses(group);
-        System.out.println(lessons);
-        return lessons;
+    public User getSchedules(User user){
+        HashMap<String,ArrayList<Lesson>> schedules =  scheduleService.getSchedules(user);
+        user.setSchedules(schedules);
+        return user;
     }
 }
