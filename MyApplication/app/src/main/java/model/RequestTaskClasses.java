@@ -3,6 +3,7 @@ package model;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.widget.Toast;
 import com.example.julie.myapplication.R;
@@ -21,8 +22,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
 
@@ -101,7 +100,9 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
             Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
         else{
-
+            dbHelper = new HelperDB(getContext(),"schedule",null,1);
+            //SQLiteDatabase db = dbHelper.getWritableDatabase();
+            dbHelper.addToLocalDB(user.getSchedules());
             //TODO add to local db
             //parseJSONLessons(msgFromServer, schedules);
             Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_schedule), Toast.LENGTH_LONG).show();

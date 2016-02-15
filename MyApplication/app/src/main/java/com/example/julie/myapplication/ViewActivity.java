@@ -109,6 +109,7 @@ public class ViewActivity extends AppCompatActivity {
             HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             db.execSQL("DELETE FROM schedule");
+            db.execSQL("DELETE FROM lesson");
             group = loginPreferences.getInt("group",1);
             //new RequestTaskClasses(ViewActivity.this,getBaseContext()).execute(getResources().getString(R.string.ip) + "/users/classes");
         }
