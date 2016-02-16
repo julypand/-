@@ -145,6 +145,20 @@ public class HelperDB extends SQLiteOpenHelper {
             String query = "INSERT INTO schedule (name) VALUES ('" + name + "\')";
             db.execSQL(query);
         }
+
+        public void deleteSchedule(String name_schedule){
+                SQLiteDatabase db = this.getWritableDatabase();
+                int id_schedule = getIdSchedule(name_schedule);
+                deleteLessons(id_schedule);
+                db.execSQL("DELETE FROM schedule WHERE id = " + id_schedule);
+
+
+        }
+        public void deleteLessons(int id_schedule){
+                SQLiteDatabase db = this.getWritableDatabase();
+                db.execSQL("DELETE FROM lesson WHERE id_schedule = " + id_schedule );
+
+        }
         public void clear(){
                 SQLiteDatabase db = this.getWritableDatabase();
                 db.execSQL("DELETE FROM schedule");

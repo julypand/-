@@ -3,8 +3,10 @@ package model;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,9 +51,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.label.setText(mDataset.get(position));
     }
 
-    public void addItem(String dataObj) {
+    public void addItem(String dataObj, int index) {
         mDataset.add(dataObj);
-        notifyItemInserted(mDataset.size()-1);
+        notifyItemInserted(index);
     }
 
     public void deleteItem(int index) {
@@ -71,16 +73,50 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             implements View
             .OnClickListener {
         TextView label;
+        Button btnEdit,btnDelete;
         private RecyclerViewAdapter parent;
 
 
-        public DataObjectHolder(final View itemView,Activity _activity,RecyclerViewAdapter parent) {
+        public DataObjectHolder(final View itemView,Activity _activity, final RecyclerViewAdapter parent) {
             super(itemView);
-            label = (TextView) itemView.findViewById(R.id.textView);
+            label = (TextView) itemView.findViewById(R.id.schedule_name);
+            btnEdit = (Button)itemView.findViewById(R.id.btnEdit);
+            btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
+
             activity = _activity;
             this.parent = parent;
+
+
             itemView.setOnClickListener(this);
-           
+            btnDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                    builder.setTitle(activity.getResources().getString(R.string.yousure))
+                            .setMessage(activity.getResources().getString(R.string.delete_schedule) + " '" + label.getText() + "' ?")
+                                    .setCancelable(false)
+                                    .setNegativeButton(activity.getResources().getString(R.string.ok),
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    HelperDB dbHelper = new HelperDB(activity.getBaseContext(),"schedule",null,1);
+                                                    String name_schedule = label.getText().toString();
+                                                    dbHelper.deleteSchedule(name_schedule);
+                                                    parent.deleteItem(getAdapterPosition());
+                                                    dialog.dismiss();
+
+                                                }
+                                            })
+                                    .setPositiveButton(activity.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                        }
+                                    });
+
+                    builder.create();
+                    builder.show();
+                }
+            });
+
         }
 
 

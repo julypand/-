@@ -117,16 +117,13 @@ public class ScheduleListActivity extends AppCompatActivity {
     }
     private ArrayList<String> getDataSet() {
         dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
-        ArrayList<String> ff = dbHelper.getNameSchedules();
         return dbHelper.getNameSchedules();
 
     }
     private void addSchedule(String name){
         dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
-
         dbHelper.addSchedule(name);
-        //mRecyclerView.
-        mAdapter.addItem(name);
+        mAdapter.addItem(name, mAdapter.getItemCount() + 1);
     }
 
 
