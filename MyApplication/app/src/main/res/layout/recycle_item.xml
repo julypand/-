@@ -11,18 +11,33 @@ xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
 <TextView
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/textView"
-    android:text="xui"
     android:textColor="@color/black"
-    android:textSize="30dp"
-    android:layout_alignParentTop="true"/>
-    </RelativeLayout>
-</android.support.v7.widget.CardView>
+    android:textSize="20dp"
+    android:layout_alignParentTop="true"
+    android:layout_weight="0.94" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_edit"
+            android:id="@+id/btnEdit"
+            android:layout_marginRight="10dp" />
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_trash"
+            android:id="@+id/btnDelete" />
     </LinearLayout>
+</android.support.v7.widget.CardView>
+
+</LinearLayout>

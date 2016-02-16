@@ -1,14 +1,15 @@
 package model;
 
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 
 
 public class Lesson {
     String day;
     String name;
     String room;
-    Time timeStart;
-    Time timeEnd;
+    String timeStart;
+    String timeEnd;
     String type;
 
     Lesson(){}
@@ -17,10 +18,24 @@ public class Lesson {
         setDay(day);
         setName(name);
         setRoom(room);
+        setTimeStart(convert(timeStart));
+        setTimeEnd(convert(timeEnd));
+        setType(type);
+    }
+    public Lesson(String day, String name, String room, String timeStart, String timeEnd, String type){
+        setDay(day);
+        setName(name);
+        setRoom(room);
         setTimeStart(timeStart);
         setTimeEnd(timeEnd);
         setType(type);
     }
+
+    public String convert(Time time){
+        SimpleDateFormat format=new SimpleDateFormat("HH:mm");
+        return format.format(time);
+    }
+
     public String getDay() {
         return day;
     }
@@ -45,19 +60,19 @@ public class Lesson {
         this.room = room;
     }
 
-    public Time getTimeStart() {
+    public String getTimeStart() {
         return timeStart;
     }
 
-    public void setTimeStart(Time timeStart) {
+    public void setTimeStart(String timeStart) {
         this.timeStart = timeStart;
     }
 
-    public Time getTimeEnd() {
+    public String getTimeEnd() {
         return timeEnd;
     }
 
-    public void setTimeEnd(Time timeEnd) {
+    public void setTimeEnd(String timeEnd) {
         this.timeEnd = timeEnd;
     }
 

@@ -36,8 +36,8 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     @Override
     public HashMap<String,ArrayList<Lesson>> getSchedules(User user){ return conn.getSchedules(user);}
     @Override
-    public ArrayList<Lesson> getClasses(int schedule_id) {
-        return conn.getClasses(schedule_id);
+    public ArrayList<Lesson> getLessons(int schedule_id) {
+        return conn.getLessons(schedule_id);
     }
 
     @Override

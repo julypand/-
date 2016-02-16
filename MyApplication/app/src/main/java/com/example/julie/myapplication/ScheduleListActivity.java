@@ -2,11 +2,12 @@ package com.example.julie.myapplication;
 
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 import java.util.ArrayList;
@@ -29,7 +31,7 @@ public class ScheduleListActivity extends AppCompatActivity {
     String ip;
     HelperDB dbHelper;
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private RecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
@@ -41,20 +43,52 @@ public class ScheduleListActivity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager= new LinearLayoutManager(this);
+
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new RecyclerViewAdapter(getDataSet(),ScheduleListActivity.this);
         mRecyclerView.setAdapter(mAdapter);
+
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                showAddDialog();
             }
         });
+    }
+
+    public void showAddDialog() {
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+        dialog.setTitle(getResources().getString(R.string.enter_name));
+
+        View linearlayout = getLayoutInflater().inflate(R.layout.dialog_newschedule, null);
+        dialog.setView(linearlayout);
+
+        final TextView name_schedule = (TextView)linearlayout.findViewById(R.id.etNameSchedule);
+
+        dialog.setPositiveButton(getResources().getString(R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                })
+
+                .setNegativeButton(getResources().getString(R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                String name = name_schedule.getText().toString();
+                                addSchedule(name);
+                                dialog.dismiss();
+                            }
+                        });
+
+        dialog.create();
+        dialog.show();
     }
 
     @Override
@@ -83,11 +117,20 @@ public class ScheduleListActivity extends AppCompatActivity {
     }
     private ArrayList<String> getDataSet() {
         dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
+        ArrayList<String> ff = dbHelper.getNameSchedules();
         return dbHelper.getNameSchedules();
 
+    }
+    private void addSchedule(String name){
+        dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
+
+        dbHelper.addSchedule(name);
+        //mRecyclerView.
+        mAdapter.addItem(name);
     }
 
 
 
 
 }
+

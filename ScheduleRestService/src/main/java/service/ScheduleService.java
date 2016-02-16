@@ -12,6 +12,6 @@ public interface ScheduleService {
     boolean isUserContainedAndAdding(User user);
     String getType(int type_id);
     HashMap<String,ArrayList<Lesson>> getSchedules(User user);
-    ArrayList<Lesson> getClasses(int schedule_id);
+    ArrayList<Lesson> getLessons(int schedule_id);
     int getGroupID(String email);
 }

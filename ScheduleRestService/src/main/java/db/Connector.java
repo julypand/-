@@ -213,7 +213,7 @@ public class Connector {
             while(rs.next()){
                 int schedule_id = rs.getInt(2);
                 name = getNameSchedule(schedule_id);
-                ArrayList<Lesson> lessons = getClasses(schedule_id);
+                ArrayList<Lesson> lessons = getLessons(schedule_id);
                 schedules.put(name,lessons);
                 }
             }
@@ -236,16 +236,36 @@ public class Connector {
         return schedules;
     }
 
-    public ArrayList<Lesson> getClasses(int schedule_id){
+    private String getNameClass(int name_id){
+        String name = "";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM class WHERE  id=\'" + name_id + "\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                name = rs.getString(2);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+
+    }
+
+    public ArrayList<Lesson> getLessons(int schedule_id){
         ArrayList<Lesson> list = new ArrayList<>();
         Statement st;
         ResultSet rs;
         try{
             st = con.createStatement();
-            String query = "SELECT * FROM class WHERE  schedule_id=\'" + schedule_id + "\'";
+            String query = "SELECT * FROM lesson WHERE  schedule_id=\'" + schedule_id + "\'";
             rs = st.executeQuery(query);
             while(rs.next()){
-               list.add(new Lesson(rs.getString(7),rs.getString(2), rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(8))));
+                String name = getNameClass(rs.getInt(2));
+               list.add(new Lesson(rs.getString(7),name, rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(8))));
             }
 
         } catch (SQLException e) {

@@ -140,6 +140,11 @@ public class HelperDB extends SQLiteOpenHelper {
                 return lessons;
 
         }
+        public void addSchedule(String name){
+            SQLiteDatabase db = this.getReadableDatabase();
+            String query = "INSERT INTO schedule (name) VALUES ('" + name + "\')";
+            db.execSQL(query);
+        }
         public void clear(){
                 SQLiteDatabase db = this.getWritableDatabase();
                 db.execSQL("DELETE FROM schedule");

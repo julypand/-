@@ -25,8 +25,8 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    public ArrayList<Lesson> getClasses(int schedule_id) {
-        return scheduleDAO.getClasses(schedule_id);
+    public ArrayList<Lesson> getLessons(int schedule_id) {
+        return scheduleDAO.getLessons(schedule_id);
     }
     @Override
     public HashMap<String,ArrayList<Lesson>> getSchedules(User user){
