@@ -102,6 +102,8 @@ public class ViewActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         int id = item.getItemId();
         if(id == R.id.logoff){
+            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            dbHelper.clear();
             loginPrefEditor = loginPreferences.edit();
             loginPrefEditor.putBoolean("saveLogin", false);
             loginPrefEditor.commit();

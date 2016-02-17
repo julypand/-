@@ -2,7 +2,6 @@ package model;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,12 +22,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private ArrayList<String> mDataset;
     private static Activity activity;
-    private LayoutInflater layoutInflater;
 
-    public RecyclerViewAdapter(Context context){
-        layoutInflater = LayoutInflater.from(context);
-        mDataset = new ArrayList<String>();
-    }
 
 
     public RecyclerViewAdapter(ArrayList<String> myDataset, Activity _activity) {
@@ -74,7 +68,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             .OnClickListener {
         TextView label;
         Button btnEdit,btnDelete;
-        private RecyclerViewAdapter parent;
+        private static RecyclerViewAdapter parent;
 
 
         public DataObjectHolder(final View itemView,Activity _activity, final RecyclerViewAdapter parent) {
@@ -91,30 +85,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             btnDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                    builder.setTitle(activity.getResources().getString(R.string.yousure))
-                            .setMessage(activity.getResources().getString(R.string.delete_schedule) + " '" + label.getText() + "' ?")
-                                    .setCancelable(false)
-                                    .setNegativeButton(activity.getResources().getString(R.string.ok),
-                                            new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int id) {
-                                                    HelperDB dbHelper = new HelperDB(activity.getBaseContext(),"schedule",null,1);
-                                                    String name_schedule = label.getText().toString();
-                                                    dbHelper.deleteSchedule(name_schedule);
-                                                    parent.deleteItem(getAdapterPosition());
-                                                    dialog.dismiss();
-
-                                                }
-                                            })
-                                    .setPositiveButton(activity.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int id) {
-                                            dialog.cancel();
-                                        }
-                                    });
-
-                    builder.create();
-                    builder.show();
+                    showDialog("delete", label, parent, getAdapterPosition());
                 }
+
+            });
+            btnEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showDialog("edit", label, parent, getAdapterPosition());
+                }
+
             });
 
         }
@@ -133,6 +113,56 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             activity.finish();
             activity.startActivity(intent);
         }
+    }
+    private static void showDialog(String kind, final TextView tvname_schedule, final RecyclerViewAdapter rv, final int position){
+
+        final String name_schedule = tvname_schedule.getText().toString();
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setCancelable(false);
+
+        builder.setPositiveButton(activity.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        });
+
+        switch (kind) {
+            case "delete":
+                builder.setTitle(activity.getResources().getString(R.string.yousure))
+                        .setMessage(activity.getResources().getString(R.string.delete_schedule) + " '" + name_schedule + "' ?")
+                        .setNegativeButton(activity.getResources().getString(R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        HelperDB dbHelper = new HelperDB(activity.getBaseContext(), "schedule", null, 1);
+                                        dbHelper.deleteSchedule(name_schedule);
+                                        rv.deleteItem(position);
+                                        dialog.dismiss();
+
+                                    }
+                                });
+                break;
+            case "edit":
+                final View linearlayout = activity.getLayoutInflater().inflate(R.layout.dialog_renameschedule, null);
+                builder.setView(linearlayout);
+                builder.setTitle(activity.getResources().getString(R.string.enter_new_name_schedule) + " '" + name_schedule + "':")
+                        .setNegativeButton(activity.getResources().getString(R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        HelperDB dbHelper = new HelperDB(activity.getBaseContext(), "schedule", null, 1);
+                                        TextView tv = (TextView) linearlayout.findViewById(R.id.etNewNameSchedule);
+                                        String new_name_schedule = tv.getText().toString();
+                                        if (!dbHelper.isNameScheduleExist(name_schedule)) {
+                                            dbHelper.renameSchedule(new_name_schedule, name_schedule);
+                                            tvname_schedule.setText(new_name_schedule);
+                                        }
+                                        dialog.dismiss();
+                                    }
+                                });
+                break;
+
+        }
+        builder.create();
+        builder.show();
     }
 
 }

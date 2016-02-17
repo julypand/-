@@ -67,8 +67,9 @@
     <string name="load_schedule">Load schedule...</string>
     <string name="success_schedule">Load Schedule Successfully!</string>
 
-    <string name="name_schedule">Name Schedule</string>
+    <string name="name_schedule">Schedule name</string>
     <string name="enter_name">Enter schedule name:</string>
+    <string name="enter_new_name_schedule">Rename </string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
     <string name ="yousure">Are you sure?</string>

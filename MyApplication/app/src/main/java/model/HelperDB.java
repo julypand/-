@@ -88,7 +88,6 @@ public class HelperDB extends SQLiteOpenHelper {
                         } while (c.moveToNext());
                         c.close();
                 }
-
                 return id;
 
         }
@@ -151,18 +150,33 @@ public class HelperDB extends SQLiteOpenHelper {
                 int id_schedule = getIdSchedule(name_schedule);
                 deleteLessons(id_schedule);
                 db.execSQL("DELETE FROM schedule WHERE id = " + id_schedule);
-
-
         }
         public void deleteLessons(int id_schedule){
                 SQLiteDatabase db = this.getWritableDatabase();
-                db.execSQL("DELETE FROM lesson WHERE id_schedule = " + id_schedule );
+                db.execSQL("DELETE FROM lesson WHERE id_schedule = " + id_schedule);
 
         }
         public void clear(){
                 SQLiteDatabase db = this.getWritableDatabase();
                 db.execSQL("DELETE FROM schedule");
                 db.execSQL("DELETE FROM lesson");
+        }
+
+
+        public boolean isNameScheduleExist(String name){
+                SQLiteDatabase db = this.getReadableDatabase();
+                String query = "SELECT FROM schedule WHERE name = '" + name;
+                String q = "SELECT id FROM schedule " + "WHERE name = '" + name + "' LIMIT 1";
+                Cursor c = db.rawQuery(q,null);
+                if (!c.moveToFirst()){
+                        return true;
+                }
+                return false;
+        }
+        public void renameSchedule(String new_name,String name){
+                SQLiteDatabase db = this.getWritableDatabase();
+                int id = getIdSchedule(name);
+                db.execSQL("UPDATE schedule SET name = '" +  new_name + "' WHERE id = " + id );
         }
 }
 
