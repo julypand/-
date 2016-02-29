@@ -254,7 +254,41 @@ public class Connector {
         return name;
 
     }
+    private String getNameDay(int id){
+        String name = "";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM day WHERE  id=\'" + id + "\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                name = rs.getString(2);
+            }
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+    }
+
+    public  ArrayList<String> getWeek(){
+        ArrayList<String> week = new ArrayList<>();
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM day";
+            rs = st.executeQuery(query);
+            while(rs.next()){
+                week.add(rs.getString(2));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return week;
+    }
     public ArrayList<Lesson> getLessons(int schedule_id){
         ArrayList<Lesson> list = new ArrayList<>();
         Statement st;
@@ -265,7 +299,7 @@ public class Connector {
             rs = st.executeQuery(query);
             while(rs.next()){
                 String name = getNameClass(rs.getInt(2));
-               list.add(new Lesson(rs.getString(7), name, rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(8))));
+               list.add(new Lesson(rs.getInt(8), name, rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(7))));
             }
 
         } catch (SQLException e) {

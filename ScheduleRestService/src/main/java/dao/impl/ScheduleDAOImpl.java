@@ -44,6 +44,10 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     public int getGroupID(String email) {
         return conn.getGroupID(email);
     }
+    @Override
+    public  ArrayList<String> getWeek() {
+        return conn.getWeek();
+    }
 
 
 }

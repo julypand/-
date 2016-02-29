@@ -1,5 +1,6 @@
 package model;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -13,6 +14,7 @@ public class User {
     private String email;
     private String password;
     private HashMap<String,ArrayList<Lesson>> schedules = new HashMap<>();
+    private  ArrayList<String> week;
 
     public User(){}
 
@@ -107,5 +109,13 @@ public class User {
 
     public void setSchedules(HashMap<String,ArrayList<Lesson>> schedules) {
         this.schedules = schedules;
+    }
+
+    public  ArrayList<String> getWeek() {
+        return week;
+    }
+
+    public void setWeek( ArrayList<String> week) {
+        this.week = week;
     }
 }

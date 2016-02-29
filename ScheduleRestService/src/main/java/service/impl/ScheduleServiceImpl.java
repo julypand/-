@@ -44,4 +44,5 @@ public class ScheduleServiceImpl implements ScheduleService {
     public ArrayList<User> getAllUsers() {
         return scheduleDAO.getAllUsers();
     }
+    public  ArrayList<String> getWeek(){return  scheduleDAO.getWeek();}
 }

@@ -68,7 +68,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             .OnClickListener {
         TextView label;
         Button btnEdit,btnDelete;
-        private static RecyclerViewAdapter parent;
 
 
         public DataObjectHolder(final View itemView,Activity _activity, final RecyclerViewAdapter parent) {
@@ -78,7 +77,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
 
             activity = _activity;
-            this.parent = parent;
 
 
             itemView.setOnClickListener(this);
@@ -117,10 +115,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private static void showDialog(String kind, final TextView tvname_schedule, final RecyclerViewAdapter rv, final int position){
 
         final String name_schedule = tvname_schedule.getText().toString();
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setCancelable(false);
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
 
-        builder.setPositiveButton(activity.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+        dialog.setCancelable(false);
+
+        dialog.setPositiveButton(activity.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.cancel();
             }
@@ -128,7 +127,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         switch (kind) {
             case "delete":
-                builder.setTitle(activity.getResources().getString(R.string.yousure))
+                dialog.setTitle(activity.getResources().getString(R.string.yousure))
                         .setMessage(activity.getResources().getString(R.string.delete_schedule) + " '" + name_schedule + "' ?")
                         .setNegativeButton(activity.getResources().getString(R.string.ok),
                                 new DialogInterface.OnClickListener() {
@@ -143,8 +142,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 break;
             case "edit":
                 final View linearlayout = activity.getLayoutInflater().inflate(R.layout.dialog_renameschedule, null);
-                builder.setView(linearlayout);
-                builder.setTitle(activity.getResources().getString(R.string.enter_new_name_schedule) + " '" + name_schedule + "':")
+
+                dialog.setView(linearlayout);
+
+                dialog.setTitle(activity.getResources().getString(R.string.enter_new_name_schedule) + " '" + name_schedule + "':")
                         .setNegativeButton(activity.getResources().getString(R.string.ok),
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
@@ -161,8 +162,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 break;
 
         }
-        builder.create();
-        builder.show();
+        dialog.create();
+        dialog.show();
     }
 
 }

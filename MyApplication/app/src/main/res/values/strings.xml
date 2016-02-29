@@ -6,7 +6,7 @@
     <string name="hello">Hello!</string>
     <string name="create_account_text">If you are here for the first time, you can</string>
     <string name="login_text">or</string>
-    <string name="ip">http://192.168.100.7:8080</string>
+    <string name="ip">http://192.168.100.4:8080</string>
 
     <!-- Login -->
     <string name="login">Login, please!</string>
@@ -72,10 +72,21 @@
     <string name="enter_new_name_schedule">Rename </string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
-    <string name ="yousure">Are you sure?</string>
+    <string name="yousure">Are you sure?</string>
     <string name="delete_schedule">Delete schedule: </string>
+
+
+    <string name="new_class">New class: </string>
+    <string name="class_name">Name</string>
+    <string name="class_room">Room</string>
+    <string name="class_stime">Start Time</string>
+    <string name="class_etime">End Time</string>
+    <string name="class_type">Type</string>
+    <string name="saveButton">Save</string>
+
 
 
 
 
 </resources>
+

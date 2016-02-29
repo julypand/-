@@ -5,16 +5,16 @@ import java.text.SimpleDateFormat;
 
 
 public class Lesson {
-    String day;
-    String name;
-    String room;
-    String timeStart;
-    String timeEnd;
-    String type;
+    private int day_id;
+    private String name;
+    private String room;
+    private String timeStart;
+    private String timeEnd;
+    private String type;
 
     Lesson(){}
 
-    public Lesson(String day, String name, String room, Time timeStart, Time timeEnd, String type){
+    public Lesson(int day, String name, String room, Time timeStart, Time timeEnd, String type){
         setDay(day);
         setName(name);
         setRoom(room);
@@ -22,7 +22,7 @@ public class Lesson {
         setTimeEnd(convert(timeEnd));
         setType(type);
     }
-    public Lesson(String day, String name, String room, String timeStart, String timeEnd, String type){
+    public Lesson(int day, String name, String room, String timeStart, String timeEnd, String type){
         setDay(day);
         setName(name);
         setRoom(room);
@@ -36,12 +36,12 @@ public class Lesson {
         return format.format(time);
     }
 
-    public String getDay() {
-        return day;
+    public int getDay() {
+        return day_id;
     }
 
-    public void setDay(String day) {
-        this.day= day;
+    public void setDay(int day) {
+        this.day_id= day;
     }
 
     public String getName() {

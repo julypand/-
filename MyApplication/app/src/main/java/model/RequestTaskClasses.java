@@ -102,7 +102,7 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
         }
         else{
             dbHelper = new HelperDB(getContext(),"schedule",null,1);
-            dbHelper.addToLocalDB(user.getSchedules());
+            dbHelper.addToLocalDB(user);
             Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
             getActivity().finish();
             getActivity().startActivity(intent);

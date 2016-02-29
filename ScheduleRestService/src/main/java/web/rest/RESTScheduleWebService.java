@@ -57,7 +57,9 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Override
     public User getSchedules(User user){
         HashMap<String,ArrayList<Lesson>> schedules =  scheduleService.getSchedules(user);
+        ArrayList<String> week = scheduleService.getWeek();
         user.setSchedules(schedules);
+        user.setWeek(week);
         return user;
     }
 }

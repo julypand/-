@@ -2,6 +2,7 @@ package com.example.julie.myapplication;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v4.app.Fragment;
@@ -30,16 +31,21 @@ public class ClassesListActivity extends AppCompatActivity {
     int day_id;
     static String name_schedule;
     SharedPreferences loginPreferences;
-    static String[] week = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+    HelperDB dbHelper;
+    static ArrayList<String> week;
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    private ViewPager mViewPager;
+    private static ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classes_list);
+        dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+        week = dbHelper.getWeek();
+
+
 
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         name_schedule = loginPreferences.getString("name_schedule","");
@@ -56,18 +62,21 @@ public class ClassesListActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.setCurrentItem(day_id);
 
-/*
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                int day_id = mViewPager.getCurrentItem();
+                Intent intent = new Intent(ClassesListActivity.this, NewClassActivity.class);
+                intent.putExtra("day_id", day_id);
+                ClassesListActivity.this.finish();
+                startActivity(intent);
             }
         });
-*/
     }
+
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(ClassesListActivity.this, ViewActivity.class);//
@@ -83,9 +92,7 @@ public class ClassesListActivity extends AppCompatActivity {
         TableLayout tableClasses;
         Button btnLeft, btnRight;
 
-        public PlaceholderFragment() {
-
-        }
+        public PlaceholderFragment() {}
 
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
@@ -101,7 +108,7 @@ public class ClassesListActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_classes_list, container, false);
             day_id = getArguments().getInt(ARG_SECTION_NUMBER)-1;
 
-            String day = week[day_id];
+            String day = week.get(day_id);
             today = (TextView) rootView.findViewById(R.id.tvDay);
             btnLeft = (Button) rootView.findViewById(R.id.btnleft);
             btnRight = (Button) rootView.findViewById(R.id.btnright);
@@ -109,14 +116,14 @@ public class ClassesListActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     int day_right_id = (day_id + 1) % 6;
-                    goDay(day_right_id);
+                    mViewPager.setCurrentItem(day_right_id);
                 }
             });
             btnLeft.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int day_right_id = (day_id + 5) % 6;
-                    goDay(day_right_id);
+                    mViewPager.setCurrentItem(day_right_id);
                 }
             });
 
@@ -134,7 +141,7 @@ public class ClassesListActivity extends AppCompatActivity {
 
         void writeDaySchedule(String day,String name_schedule){
             HelperDB dbHelper = new HelperDB(getActivity().getBaseContext(),"schedule",null,1);
-            ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day,name_schedule);
+            ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day_id,name_schedule);
             addLessons(lessonsOfDay);
         }
 
@@ -178,17 +185,17 @@ public class ClassesListActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return getResources().getString(R.string.monday);
+                    return week.get(0);
                 case 1:
-                    return getResources().getString(R.string.tuesday);
+                    return week.get(1);
                 case 3:
-                    return getResources().getString(R.string.wednesday);
+                    return week.get(2);
                 case 4:
-                    return getResources().getString(R.string.thursday);
+                    return week.get(3);
                 case 5:
-                    return getResources().getString(R.string.friday);
+                    return week.get(4);
                 case 6:
-                    return getResources().getString(R.string.saturday);
+                    return week.get(5);
             }
             return null;
         }

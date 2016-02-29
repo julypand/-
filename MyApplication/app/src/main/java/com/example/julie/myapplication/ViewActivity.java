@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 import model.HelperDB;
 import model.RequestTaskClasses;
 import model.User;
@@ -19,8 +21,11 @@ import model.User;
 public class ViewActivity extends AppCompatActivity {
 
     Button btnMonday, btnTuesday, btnWednesday, btnThursday, btnFriday, btnSaturday;
+    ArrayList<Button> weekBtn;
     SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
+    HelperDB dbHelper;
+    ArrayList<String> week;
     String ip;
     String name_schedule;
 
@@ -33,6 +38,8 @@ public class ViewActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         name_schedule = loginPreferences.getString("name_schedule","");
 
+        dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+        week = dbHelper.getWeek();
 
         Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
         topToolBar.setTitle(name_schedule);
@@ -45,6 +52,15 @@ public class ViewActivity extends AppCompatActivity {
         btnThursday = (Button) findViewById(R.id.btnThursday);
         btnFriday = (Button) findViewById(R.id.btnFriday);
         btnSaturday = (Button) findViewById(R.id.btnSaturday);
+
+        btnMonday.setText(week.get(0));
+        btnTuesday.setText(week.get(1));
+        btnWednesday.setText(week.get(2));
+        btnThursday.setText(week.get(3));
+        btnFriday.setText(week.get(4));
+        btnSaturday.setText(week.get(5));
+
+
 
 
         btnMonday.setOnClickListener(new View.OnClickListener() {

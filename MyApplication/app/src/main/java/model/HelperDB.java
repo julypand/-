@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,7 +19,7 @@ public class HelperDB extends SQLiteOpenHelper {
         public void onCreate(SQLiteDatabase db) {
                 db.execSQL("CREATE TABLE lesson ("
                         + "id_schedule integer,"
-                        + "day text,"
+                        + "day_id integer,"
                         + "name text,"
                         + "room text,"
                         + "stime text,"
@@ -31,12 +32,20 @@ public class HelperDB extends SQLiteOpenHelper {
                         + "name text"
                         + ");");
 
+                db.execSQL("CREATE TABLE day ("
+                        + "id integer primary key autoincrement,"
+                        + "name text"
+                        + ");");
+
+
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
                 db.execSQL("DROP TABLE IF EXIST schedule");
                 db.execSQL("DROP TABLE IF EXIST lesson");
+                db.execSQL("DROP TABLE IF EXIST day");
+
                 onCreate(db);
 
         }
@@ -47,7 +56,9 @@ public class HelperDB extends SQLiteOpenHelper {
 
 
 
-        public void addToLocalDB(HashMap<String,ArrayList<Lesson>> schedule) {
+        public void addToLocalDB(User user){
+                HashMap<String,ArrayList<Lesson>> schedule = user.getSchedules();
+                ArrayList<String> week = user.getWeek();
                 ContentValues cv = new ContentValues();
                 SQLiteDatabase db = this.getWritableDatabase();
 
@@ -64,11 +75,15 @@ public class HelperDB extends SQLiteOpenHelper {
                                 cv.put("stime", l.getTimeStart());
                                 cv.put("room", l.getRoom());
                                 cv.put("name", l.getName());
-                                cv.put("day", l.getDay());
+                                cv.put("day_id", l.getDay());
                                 cv.put("type", l.getType());
                                 db.insert("lesson", null, cv);
                         }
 
+                }
+                for(String day: week){
+                        String query = "INSERT INTO day (name) VALUES ('" + day +  "\')";
+                        db.execSQL(query);
                 }
 
         }
@@ -108,16 +123,29 @@ public class HelperDB extends SQLiteOpenHelper {
                 }
                 return names;
         }
+        public ArrayList<String> getWeek(){
+                ArrayList<String> week = new ArrayList<>();
+                SQLiteDatabase db = this.getReadableDatabase();
+                Cursor c = db.query("day", null, null, null, null, null, null);
+                if (c.moveToFirst()) {
+                        int dayColIndex = c.getColumnIndex("name");
+                        do {
+                                week.add(c.getString(dayColIndex));
+                        } while (c.moveToNext());
+                        c.close();
+                }
 
+                return week;
+        }
 
-        public ArrayList<Lesson> readScheduleOfDay(String day, String schedule_name) {
+        public ArrayList<Lesson> readScheduleOfDay(int day, String schedule_name) {
                 ArrayList<Lesson> lessons = new ArrayList<>();
                 SQLiteDatabase db = this.getReadableDatabase();
                 Cursor c = db.query("lesson", null, null, null, null, null, null);
                 int schedule_id = getIdSchedule(schedule_name);
                 if (c.moveToFirst()) {
                         int idColIndex = c.getColumnIndex("id_schedule");
-                        int dayColIndex = c.getColumnIndex("day");
+                        int dayColIndex = c.getColumnIndex("day_id");
                         int nameColIndex = c.getColumnIndex("name");
                         int roomColIndex = c.getColumnIndex("room");
                         int timestartColIndex = c.getColumnIndex("stime");
@@ -125,8 +153,8 @@ public class HelperDB extends SQLiteOpenHelper {
                         int typeColIndex = c.getColumnIndex("type");
 
                         do {
-                                if (c.getString(dayColIndex).equals(day) && c.getInt(idColIndex) == (schedule_id))
-                                        lessons.add(new Lesson(c.getString(dayColIndex),
+                                if (c.getInt(dayColIndex) == (day) && c.getInt(idColIndex) == (schedule_id))
+                                        lessons.add(new Lesson(c.getInt(dayColIndex),
                                                 c.getString(nameColIndex),
                                                 c.getString(roomColIndex),
                                                 c.getString(timestartColIndex),
@@ -137,6 +165,38 @@ public class HelperDB extends SQLiteOpenHelper {
                         c.close();
                 }
                 return lessons;
+
+        }
+        public String getNameDay(int day_id){
+                String name= "";
+                SQLiteDatabase db = this.getReadableDatabase();
+                Cursor c = db.query("day", null, null, null, null, null, null);
+                if (c.moveToFirst()) {
+                        int idColIndex = c.getColumnIndex("id");
+                        int nameColIndex = c.getColumnIndex("name");
+
+                        do {
+                                if (c.getInt(idColIndex) == (day_id))
+                                        name = c.getString(nameColIndex);
+                        } while (c.moveToNext());
+                        c.close();
+                }
+                 return name;
+
+        }
+        public void addLesson(Lesson lesson, String name_schedule, int day_id){
+                SQLiteDatabase db = this.getReadableDatabase();
+                int id_schedule = getIdSchedule(name_schedule);
+                String query = "INSERT INTO lesson (id_schedule,day_id,name,room,stime,etime,type) " +
+                        "                               VALUES ('" + id_schedule + " ',' "
+                                                                        + day_id + "','"  + lesson.getName() +"','"
+                                                                                + lesson.getRoom()  + "','"
+                                                                                        +lesson.getTimeStart() + "','"
+                                                                                                +lesson.getTimeEnd() + "','"
+                                                                                                        +lesson.getType() + "\')";
+
+
+                db.execSQL(query);
 
         }
         public void addSchedule(String name){
@@ -160,6 +220,8 @@ public class HelperDB extends SQLiteOpenHelper {
                 SQLiteDatabase db = this.getWritableDatabase();
                 db.execSQL("DELETE FROM schedule");
                 db.execSQL("DELETE FROM lesson");
+
+                db.execSQL("DELETE FROM day");
         }
 
 

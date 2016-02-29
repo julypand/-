@@ -14,4 +14,5 @@ public interface ScheduleService {
     HashMap<String,ArrayList<Lesson>> getSchedules(User user);
     ArrayList<Lesson> getLessons(int schedule_id);
     int getGroupID(String email);
+    ArrayList<String> getWeek();
 }
