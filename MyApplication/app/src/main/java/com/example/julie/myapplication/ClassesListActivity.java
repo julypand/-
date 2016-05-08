@@ -22,6 +22,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import model.HelperDB;
 import model.Lesson;
@@ -46,9 +48,8 @@ public class ClassesListActivity extends AppCompatActivity {
         week = dbHelper.getWeek();
 
 
-
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
-        name_schedule = loginPreferences.getString("name_schedule","");
+        name_schedule = loginPreferences.getString("name_schedule", "");
 
 
         day_id = getIntent().getIntExtra("day_id", 0);
@@ -142,6 +143,12 @@ public class ClassesListActivity extends AppCompatActivity {
         void writeDaySchedule(String day,String name_schedule){
             HelperDB dbHelper = new HelperDB(getActivity().getBaseContext(),"schedule",null,1);
             ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day_id,name_schedule);
+            Collections.sort(lessonsOfDay, new Comparator<Lesson>() {
+                @Override
+                public int compare(Lesson lhs, Lesson rhs) {
+                    return lhs.getTimeStart().compareTo(rhs.getTimeStart());
+                }
+            });
             addLessons(lessonsOfDay);
         }
 
@@ -153,7 +160,7 @@ public class ClassesListActivity extends AppCompatActivity {
                 TextView roomText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
                 TextView typeText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
 
-                timeText.setText(les.getTimeStart() + " - " + les.getTimeEnd());
+                timeText.setText(les.convert(les.getTimeStart()) + " - " + les.convert(les.getTimeEnd()));
                 nameText.setText(les.getName());
                 roomText.setText(les.getRoom());
                 typeText.setText(les.getType());
