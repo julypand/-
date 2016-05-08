@@ -299,7 +299,7 @@ public class Connector {
             rs = st.executeQuery(query);
             while(rs.next()){
                 String name = getNameClass(rs.getInt(2));
-               list.add(new Lesson(rs.getInt(8), name, rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(7))));
+               list.add(new Lesson(rs.getInt(1),rs.getInt(8), name, rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(7))));
             }
 
         } catch (SQLException e) {

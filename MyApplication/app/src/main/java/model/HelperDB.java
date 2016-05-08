@@ -33,7 +33,7 @@ public class HelperDB extends SQLiteOpenHelper {
                         + ");");
 
                 db.execSQL("CREATE TABLE day ("
-                        + "id integer primary key autoincrement,"
+                        + "id integer,"
                         + "name text"
                         + ");");
 
@@ -62,17 +62,18 @@ public class HelperDB extends SQLiteOpenHelper {
                 ContentValues cv = new ContentValues();
                 SQLiteDatabase db = this.getWritableDatabase();
 
+
                 for (HashMap.Entry<String, ArrayList<Lesson>> entry : schedule.entrySet()) {
                         String name_schedule = entry.getKey();
                         String query = "INSERT INTO schedule (name) VALUES ('" + name_schedule + "\')";
                         db.execSQL(query);
-                        int schedule_id = getIdSchedule(name_schedule);
 
+                        int schedule_id = getIdSchedule(name_schedule);
                         ArrayList<Lesson> lessons = entry.getValue();
                         for (Lesson l : lessons) {
                                 cv.put("id_schedule", schedule_id);
-                                cv.put("etime", l.getTimeEnd());
-                                cv.put("stime", l.getTimeStart());
+                                cv.put("etime", l.convert(l.getTimeEnd()));
+                                cv.put("stime", l.convert(l.getTimeStart()));
                                 cv.put("room", l.getRoom());
                                 cv.put("name", l.getName());
                                 cv.put("day_id", l.getDay());
@@ -81,10 +82,11 @@ public class HelperDB extends SQLiteOpenHelper {
                         }
 
                 }
-                for(String day: week){
-                        String query = "INSERT INTO day (name) VALUES ('" + day +  "\')";
-                        db.execSQL(query);
-                }
+            for(int i = 0; i < week.size(); i++){
+                String query = "INSERT INTO day (id, name) VALUES ('"+ i + "\',\'" + week.get(i) +  "\')";
+                db.execSQL(query);
+            }
+
 
         }
         public int getIdSchedule(String name){
@@ -94,7 +96,6 @@ public class HelperDB extends SQLiteOpenHelper {
                 if (c.moveToFirst()) {
                         int idColIndex = c.getColumnIndex("id");
                         int nameColIndex = c.getColumnIndex("name");
-
                         do {
                                 if (c.getString(nameColIndex).equals(name)) {
                                         id = c.getInt(idColIndex);
@@ -144,7 +145,8 @@ public class HelperDB extends SQLiteOpenHelper {
                 Cursor c = db.query("lesson", null, null, null, null, null, null);
                 int schedule_id = getIdSchedule(schedule_name);
                 if (c.moveToFirst()) {
-                        int idColIndex = c.getColumnIndex("id_schedule");
+                        int idColIndex = c.getColumnIndex("id");
+                        int idScheduleColIndex = c.getColumnIndex("id_schedule");
                         int dayColIndex = c.getColumnIndex("day_id");
                         int nameColIndex = c.getColumnIndex("name");
                         int roomColIndex = c.getColumnIndex("room");
@@ -153,8 +155,10 @@ public class HelperDB extends SQLiteOpenHelper {
                         int typeColIndex = c.getColumnIndex("type");
 
                         do {
-                                if (c.getInt(dayColIndex) == (day) && c.getInt(idColIndex) == (schedule_id))
-                                        lessons.add(new Lesson(c.getInt(dayColIndex),
+                            int day_id = c.getInt(dayColIndex);
+                            int schedule= c.getInt(idScheduleColIndex);
+                                if (c.getInt(dayColIndex) == (day) && c.getInt(idScheduleColIndex) == (schedule_id))
+                                        lessons.add(new Lesson(1,c.getInt(dayColIndex),
                                                 c.getString(nameColIndex),
                                                 c.getString(roomColIndex),
                                                 c.getString(timestartColIndex),

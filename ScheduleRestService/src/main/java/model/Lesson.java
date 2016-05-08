@@ -5,24 +5,18 @@ import java.text.SimpleDateFormat;
 
 
 public class Lesson {
+    private int id;
     private int day_id;
     private String name;
     private String room;
-    private String timeStart;
-    private String timeEnd;
+    private Time timeStart;
+    private Time timeEnd;
     private String type;
 
     Lesson(){}
 
-    public Lesson(int day, String name, String room, Time timeStart, Time timeEnd, String type){
-        setDay(day);
-        setName(name);
-        setRoom(room);
-        setTimeStart(convert(timeStart));
-        setTimeEnd(convert(timeEnd));
-        setType(type);
-    }
-    public Lesson(int day, String name, String room, String timeStart, String timeEnd, String type){
+    public Lesson(int id, int day, String name, String room, Time timeStart, Time timeEnd, String type){
+        setId(id);
         setDay(day);
         setName(name);
         setRoom(room);
@@ -34,6 +28,14 @@ public class Lesson {
     public String convert(Time time){
         SimpleDateFormat format=new SimpleDateFormat("HH:mm");
         return format.format(time);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getDay() {
@@ -60,19 +62,19 @@ public class Lesson {
         this.room = room;
     }
 
-    public String getTimeStart() {
+    public Time getTimeStart() {
         return timeStart;
     }
 
-    public void setTimeStart(String timeStart) {
+    public void setTimeStart(Time timeStart) {
         this.timeStart = timeStart;
     }
 
-    public String getTimeEnd() {
+    public Time getTimeEnd() {
         return timeEnd;
     }
 
-    public void setTimeEnd(String timeEnd) {
+    public void setTimeEnd(Time timeEnd) {
         this.timeEnd = timeEnd;
     }
 
