@@ -10,9 +10,6 @@ import com.example.julie.myapplication.R;
 import com.example.julie.myapplication.ScheduleListActivity;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -101,7 +98,7 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
             Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
         else{
-            dbHelper = new HelperDB(getContext(),"schedule",null,1);
+            dbHelper = new HelperDB(getContext());
             dbHelper.addToLocalDB(user);
             Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
             getActivity().finish();

@@ -44,7 +44,7 @@ public class ClassesListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classes_list);
-        dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+        dbHelper = new HelperDB(getApplicationContext());
         week = dbHelper.getWeek();
 
 
@@ -92,6 +92,7 @@ public class ClassesListActivity extends AppCompatActivity {
         int day_id;
         TableLayout tableClasses;
         Button btnLeft, btnRight;
+        HelperDB helperDB;
 
         public PlaceholderFragment() {}
 
@@ -141,8 +142,8 @@ public class ClassesListActivity extends AppCompatActivity {
 
 
         void writeDaySchedule(String day,String name_schedule){
-            HelperDB dbHelper = new HelperDB(getActivity().getBaseContext(),"schedule",null,1);
-            ArrayList<Lesson> lessonsOfDay = dbHelper.readScheduleOfDay(day_id,name_schedule);
+            helperDB = new HelperDB(getActivity().getApplicationContext());
+            ArrayList<Lesson> lessonsOfDay = helperDB.readScheduleOfDay(day_id,name_schedule);
             Collections.sort(lessonsOfDay, new Comparator<Lesson>() {
                 @Override
                 public int compare(Lesson lhs, Lesson rhs) {

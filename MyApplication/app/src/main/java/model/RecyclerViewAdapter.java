@@ -132,7 +132,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         .setNegativeButton(activity.getResources().getString(R.string.ok),
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
-                                        HelperDB dbHelper = new HelperDB(activity.getBaseContext(), "schedule", null, 1);
+                                        HelperDB dbHelper = new HelperDB(activity.getBaseContext());
                                         dbHelper.deleteSchedule(name_schedule);
                                         rv.deleteItem(position);
                                         dialog.dismiss();
@@ -149,7 +149,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         .setNegativeButton(activity.getResources().getString(R.string.ok),
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
-                                        HelperDB dbHelper = new HelperDB(activity.getBaseContext(), "schedule", null, 1);
+                                        HelperDB dbHelper = new HelperDB(activity.getBaseContext());
                                         TextView tv = (TextView) linearlayout.findViewById(R.id.etNewNameSchedule);
                                         String new_name_schedule = tv.getText().toString();
                                         if (!dbHelper.isNameScheduleExist(name_schedule)) {

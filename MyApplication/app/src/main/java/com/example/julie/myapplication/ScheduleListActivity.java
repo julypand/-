@@ -49,6 +49,7 @@ public class ScheduleListActivity extends AppCompatActivity {
         mAdapter = new RecyclerViewAdapter(getDataSet(),ScheduleListActivity.this);
         mRecyclerView.setAdapter(mAdapter);
 
+        dbHelper = new HelperDB(getApplicationContext());
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -100,7 +101,7 @@ public class ScheduleListActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         int id = item.getItemId();
         if(id == R.id.logoff){
-            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            HelperDB dbHelper = new HelperDB(getApplicationContext());
             dbHelper.clear();
             loginPrefEditor = loginPreferences.edit();
             loginPrefEditor.putBoolean("saveLogin", false);
@@ -109,7 +110,8 @@ public class ScheduleListActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         }
         if(id == R.id.refresh){
-            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            HelperDB dbHelper = new HelperDB(getApplicationContext());
+            dbHelper.getWritableDatabase();
             dbHelper.clear();
             String email = loginPreferences.getString("email", "");
             ip = getResources().getString(R.string.ip);
@@ -118,12 +120,12 @@ public class ScheduleListActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private ArrayList<String> getDataSet() {
-        dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
+        dbHelper = new HelperDB(getBaseContext());
         return dbHelper.getNameSchedules();
 
     }
     private void addSchedule(String name){
-        dbHelper = new HelperDB(getBaseContext(),"schedule",null,1);
+        dbHelper = new HelperDB(getBaseContext());
         dbHelper.addSchedule(name);
         mAdapter.addItem(name, mAdapter.getItemCount() + 1);
     }

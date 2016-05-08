@@ -29,10 +29,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, ScheduleListActivity.class));
         }
         else {
-            dbHelper = new HelperDB(this,"schedule",null,1);
+            dbHelper = new HelperDB(getApplicationContext());
             dbHelper.clear();
-            dbHelper.close();
-        }
+                    }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

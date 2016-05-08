@@ -26,11 +26,14 @@ public class NewClassActivity extends AppCompatActivity {
     boolean isStart = true;
     String name, room,stime,etime, type;
     Calendar dateAndTime = Calendar.getInstance();
+    HelperDB helperDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_class);
+
+        helperDB = new HelperDB(getApplicationContext());
 
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         name_schedule = loginPreferences.getString("name_schedule", "");
@@ -100,9 +103,8 @@ public class NewClassActivity extends AppCompatActivity {
             onSaveFailed();
             return;
         }
-        HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
         Lesson lesson = new Lesson(day_id,name,room,stime,etime,type);
-        dbHelper.addLesson(lesson,name_schedule,day_id);
+        helperDB.addLesson(lesson,name_schedule,day_id);
         NewClassActivity.this.finish();
         Intent intent = new Intent(NewClassActivity.this, ClassesListActivity.class);
         intent.putExtra("day_id", day_id);

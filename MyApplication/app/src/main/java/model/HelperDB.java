@@ -10,31 +10,49 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HelperDB extends SQLiteOpenHelper {
+    private static final int DATABASE_VERSION = 1;
 
-        public HelperDB(Context context, String name, SQLiteDatabase.CursorFactory factory, int vers) {
-                super(context, name, factory, vers);
+    private static final String DATABASE_NAME = "schedule3";
+
+    private static final String TABLE_LESSON = "lesson";
+    private static final String TABLE_DAY = "day";
+    private static final String TABLE_SCHEDULE = "schedule";
+
+    private static final String KEY_ID = "id";
+    private static final String KEY_SCH_ID = "schedule_id";
+    private static final String KEY_DAY_ID = "day_id";
+    private static final String KEY_NAME = "name";
+    private static final String KEY_ROOM = "room";
+    private static final String KEY_TYPE = "type";
+    private static final String KEY_ST_TIME = "stime";
+    private static final String KEY_E_TIME = "etime";
+
+
+        public HelperDB(Context context) {
+                super(context, DATABASE_NAME, null, DATABASE_VERSION);
         }
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-                db.execSQL("CREATE TABLE lesson ("
-                        + "id_schedule integer,"
-                        + "day_id integer,"
-                        + "name text,"
-                        + "room text,"
-                        + "stime text,"
-                        + "etime text,"
-                        + "type text"
+                db.execSQL("CREATE TABLE " + TABLE_LESSON + " ( "
+                        + KEY_ID + " integer, "
+                        + KEY_SCH_ID + " integer, "
+                        + KEY_DAY_ID + " integer, "
+                        + KEY_NAME + " text, "
+                        + KEY_ROOM + " text, "
+                        + KEY_ST_TIME + " text, "
+                        + KEY_E_TIME + " text, "
+                        + KEY_TYPE + " text"
                         + ");");
 
-                db.execSQL("CREATE TABLE schedule ("
-                        + "id integer primary key autoincrement,"
-                        + "name text"
+                db.execSQL("CREATE TABLE " + TABLE_SCHEDULE + " ( "
+                        + KEY_ID + " integer primary key autoincrement, "
+                        + KEY_NAME + " text "
                         + ");");
 
-                db.execSQL("CREATE TABLE day ("
-                        + "id integer,"
-                        + "name text"
+                db.execSQL("CREATE TABLE " + TABLE_DAY + " ( "
+                        + KEY_ID + " integer, "
+                        + KEY_NAME +" text "
                         + ");");
 
 
@@ -42,9 +60,9 @@ public class HelperDB extends SQLiteOpenHelper {
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-                db.execSQL("DROP TABLE IF EXIST schedule");
-                db.execSQL("DROP TABLE IF EXIST lesson");
-                db.execSQL("DROP TABLE IF EXIST day");
+                db.execSQL("DROP TABLE IF EXIST " + TABLE_LESSON);
+                db.execSQL("DROP TABLE IF EXIST " + TABLE_SCHEDULE);
+                db.execSQL("DROP TABLE IF EXIST " + TABLE_DAY);
 
                 onCreate(db);
 
@@ -65,25 +83,26 @@ public class HelperDB extends SQLiteOpenHelper {
 
                 for (HashMap.Entry<String, ArrayList<Lesson>> entry : schedule.entrySet()) {
                         String name_schedule = entry.getKey();
-                        String query = "INSERT INTO schedule (name) VALUES ('" + name_schedule + "\')";
+                        String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_NAME +") VALUES ('" + name_schedule + "\')";
                         db.execSQL(query);
 
                         int schedule_id = getIdSchedule(name_schedule);
                         ArrayList<Lesson> lessons = entry.getValue();
                         for (Lesson l : lessons) {
-                                cv.put("id_schedule", schedule_id);
-                                cv.put("etime", l.convert(l.getTimeEnd()));
-                                cv.put("stime", l.convert(l.getTimeStart()));
-                                cv.put("room", l.getRoom());
-                                cv.put("name", l.getName());
-                                cv.put("day_id", l.getDay());
-                                cv.put("type", l.getType());
-                                db.insert("lesson", null, cv);
+                                cv.put(KEY_ID, l.getId());
+                                cv.put(KEY_SCH_ID, schedule_id);
+                                cv.put(KEY_E_TIME, l.convert(l.getTimeEnd()));
+                                cv.put(KEY_ST_TIME, l.convert(l.getTimeStart()));
+                                cv.put(KEY_ROOM, l.getRoom());
+                                cv.put(KEY_NAME, l.getName());
+                                cv.put(KEY_DAY_ID, l.getDay());
+                                cv.put(KEY_TYPE, l.getType());
+                                db.insert(TABLE_LESSON, null, cv);
                         }
 
                 }
             for(int i = 0; i < week.size(); i++){
-                String query = "INSERT INTO day (id, name) VALUES ('"+ i + "\',\'" + week.get(i) +  "\')";
+                String query = "INSERT INTO " + TABLE_DAY +"("+KEY_ID+","+KEY_NAME+") VALUES ('"+ i + "\',\'" + week.get(i) +  "\')";
                 db.execSQL(query);
             }
 
@@ -92,10 +111,10 @@ public class HelperDB extends SQLiteOpenHelper {
         public int getIdSchedule(String name){
                 int id = 0;
                 SQLiteDatabase db = this.getReadableDatabase();
-                Cursor c = db.query("schedule", null, null, null, null, null, null);
+                Cursor c = db.query(TABLE_SCHEDULE, null, null, null, null, null, null);
                 if (c.moveToFirst()) {
-                        int idColIndex = c.getColumnIndex("id");
-                        int nameColIndex = c.getColumnIndex("name");
+                        int idColIndex = c.getColumnIndex(KEY_ID);
+                        int nameColIndex = c.getColumnIndex(KEY_NAME);
                         do {
                                 if (c.getString(nameColIndex).equals(name)) {
                                         id = c.getInt(idColIndex);
@@ -112,9 +131,9 @@ public class HelperDB extends SQLiteOpenHelper {
                 ArrayList<String> names = new ArrayList<>();
 
                 SQLiteDatabase db = this.getReadableDatabase();
-                Cursor c = db.query("schedule", null, null, null, null, null, null);
+                Cursor c = db.query(TABLE_SCHEDULE, null, null, null, null, null, null);
                 if (c.moveToFirst()) {
-                        int nameColIndex = c.getColumnIndex("name");
+                        int nameColIndex = c.getColumnIndex(KEY_NAME);
                         do {
                                 String name = c.getString(nameColIndex);
                                 names.add(name);
@@ -127,9 +146,9 @@ public class HelperDB extends SQLiteOpenHelper {
         public ArrayList<String> getWeek(){
                 ArrayList<String> week = new ArrayList<>();
                 SQLiteDatabase db = this.getReadableDatabase();
-                Cursor c = db.query("day", null, null, null, null, null, null);
+                Cursor c = db.query(TABLE_DAY, null, null, null, null, null, null);
                 if (c.moveToFirst()) {
-                        int dayColIndex = c.getColumnIndex("name");
+                        int dayColIndex = c.getColumnIndex(KEY_NAME);
                         do {
                                 week.add(c.getString(dayColIndex));
                         } while (c.moveToNext());
@@ -142,23 +161,23 @@ public class HelperDB extends SQLiteOpenHelper {
         public ArrayList<Lesson> readScheduleOfDay(int day, String schedule_name) {
                 ArrayList<Lesson> lessons = new ArrayList<>();
                 SQLiteDatabase db = this.getReadableDatabase();
-                Cursor c = db.query("lesson", null, null, null, null, null, null);
+                Cursor c = db.query(TABLE_LESSON, null, null, null, null, null, null);
                 int schedule_id = getIdSchedule(schedule_name);
                 if (c.moveToFirst()) {
-                        int idColIndex = c.getColumnIndex("id");
-                        int idScheduleColIndex = c.getColumnIndex("id_schedule");
-                        int dayColIndex = c.getColumnIndex("day_id");
-                        int nameColIndex = c.getColumnIndex("name");
-                        int roomColIndex = c.getColumnIndex("room");
-                        int timestartColIndex = c.getColumnIndex("stime");
-                        int timeendColIndex = c.getColumnIndex("etime");
-                        int typeColIndex = c.getColumnIndex("type");
+                        int idColIndex = c.getColumnIndex(KEY_ID);
+                        int idScheduleColIndex = c.getColumnIndex(KEY_SCH_ID);
+                        int dayColIndex = c.getColumnIndex(KEY_DAY_ID);
+                        int nameColIndex = c.getColumnIndex(KEY_NAME);
+                        int roomColIndex = c.getColumnIndex(KEY_ROOM);
+                        int timestartColIndex = c.getColumnIndex(KEY_ST_TIME);
+                        int timeendColIndex = c.getColumnIndex(KEY_E_TIME);
+                        int typeColIndex = c.getColumnIndex(KEY_TYPE);
 
                         do {
                             int day_id = c.getInt(dayColIndex);
                             int schedule= c.getInt(idScheduleColIndex);
                                 if (c.getInt(dayColIndex) == (day) && c.getInt(idScheduleColIndex) == (schedule_id))
-                                        lessons.add(new Lesson(1,c.getInt(dayColIndex),
+                                        lessons.add(new Lesson(c.getInt(idColIndex),c.getInt(dayColIndex),
                                                 c.getString(nameColIndex),
                                                 c.getString(roomColIndex),
                                                 c.getString(timestartColIndex),
@@ -174,10 +193,10 @@ public class HelperDB extends SQLiteOpenHelper {
         public String getNameDay(int day_id){
                 String name= "";
                 SQLiteDatabase db = this.getReadableDatabase();
-                Cursor c = db.query("day", null, null, null, null, null, null);
+                Cursor c = db.query(TABLE_DAY, null, null, null, null, null, null);
                 if (c.moveToFirst()) {
-                        int idColIndex = c.getColumnIndex("id");
-                        int nameColIndex = c.getColumnIndex("name");
+                        int idColIndex = c.getColumnIndex(KEY_ID);
+                        int nameColIndex = c.getColumnIndex(KEY_NAME);
 
                         do {
                                 if (c.getInt(idColIndex) == (day_id))
@@ -188,24 +207,25 @@ public class HelperDB extends SQLiteOpenHelper {
                  return name;
 
         }
-        public void addLesson(Lesson lesson, String name_schedule, int day_id){
-                SQLiteDatabase db = this.getReadableDatabase();
-                int id_schedule = getIdSchedule(name_schedule);
-                String query = "INSERT INTO lesson (id_schedule,day_id,name,room,stime,etime,type) " +
-                        "                               VALUES ('" + id_schedule + " ',' "
-                                                                        + day_id + "','"  + lesson.getName() +"','"
-                                                                                + lesson.getRoom()  + "','"
-                                                                                        +lesson.getTimeStart() + "','"
-                                                                                                +lesson.getTimeEnd() + "','"
-                                                                                                        +lesson.getType() + "\')";
+        public void addLesson(Lesson l, String name_schedule, int day_id){
+            SQLiteDatabase db = this.getReadableDatabase();
+            ContentValues cv = new ContentValues();
+            int schedule_id = getIdSchedule(name_schedule);
 
-
-                db.execSQL(query);
+            cv.put(KEY_ID, l.getId());
+            cv.put(KEY_SCH_ID, schedule_id);
+            cv.put(KEY_E_TIME, l.convert(l.getTimeEnd()));
+            cv.put(KEY_ST_TIME, l.convert(l.getTimeStart()));
+            cv.put(KEY_ROOM, l.getRoom());
+            cv.put(KEY_NAME, l.getName());
+            cv.put(KEY_DAY_ID, l.getDay());
+            cv.put(KEY_TYPE, l.getType());
+            db.insert(TABLE_LESSON, null, cv);
 
         }
         public void addSchedule(String name){
             SQLiteDatabase db = this.getReadableDatabase();
-            String query = "INSERT INTO schedule (name) VALUES ('" + name + "\')";
+            String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_NAME + ") VALUES ('" + name + "\')";
             db.execSQL(query);
         }
 
@@ -213,26 +233,25 @@ public class HelperDB extends SQLiteOpenHelper {
                 SQLiteDatabase db = this.getWritableDatabase();
                 int id_schedule = getIdSchedule(name_schedule);
                 deleteLessons(id_schedule);
-                db.execSQL("DELETE FROM schedule WHERE id = " + id_schedule);
+                db.execSQL("DELETE FROM " + TABLE_SCHEDULE + " WHERE " + KEY_ID + " = " + id_schedule);
         }
         public void deleteLessons(int id_schedule){
                 SQLiteDatabase db = this.getWritableDatabase();
-                db.execSQL("DELETE FROM lesson WHERE id_schedule = " + id_schedule);
+                db.execSQL("DELETE FROM " + TABLE_LESSON + " WHERE "+ KEY_SCH_ID + " = " + id_schedule);
 
         }
         public void clear(){
                 SQLiteDatabase db = this.getWritableDatabase();
-                db.execSQL("DELETE FROM schedule");
-                db.execSQL("DELETE FROM lesson");
-
-                db.execSQL("DELETE FROM day");
+                db.execSQL("DELETE FROM "+ TABLE_SCHEDULE);
+                db.execSQL("DELETE FROM " + TABLE_LESSON);
+                db.execSQL("DELETE FROM "+ TABLE_DAY);
         }
 
 
         public boolean isNameScheduleExist(String name){
                 SQLiteDatabase db = this.getReadableDatabase();
-                String query = "SELECT FROM schedule WHERE name = '" + name;
-                String q = "SELECT id FROM schedule " + "WHERE name = '" + name + "' LIMIT 1";
+                String query = "SELECT FROM " + TABLE_SCHEDULE +" WHERE " +KEY_NAME + " = '" + name;
+                String q = "SELECT " + KEY_ID + " FROM " + TABLE_SCHEDULE  + " WHERE " + KEY_NAME + " = '" + name + "' LIMIT 1";
                 Cursor c = db.rawQuery(q,null);
                 if (!c.moveToFirst()){
                         return true;
@@ -242,7 +261,7 @@ public class HelperDB extends SQLiteOpenHelper {
         public void renameSchedule(String new_name,String name){
                 SQLiteDatabase db = this.getWritableDatabase();
                 int id = getIdSchedule(name);
-                db.execSQL("UPDATE schedule SET name = '" +  new_name + "' WHERE id = " + id );
+                db.execSQL("UPDATE " + TABLE_SCHEDULE + " SET "+ KEY_NAME + " = '" +  new_name + "' WHERE "+ KEY_ID + " = " + id );
         }
 }
 

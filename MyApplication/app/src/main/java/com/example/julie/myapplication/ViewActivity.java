@@ -21,7 +21,6 @@ import model.User;
 public class ViewActivity extends AppCompatActivity {
 
     Button btnMonday, btnTuesday, btnWednesday, btnThursday, btnFriday, btnSaturday;
-    ArrayList<Button> weekBtn;
     SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
     HelperDB dbHelper;
@@ -38,7 +37,7 @@ public class ViewActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         name_schedule = loginPreferences.getString("name_schedule","");
 
-        dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+        dbHelper = new HelperDB(getApplicationContext());
         week = dbHelper.getWeek();
 
         Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
@@ -118,7 +117,7 @@ public class ViewActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         int id = item.getItemId();
         if(id == R.id.logoff){
-            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            HelperDB dbHelper = new HelperDB(getApplicationContext());
             dbHelper.clear();
             loginPrefEditor = loginPreferences.edit();
             loginPrefEditor.putBoolean("saveLogin", false);
@@ -127,7 +126,8 @@ public class ViewActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         }
         if(id == R.id.refresh){
-            HelperDB dbHelper = new HelperDB(getApplicationContext(),"schedule",null,1);
+            HelperDB dbHelper = new HelperDB(this);
+            dbHelper.getWritableDatabase();
             dbHelper.clear();
             String email = loginPreferences.getString("email", "");
             ip = getResources().getString(R.string.ip);
