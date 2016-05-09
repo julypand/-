@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 public class Lesson {
     int id;
     int day_id;
+    String schedule_name;
     String name;
     String room;
     Time timeStart;
@@ -18,9 +19,10 @@ public class Lesson {
     Lesson() {
     }
 
-    public Lesson(int id, int day, String name, String room, Time timeStart, Time timeEnd, String type) {
+    public Lesson(int id, int day, String name,String schedule_name, String room, Time timeStart, Time timeEnd, String type) {
         setId(id);
         setDay(day);
+        setSchedule(schedule_name);
         setName(name);
         setRoom(room);
         setTimeStart(timeStart);
@@ -28,17 +30,19 @@ public class Lesson {
         setType(type);
     }
 
-    public Lesson(int id, int day, String name, String room, String timeStart, String timeEnd, String type) {
+    public Lesson(int id, int day, String name, String schedule_name, String room, String timeStart, String timeEnd, String type) {
         setId(id);
         setDay(day);
+        setSchedule(schedule_name);
         setName(name);
         setRoom(room);
         setTimeStart(convert(timeStart));
         setTimeEnd(convert(timeEnd));
         setType(type);
     }
-    public Lesson(int day, String name, String room, String timeStart, String timeEnd, String type) {
+    public Lesson(int day, String name,String schedule_name, String room, String timeStart, String timeEnd, String type) {
         setDay(day);
+        setSchedule(schedule_name);
         setName(name);
         setRoom(room);
         setTimeStart(convert(timeStart));
@@ -107,6 +111,13 @@ public class Lesson {
         return type;
     }
 
+    public String getSchedule() {
+        return schedule_name;
+    }
+
+    public void setSchedule(String schedule_name) {
+        this.schedule_name = schedule_name;
+    }
 
     public Time convert(String time) {
         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");

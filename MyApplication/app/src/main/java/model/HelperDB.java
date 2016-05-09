@@ -56,6 +56,7 @@ public class HelperDB extends SQLiteOpenHelper {
                         + ");");
 
 
+
         }
 
         @Override
@@ -179,6 +180,7 @@ public class HelperDB extends SQLiteOpenHelper {
                                 if (c.getInt(dayColIndex) == (day) && c.getInt(idScheduleColIndex) == (schedule_id))
                                         lessons.add(new Lesson(c.getInt(idColIndex),c.getInt(dayColIndex),
                                                 c.getString(nameColIndex),
+                                                schedule_name,
                                                 c.getString(roomColIndex),
                                                 c.getString(timestartColIndex),
                                                 c.getString(timeendColIndex),
@@ -207,7 +209,7 @@ public class HelperDB extends SQLiteOpenHelper {
                  return name;
 
         }
-        public void addLesson(Lesson l, String name_schedule, int day_id){
+        public void addLesson(Lesson l, String name_schedule){
             SQLiteDatabase db = this.getReadableDatabase();
             ContentValues cv = new ContentValues();
             int schedule_id = getIdSchedule(name_schedule);
@@ -245,6 +247,7 @@ public class HelperDB extends SQLiteOpenHelper {
                 db.execSQL("DELETE FROM "+ TABLE_SCHEDULE);
                 db.execSQL("DELETE FROM " + TABLE_LESSON);
                 db.execSQL("DELETE FROM "+ TABLE_DAY);
+
         }
 
 

@@ -16,6 +16,8 @@ import java.util.Calendar;
 
 import model.HelperDB;
 import model.Lesson;
+import model.RequestTaskLogin;
+import model.RequestTaskNewClass;
 
 public class NewClassActivity extends AppCompatActivity {
     int day_id;
@@ -27,6 +29,7 @@ public class NewClassActivity extends AppCompatActivity {
     String name, room,stime,etime, type;
     Calendar dateAndTime = Calendar.getInstance();
     HelperDB helperDB;
+    String ip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,12 +106,10 @@ public class NewClassActivity extends AppCompatActivity {
             onSaveFailed();
             return;
         }
-        Lesson lesson = new Lesson(day_id,name,room,stime,etime,type);
-        helperDB.addLesson(lesson,name_schedule,day_id);
-        NewClassActivity.this.finish();
-        Intent intent = new Intent(NewClassActivity.this, ClassesListActivity.class);
-        intent.putExtra("day_id", day_id);
-        startActivity(intent);
+        Lesson lesson = new Lesson(day_id,name,name_schedule,room,stime,etime,type);
+        ip =  getResources().getString(R.string.ip);
+        new RequestTaskNewClass(NewClassActivity.this, getBaseContext(), lesson, name_schedule).execute(ip + "/users/classes/addLesson");
+
 
     }
     public boolean validate() {

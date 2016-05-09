@@ -29,7 +29,6 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Produces(MediaType.APPLICATION_JSON)
     @Override
     public User getUser(User user) { // TODO passing user is clumsy. Think of just passing email only. Through query params?
-
         String email = user.getEmail();
         String password = scheduleService.getPassword(email);
         user.setPassword(password);
@@ -42,7 +41,6 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Produces(MediaType.APPLICATION_JSON)
     @Override
     public boolean checkEmail(User user) {
-        String email = user.getEmail();
         if(!scheduleService.isUserContainedAndAdding(user)){
             return true;
         }
@@ -61,5 +59,14 @@ public class RESTScheduleWebService implements ScheduleWebService {
         user.setSchedules(schedules);
         user.setWeek(week);
         return user;
+    }
+    @Path("/classes/addLesson")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public int addLesson(Lesson lesson){
+        int lessonId = scheduleService.addLesson(lesson);
+        return lessonId;
     }
 }

@@ -1,17 +1,15 @@
 package model;
 
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+import com.example.julie.myapplication.ClassesListActivity;
 import com.example.julie.myapplication.R;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,76 +19,68 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 
-public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
-
-
+public class RequestTaskNewClass extends AsyncTask<String, Void, Void> {
+    private int idLesson;
     private ProgressDialog pDialog;
+    private Lesson lesson;
     private Context context;
     private Activity activity;
-    private String email, password;
-    private User user;
-    public SharedPreferences loginPreferences;
-    SharedPreferences.Editor loginPrefEditor;
-    private boolean isSaveLogin;
-    String error = null;
+    private HelperDB dbHelper;
+    private String error = null;
+    private String scheduleName;
 
-
-    public RequestTaskLogin(Activity activity, Context context, String email, String password, boolean isSaveLogin){
+    public RequestTaskNewClass(Activity activity,Context context,Lesson lesson,String schedule_name){
         this.setActivity(activity);
         this.setpDialog();
-        this.setEmail(email);
-        this.setPassword(password);
-        this.setIsSaveLogin(isSaveLogin);
+        this.setLesson(lesson);
         this.setContext(context);
+        this.setScheduleName(schedule_name);
     }
-
 
     @Override
     protected Void doInBackground(String... params) {
         BufferedReader br;
         OutputStream os;
         BufferedWriter bw;
-        StringBuilder sb = new StringBuilder();
         URL url;
 
         try{
             url = new URL(params[0]);
-            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection connection = (HttpURLConnection)url.openConnection(); //2
             connection.setRequestMethod("POST");
             connection.setDoOutput(true);
             connection.setDoInput(true);
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
-            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             ObjectMapper mapper = new ObjectMapper();
 
-            mapper.writeValue(bw, new User(getEmail()));
+            mapper.writeValue(bw, lesson);
             bw.close();
             os.close();
 
-
-
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            user = mapper.readValue(br,User.class);
+            idLesson = mapper.readValue(br,int.class);
+            lesson.setId(idLesson);
             br.close();
 
 
         } catch (MalformedURLException e) {
-
+            e.printStackTrace();
+            error = e.getMessage().toString();
+        } catch (ProtocolException e) {
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (IOException e) {
-
             e.printStackTrace();
             error = e.getMessage().toString();
         }
-
         return null;
     }
 
@@ -98,7 +88,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     protected void onPreExecute(){
         pDialog.setTitle(getActivity().getResources().getString(R.string.wait));
         pDialog.setIndeterminate(true);
-        pDialog.setMessage(getActivity().getResources().getString(R.string.login_wait));
+        pDialog.setMessage(getActivity().getResources().getString(R.string.add_wait));
         pDialog.show();
         super.onPreExecute();
     }
@@ -108,28 +98,20 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         super.onPostExecute(result);
         pDialog.dismiss();
 
-            AES.setKey(getPassword());
-            AES.decrypt(user.getPassword().trim());
-            if(AES.getDecryptedString().equals(getPassword())){
-                loginPreferences = context.getSharedPreferences("loginPrefs", context.MODE_PRIVATE);
-                loginPrefEditor = loginPreferences.edit();
-                loginPrefEditor.putString("email",email);
-                if(isSaveLogin) {
-                    loginPrefEditor.putBoolean("saveLogin", true);
-                }
-                else {
-                    loginPrefEditor.putBoolean("saveLogin", false);
-                }
-                loginPrefEditor.commit();
-                RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), user);
-                rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
-
-            }
-            else{
-                Toast.makeText(getContext(), getActivity().getResources().getString(R.string.incorrent_email), Toast.LENGTH_LONG).show();
-            }
+        if(error != null){
+            Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
+        else{
+            dbHelper = new HelperDB(getContext());
+            dbHelper.addLesson(lesson, scheduleName);
+            Intent intent = new Intent(getActivity(), ClassesListActivity.class);
+            intent.putExtra("day_id", lesson.getDay());
+            getActivity().finish();
+            getActivity().startActivity(intent);
+            Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_adding), Toast.LENGTH_LONG).show();
 
+        }
+    }
 
 
 
@@ -141,25 +123,30 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         this.activity = activity;
     }
 
+    public ProgressDialog getpDialog() {
+        return pDialog;
+    }
+
     public void setpDialog() {
         this.pDialog = new ProgressDialog(getActivity(), R.style.AppTheme);
     }
 
-    public String getEmail() {
-        return email;
+    public Lesson getLesson() {
+        return lesson;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
     }
 
-    public String getPassword() {
-        return password;
+    public String getScheduleName() {
+        return scheduleName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setScheduleName(String scheduleName) {
+        this.scheduleName = scheduleName;
     }
+
     public Context getContext() {
         return context;
     }
@@ -167,8 +154,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     public void setContext(Context context) {
         this.context = context;
     }
-
-    public void setIsSaveLogin(boolean isSaveLogin) {
-        this.isSaveLogin = isSaveLogin;
-    }
 }
+
+

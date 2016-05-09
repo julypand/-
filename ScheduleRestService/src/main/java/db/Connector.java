@@ -49,20 +49,13 @@ public class Connector {
     public String getPassword(String email){
         Statement st;
         ResultSet rs;
-        ArrayList<String> list = new ArrayList<>();
         try{
             st = con.createStatement();
-            rs = st.executeQuery("SELECT email FROM user");
+            rs = st.executeQuery("SELECT password FROM user WHERE email = \'" + email + "\'");
             while(rs.next()) {
-                list.add(rs.getString(1));
+                return  rs.getString(1);
             }
-            if(list.contains(email)){
-                st = con.createStatement();
-                rs = st.executeQuery("SELECT password FROM user WHERE email=\'" + email + "\'");
-                while(rs.next()){
-                    return rs.getString(1);
-                }
-            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -75,7 +68,7 @@ public class Connector {
         int result = 0;
         try{
             st = con.createStatement();
-            rs = st.executeQuery("SELECT group_id FROM user WHERE email=\'" + email + "\'");
+            rs = st.executeQuery("SELECT group_id FROM user WHERE email = \'" + email + "\'");
             if(rs.next()) {
                 result = rs.getInt(1);
                 System.out.println(rs.getInt(1));
@@ -165,40 +158,6 @@ public class Connector {
 
 
     // Schedule
-    private String getNameSchedule(int schedule_id){
-        String name = "";
-        Statement st;
-        ResultSet rs;
-        try {
-            st = con.createStatement();
-            rs = st.executeQuery("SELECT * FROM schedule WHERE  id='" + schedule_id + "\'");
-            if(rs.next()) {
-                name = rs.getString(2);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return name;
-
-    }
-
-    public String getType(int id){
-        String type = "lecture";
-        Statement st;
-        ResultSet rs;
-        try{
-            st = con.createStatement();
-            String query = "SELECT * FROM type WHERE  id=\'" + id + "\'";
-            rs = st.executeQuery(query);
-            while(rs.next()){
-                type = rs.getString(2);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return type;
-    }
-
     public HashMap<String,ArrayList<Lesson>> getSchedules(User user){
         String email = user.getEmail();
         HashMap<String,ArrayList<Lesson>> schedules = new HashMap<>();
@@ -236,41 +195,6 @@ public class Connector {
         return schedules;
     }
 
-    private String getNameClass(int name_id){
-        String name = "";
-        Statement st;
-        ResultSet rs;
-        try{
-            st = con.createStatement();
-            String query = "SELECT * FROM class WHERE  id=\'" + name_id + "\'";
-            rs = st.executeQuery(query);
-            if(rs.next()){
-                name = rs.getString(2);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return name;
-
-    }
-    private String getNameDay(int id){
-        String name = "";
-        Statement st;
-        ResultSet rs;
-        try{
-            st = con.createStatement();
-            String query = "SELECT * FROM day WHERE  id=\'" + id + "\'";
-            rs = st.executeQuery(query);
-            if(rs.next()){
-                name = rs.getString(2);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return name;
-    }
 
     public  ArrayList<String> getWeek(){
         ArrayList<String> week = new ArrayList<>();
@@ -299,12 +223,208 @@ public class Connector {
             rs = st.executeQuery(query);
             while(rs.next()){
                 String name = getNameClass(rs.getInt(2));
-               list.add(new Lesson(rs.getInt(1),rs.getInt(8), name, rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(7))));
+               list.add(new Lesson(rs.getInt(1),rs.getInt(8), name, getNameSchedule(schedule_id) ,rs.getString(3), rs.getTime(4), rs.getTime(5), getType(rs.getInt(7))));
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list;
+    }
+    public int addLesson(Lesson lesson){
+        String name = lesson.getName();
+        String type = lesson.getType();
+        String schedule = lesson.getSchedule();
+        int name_id = -1;
+        int type_id = -1;
+        int schedule_id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            name_id = getIdClass(name);
+            if(name_id == -1){
+                name_id = addClass(name);
+            }
+            type_id = getIdType(type);
+            if(type_id == -1){
+                type_id = addType(type);
+            }
+            schedule_id = getIdSchedule(schedule);
+
+            st.executeUpdate("INSERT INTO lesson (name_id, room, time_start, time_end, schedule_id, type_id, day_id) " +
+                    "VALUES ('" + name_id + "\', \'"+lesson.getRoom()+ "\', \'" + lesson.getTimeStart() + "\', \'"
+                    + lesson.getTimeEnd() + "\', \'" + schedule_id + "\', \'" + type_id + "\', \'"+ lesson.getDay() + "')");
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return getLessonId(lesson, name_id, type_id, schedule_id);
+    }
+    private int getLessonId(Lesson lesson, int name_id, int type_id, int schedule_id){
+        int id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = " SELECT * FROM lesson WHERE name_id = '" + name_id + "\' AND time_start=\'" + lesson.getTimeStart() + "\' AND time_end=\'" + lesson.getTimeEnd()
+                    + "\' AND schedule_id=\'" + schedule_id  + "\' AND type_id=\'" + type_id+"\' AND day_id=\'"+lesson.getDay() +"\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                id = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+    private String getNameClass(int name_id){
+        String name = "";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM class WHERE  id=\'" + name_id + "\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                name = rs.getString(2);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+
+    }
+    private int getIdClass(String name){
+        int id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM class WHERE  name = \'" + name + "\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                id = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+    private int addClass(String name){
+        int id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "INSERT INTO class (name) VALUES ('" + name +  "')";
+            st.executeUpdate(query);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return getIdClass(name);
+    }
+    private int getIdType(String name){
+        int id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM type WHERE  name=\'" + name + "\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                id = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+    public String getType(int id){
+        String type = "lecture";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM type WHERE  id=\'" + id + "\'";
+            rs = st.executeQuery(query);
+            while(rs.next()){
+                type = rs.getString(2);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return type;
+    }
+    private int addType(String name){
+        int id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "INSERT INTO type (name) " +
+                    "VALUES ('" + name +  "')";
+            st.executeUpdate(query);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return getIdType(name);
+    }
+
+    private String getNameDay(int id){
+        String name = "";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM day WHERE  id=\'" + id + "\'";
+            rs = st.executeQuery(query);
+            if(rs.next()){
+                name = rs.getString(2);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+    }
+    private String getNameSchedule(int schedule_id){
+        String name = "";
+        Statement st;
+        ResultSet rs;
+        try {
+            st = con.createStatement();
+            rs = st.executeQuery("SELECT * FROM schedule WHERE  id='" + schedule_id + "\'");
+            if(rs.next()) {
+                name = rs.getString(2);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+
+    }
+    private int getIdSchedule(String name){
+        int id = -1;
+        Statement st;
+        ResultSet rs;
+        try {
+            st = con.createStatement();
+            rs = st.executeQuery("SELECT * FROM schedule WHERE  name='" + name + "\'");
+            if(rs.next()) {
+                id = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+
     }
 }

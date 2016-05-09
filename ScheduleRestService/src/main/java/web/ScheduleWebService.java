@@ -1,5 +1,6 @@
 package web;
 
+import model.Lesson;
 import model.User;
 
 import java.util.ArrayList;
@@ -10,5 +11,6 @@ public interface ScheduleWebService {
     User getUser(User user);
     boolean checkEmail(User user);
     User getSchedules(User user);
+    public int addLesson(Lesson lesson);
 
 }

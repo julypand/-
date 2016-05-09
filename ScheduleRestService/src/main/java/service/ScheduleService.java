@@ -15,4 +15,5 @@ public interface ScheduleService {
     ArrayList<Lesson> getLessons(int schedule_id);
     int getGroupID(String email);
     ArrayList<String> getWeek();
+    int addLesson(Lesson lesson);
 }

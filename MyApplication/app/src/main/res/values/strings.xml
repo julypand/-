@@ -6,7 +6,7 @@
     <string name="hello">Hello!</string>
     <string name="create_account_text">If you are here for the first time, you can</string>
     <string name="login_text">or</string>
-    <string name="ip">http://192.168.100.4:8080</string>
+    <string name="ip">http://192.168.43.187:8080</string>
 
     <!-- Login -->
     <string name="login">Login, please!</string>
@@ -62,6 +62,8 @@
     <string name="signup_wait">SignUp...</string>
     <string name="success_signup">Successful signing!</string>
     <string name="change_email">Somebody has that e-mail. Change it!</string>
+    <string name="add_wait">Adding..</string>
+    <string name="success_adding">Successful adding!</string>
 
 
     <string name="load_schedule">Load schedule...</string>

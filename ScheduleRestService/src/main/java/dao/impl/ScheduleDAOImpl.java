@@ -48,6 +48,11 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     public  ArrayList<String> getWeek() {
         return conn.getWeek();
     }
+    @Override
+    public  int addLesson(Lesson lesson) {
+        return conn.addLesson(lesson);
+    }
+
 
 
 }
