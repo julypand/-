@@ -3,6 +3,7 @@ package service.impl;
 import dao.ScheduleDAO;
 import dao.impl.ScheduleDAOImpl;
 import model.Lesson;
+import model.Schedule;
 import model.User;
 import service.ScheduleService;
 
@@ -29,7 +30,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         return scheduleDAO.getLessons(schedule_id);
     }
     @Override
-    public HashMap<String,ArrayList<Lesson>> getSchedules(User user){
+    public ArrayList<Schedule> getSchedules(User user){
         return scheduleDAO.getSchedules(user);
     }
 

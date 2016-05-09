@@ -17,6 +17,7 @@ import java.util.HashMap;
 
 import model.Lesson;
 import model.RequestTaskSignUp;
+import model.Schedule;
 import model.User;
 
 public class SignupActivity extends AppCompatActivity {
@@ -60,7 +61,7 @@ public class SignupActivity extends AppCompatActivity {
             onSignupFailed();
             return;
         }
-        User user = new User(name,surname,Integer.valueOf(course),Integer.valueOf(group),email,password,new HashMap<String,ArrayList<Lesson>>());
+        User user = new User(name,surname,Integer.valueOf(course),Integer.valueOf(group),email,password,new ArrayList<Schedule>());
         ip = getResources().getString(R.string.ip);
         new RequestTaskSignUp(SignupActivity.this, getBaseContext(), user).execute(ip + "/users/signup");
     }

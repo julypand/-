@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class HelperDB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
@@ -46,7 +47,7 @@ public class HelperDB extends SQLiteOpenHelper {
                         + ");");
 
                 db.execSQL("CREATE TABLE " + TABLE_SCHEDULE + " ( "
-                        + KEY_ID + " integer primary key autoincrement, "
+                        + KEY_ID + " integer, "
                         + KEY_NAME + " text "
                         + ");");
 
@@ -76,19 +77,19 @@ public class HelperDB extends SQLiteOpenHelper {
 
 
         public void addToLocalDB(User user){
-                HashMap<String,ArrayList<Lesson>> schedule = user.getSchedules();
-                ArrayList<String> week = user.getWeek();
+                List<Schedule> schedules = user.getSchedules();
+                List<String> week = user.week();
                 ContentValues cv = new ContentValues();
                 SQLiteDatabase db = this.getWritableDatabase();
 
 
-                for (HashMap.Entry<String, ArrayList<Lesson>> entry : schedule.entrySet()) {
-                        String name_schedule = entry.getKey();
-                        String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_NAME +") VALUES ('" + name_schedule + "\')";
+                for (Schedule schedule: schedules) {
+                        String name_schedule = schedule.getName();
+                        int schedule_id = schedule.getId();
+                        String query = "INSERT INTO " + TABLE_SCHEDULE + "(" +KEY_ID +"," + KEY_NAME +") VALUES ("+ schedule_id+ ",'"+ name_schedule + "\')";
                         db.execSQL(query);
 
-                        int schedule_id = getIdSchedule(name_schedule);
-                        ArrayList<Lesson> lessons = entry.getValue();
+                        List<Lesson> lessons = schedule.getLessons();
                         for (Lesson l : lessons) {
                                 cv.put(KEY_ID, l.getId());
                                 cv.put(KEY_SCH_ID, schedule_id);

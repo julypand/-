@@ -1,6 +1,7 @@
 package web.rest;
 
 import model.Lesson;
+import model.Schedule;
 import model.User;
 import service.ScheduleService;
 import service.impl.ScheduleServiceImpl;
@@ -54,10 +55,10 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Produces(MediaType.APPLICATION_JSON)
     @Override
     public User getSchedules(User user){
-        HashMap<String,ArrayList<Lesson>> schedules =  scheduleService.getSchedules(user);
+        ArrayList<Schedule> schedules =  scheduleService.getSchedules(user);
         ArrayList<String> week = scheduleService.getWeek();
         user.setSchedules(schedules);
-        user.setWeek(week);
+        user.weekSet(week);
         return user;
     }
     @Path("/classes/addLesson")

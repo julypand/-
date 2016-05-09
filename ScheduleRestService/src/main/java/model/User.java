@@ -2,7 +2,6 @@ package model;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public class User {
@@ -10,32 +9,36 @@ public class User {
     private String name;
     private String surname;
     private int course;
-    private String group;
+    private int group;
     private String email;
     private String password;
-    private HashMap<String,ArrayList<Lesson>> schedules;
-    private  ArrayList<String> week;
+    private ArrayList<Schedule> schedules = new ArrayList<>();
+
 
     public User(){}
 
-    public User(String name, String surname, int course,String group, String email, String password, HashMap<String,ArrayList<Lesson>> schedules){
+
+    public User(String name, String surname, int course, int group, String email, String password){
         setName(name);
         setSurname(surname);
         setCourse(course);
         setGroup(group);
         setEmail(email);
         setPassword(password);
+    }
+    public User(String name, String surname, int course, int group, String email, String password,ArrayList<Schedule> schedules){
+        this(name,surname,course,group,email,password);
         setSchedules(schedules);
     }
-    public User(String name, String surname, int course,String group, String email, String password){
-        setName(name);
-        setSurname(surname);
-        setCourse(course);
-        setGroup(group);
+    public User(String email){
         setEmail(email);
-        setPassword(password);
-        setSchedules(new HashMap<String, ArrayList<Lesson>>());
     }
+
+    public String toString(){
+        return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +
+                + this.getCourse() + ", group: " + this.getGroup() + ", email: " + this.getEmail());
+    }
+
 
 
     public String getName() {
@@ -62,11 +65,11 @@ public class User {
         this.course = course;
     }
 
-    public String getGroup() {
+    public int getGroup() {
         return group;
     }
 
-    public void setGroup(String group) {
+    public void setGroup(int group) {
         this.group = group;
     }
 
@@ -86,19 +89,17 @@ public class User {
         this.password = password;
     }
 
-    public HashMap<String, ArrayList<Lesson>> getSchedules() {
+    public ArrayList<Schedule> getSchedules() {
         return schedules;
     }
 
-    public void setSchedules(HashMap<String, ArrayList<Lesson>> schedules) {
+    public void setSchedules(ArrayList<Schedule> schedules) {
         this.schedules = schedules;
     }
 
-    public  ArrayList<String> getWeek() {
-        return week;
+    public void weekSet(ArrayList<String> week){
+        for(Schedule s : schedules)
+            s.setWeek(week);
     }
 
-    public void setWeek( ArrayList<String> week) {
-        this.week = week;
-    }
 }

@@ -3,6 +3,7 @@ package dao.impl;
 import dao.ScheduleDAO;
 import db.Connector;
 import model.Lesson;
+import model.Schedule;
 import model.User;
 
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     }
 
     @Override
-    public HashMap<String,ArrayList<Lesson>> getSchedules(User user){ return conn.getSchedules(user);}
+    public ArrayList<Schedule> getSchedules(User user){ return conn.getSchedules(user);}
     @Override
     public ArrayList<Lesson> getLessons(int schedule_id) {
         return conn.getLessons(schedule_id);

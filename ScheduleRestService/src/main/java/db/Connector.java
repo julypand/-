@@ -1,11 +1,11 @@
 package db;
 
 import model.Lesson;
+import model.Schedule;
 import model.User;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Properties;
 
 
@@ -39,7 +39,7 @@ public class Connector {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM user");
             while(rs.next())
-                list.add(new User(rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5), rs.getString(6), rs.getString(7)));
+                list.add(new User(rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7)));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -158,9 +158,9 @@ public class Connector {
 
 
     // Schedule
-    public HashMap<String,ArrayList<Lesson>> getSchedules(User user){
+    public ArrayList<Schedule> getSchedules(User user){
         String email = user.getEmail();
-        HashMap<String,ArrayList<Lesson>> schedules = new HashMap<>();
+        ArrayList<Schedule> schedules = new ArrayList<>();
         String name;
         Statement st = null;
         ResultSet rs = null;
@@ -173,7 +173,7 @@ public class Connector {
                 int schedule_id = rs.getInt(2);
                 name = getNameSchedule(schedule_id);
                 ArrayList<Lesson> lessons = getLessons(schedule_id);
-                schedules.put(name,lessons);
+                schedules.add(new Schedule(schedule_id,name, lessons));
                 }
             }
 

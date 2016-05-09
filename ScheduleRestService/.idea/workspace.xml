@@ -26,7 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b7f4b79-5a18-46c0-b576-cc9c8ba66f4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/RequestTaskNewClass.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/RequestTaskNewSchedule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/Schedule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/db/Connector.class" afterPath="$PROJECT_DIR$/target/classes/db/Connector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/db/Connector.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/db/Connector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Lesson.class" afterPath="$PROJECT_DIR$/target/classes/model/Lesson.class" />
@@ -43,22 +45,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/impl/ScheduleServiceImpl.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/impl/ScheduleServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/web/ScheduleWebService.class" afterPath="$PROJECT_DIR$/target/classes/web/ScheduleWebService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/ScheduleWebService.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/ScheduleWebService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/User.class" afterPath="$PROJECT_DIR$/target/classes/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/db/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/db/Connector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/HelperDB.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/HelperDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/Lesson.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/Lesson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Lesson.java" afterPath="$PROJECT_DIR$/src/main/java/model/Lesson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/NewClassActivity.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/NewClassActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" afterPath="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/RequestTaskLogin.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/RequestTaskLogin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/ScheduleListActivity.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/ScheduleListActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" afterPath="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/SignupActivity.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/SignupActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/User.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScheduleRestService.iws" />
@@ -89,159 +91,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
-                <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
-                <element signature="method#getType#0;class#Connector#0" expanded="false" />
-                <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
-                <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-                <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-                <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-                <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-                <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-                <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-                <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-                <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-                <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-                <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-                <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-                <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-                <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-                <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-                <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-                <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-                <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-                <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-                <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-                <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-                <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-                <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-                <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-                <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-                <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1164#1165#0" expanded="true" />
+                <element signature="e#1204#1205#0" expanded="true" />
+                <element signature="e#1236#1237#0" expanded="true" />
+                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+                <element signature="e#1384#1385#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1520#1521#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#1650#1651#0" expanded="true" />
+                <element signature="e#1682#1683#0" expanded="true" />
+                <element signature="e#1710#1711#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#1786#1787#0" expanded="true" />
+                <element signature="e#1821#1822#0" expanded="true" />
+                <element signature="e#1852#1853#0" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
+                <element signature="e#1940#1941#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2021#2022#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2126#2127#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleWebService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
+      <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.20401338">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#445#446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#1277#1278#0" expanded="true" />
-                <element signature="e#1322#1323#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RESTScheduleWebService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3089431">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceMethodInvocationHandlerFactory.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2222223">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractJavaResourceMethodDispatcher.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2222223">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaResourceMethodDispatcherProvider.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/JavaResourceMethodDispatcherProvider.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.333334">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReflectionHelper.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/hk2/hk2-utils/2.4.0-b10/hk2-utils-2.4.0-b10.jar!/org/glassfish/hk2/utilities/reflection/ReflectionHelper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.037037">
-              <caret line="834" column="0" selection-start-line="834" selection-start-column="0" selection-end-line="834" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -271,19 +171,19 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Classes.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Class.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Day.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/web/LittleClassy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Lesson.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/Connector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/User.java" />
       </list>
     </option>
   </component>
@@ -343,6 +243,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -1018,7 +919,7 @@
       <workItem from="1456758504105" duration="6233000" />
       <workItem from="1462702949478" duration="13190000" />
       <workItem from="1462736423515" duration="2247000" />
-      <workItem from="1462784875780" duration="10172000" />
+      <workItem from="1462784875780" duration="16549000" />
     </task>
     <task id="LOCAL-00001" summary="Edit nessasery">
       <created>1450379436559</created>
@@ -1030,7 +931,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198448000" />
+    <option name="totallyTimeSpent" value="204825000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1042,7 +943,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1054,11 +955,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3306581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27895597" sideWeight="0.38653556" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1072,7 +974,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1130,12 +1031,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java</url>
-          <line>43</line>
+          <line>32</line>
           <properties />
-          <option name="timeStamp" value="70" />
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="79" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1144,13 +1045,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1167,35 +1061,34 @@
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1223,35 +1116,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1272,35 +1164,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1321,35 +1212,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1370,35 +1260,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1419,35 +1308,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1468,35 +1356,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1517,35 +1404,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1566,35 +1452,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1615,35 +1500,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1664,35 +1548,34 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -1776,32 +1659,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/db20160327.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ScheduleRestService.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1845,11 +1707,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/JavaResourceMethodDispatcherProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.333334">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1864,37 +1736,20 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.2222223">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/JavaResourceMethodDispatcherProvider.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar!/com/mysql/jdbc/ConnectionImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.333334">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        <state vertical-scroll-proportion="-8.333333">
+          <caret line="1676" column="45" selection-start-line="1676" selection-start-column="45" selection-end-line="1676" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1444141454000" expanded="true" signature="-1:-1" placeholder="SELECT @@ses..." />
+            <marker date="1444141454000" expanded="true" signature="-1:-1" placeholder="SELECT @@ses..." />
+            <marker date="1444141454000" expanded="true" signature="-1:-1" placeholder="select @@ses..." />
+            <marker date="1444141454000" expanded="true" signature="-1:-1" placeholder="/* missingVa..." />
           </folding>
         </state>
       </provider>
@@ -1902,21 +1757,44 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1925,49 +1803,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+        <state vertical-scroll-proportion="4.8556523">
+          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462805783315" expanded="true" signature="1186:1204" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1661" placeholder="SELECT passw..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1710" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="1654:1711" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="2104:2161" placeholder="SELECT group..user..." />
-            <marker date="1462805783315" expanded="true" signature="2607:2629" placeholder="SELECT email..user..." />
-            <marker date="1462805783315" expanded="true" signature="3082:3216" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462805783315" expanded="true" signature="3412:3672" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="3808:3938" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="4630:4678" placeholder="SELECT * FRO..user..." />
-            <marker date="1462805783315" expanded="true" signature="5273:5337" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462805783315" expanded="true" signature="6245:6262" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="6734:6797" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="7901:8228" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="8619:8895" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462805783315" expanded="true" signature="9316:9365" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="9784:9834" placeholder="SELECT * FRO..class..." />
-            <marker date="1462805783315" expanded="true" signature="10243:10292" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="10636:10683" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11100:11143" placeholder="SELECT * FRO..type..." />
-            <marker date="1462805783315" expanded="true" signature="11560:11633" placeholder="INSERT INTO ..." />
-            <marker date="1462805783315" expanded="true" signature="11981:12023" placeholder="SELECT * FRO..day..." />
-            <marker date="1462805783315" expanded="true" signature="12465:12520" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462805783315" expanded="true" signature="12909:12959" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT passw..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT group..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT email..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_group..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_has_schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..lesson..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..class..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..type..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..day..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
+            <marker date="1462809351664" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3089431">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.45986623">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1786#1787#0" expanded="true" />
+            <element signature="e#1821#1822#0" expanded="true" />
+            <element signature="e#1852#1853#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2126#2127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20401338">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
           </folding>
         </state>
       </provider>
