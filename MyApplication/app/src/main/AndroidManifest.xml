@@ -36,7 +36,8 @@
             android:name=".ScheduleListActivity"
             android:label="@string/title_activity_schedule_list"
             android:theme="@style/AppTheme" />
-        <activity android:name=".NewClassActivity"></activity>
+        <activity android:name=".NewClassActivity" />
+        <activity android:name=".NewScheduleActivity"></activity>
     </application>
 
 </manifest>

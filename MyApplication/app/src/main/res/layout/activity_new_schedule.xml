@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.julie.myapplication.NewScheduleActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_schedule"
+            android:textSize="80px"
+            android:id="@+id/tvScheduleTittle" />
+
+
+        <!-- Name Label -->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/etScheduleName"
+                style = "@style/EditText"
+                android:inputType="textCapWords"
+                android:hint="@string/schedule_name" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <!-- Save Button -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/Button"
+                android:id="@+id/btnSave"
+                android:text="@string/saveButton"
+                android:layout_width="165dp"
+                android:padding="5dp"
+                android:layout_marginRight="5dp" />
+
+            <android.support.v7.widget.AppCompatButton
+                style = "@style/Button"
+                android:id="@+id/btnCancel"
+                android:text="@string/cancel"
+                android:layout_width="165dp"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <!-- Cancel Button -->
+
+    </LinearLayout>
+</ScrollView>

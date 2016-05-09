@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -23,6 +24,9 @@ import java.util.ArrayList;
 import model.HelperDB;
 import model.RecyclerViewAdapter;
 import model.RequestTaskClasses;
+import model.RequestTaskNewClass;
+import model.RequestTaskNewSchedule;
+import model.Schedule;
 import model.User;
 
 public class ScheduleListActivity extends AppCompatActivity {
@@ -56,41 +60,13 @@ public class ScheduleListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAddDialog();
+                Intent intent = new Intent(ScheduleListActivity.this, NewScheduleActivity.class);
+                ScheduleListActivity.this.finish();
+                startActivity(intent);
             }
         });
     }
 
-    public void showAddDialog() {
-        final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-
-        dialog.setTitle(getResources().getString(R.string.enter_name));
-
-        View linearlayout = getLayoutInflater().inflate(R.layout.dialog_newschedule, null);
-        dialog.setView(linearlayout);
-
-        final TextView name_schedule = (TextView)linearlayout.findViewById(R.id.etNameSchedule);
-
-        dialog.setPositiveButton(getResources().getString(R.string.cancel),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-
-                    }
-                })
-
-                .setNegativeButton(getResources().getString(R.string.ok),
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                String name = name_schedule.getText().toString();
-                                addSchedule(name);
-                                dialog.dismiss();
-                            }
-                        });
-
-        dialog.create();
-        dialog.show();
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -124,11 +100,7 @@ public class ScheduleListActivity extends AppCompatActivity {
         return dbHelper.getNameSchedules();
 
     }
-    private void addSchedule(String name){
-        dbHelper = new HelperDB(getBaseContext());
-        dbHelper.addSchedule(name);
-        mAdapter.addItem(name, mAdapter.getItemCount() + 1);
-    }
+
 
 
 

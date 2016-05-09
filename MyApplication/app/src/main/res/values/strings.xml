@@ -54,6 +54,9 @@
     <!--  Schedule List -->
     <string name="title_activity_schedule_list">List Schedules</string>
     <string name="choose_schedule">Choose schedule:</string>
+    <!--  New Schedule  -->
+    <string name="new_schedule">New Schedule</string>
+    <string name="schedule_name">Name</string>
 
     <!-- Dialog Windows -->
     <string name="wait">Please, wait..</string>
@@ -64,6 +67,8 @@
     <string name="change_email">Somebody has that e-mail. Change it!</string>
     <string name="add_wait">Adding..</string>
     <string name="success_adding">Successful adding!</string>
+
+    <string name="schedule_exist">This name has already exist!</string>
 
 
     <string name="load_schedule">Load schedule...</string>
@@ -85,9 +90,6 @@
     <string name="class_etime">End Time</string>
     <string name="class_type">Type</string>
     <string name="saveButton">Save</string>
-
-
-
 
 
 </resources>

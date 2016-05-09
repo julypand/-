@@ -30,7 +30,15 @@ public class User {
     public User(String email){
         setEmail(email);
     }
-
+    public User(String email, ArrayList<Schedule> schedules){
+        this(email);
+        setSchedules(schedules);
+    }
+    public User(String email, Schedule schedules){
+        this(email);
+        setSchedules(new ArrayList<Schedule>());
+        getSchedules().add(schedules);
+    }
 
     public String toString(){
         return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +

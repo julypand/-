@@ -1,18 +1,28 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Schedule {
     private int id;
     private String name;
+    private String userEmail;
     private ArrayList<Lesson> lessons  = new ArrayList<>();
     private ArrayList<String> week = new ArrayList<>();
+
     public Schedule(){}
 
-    public Schedule(int id, String name){
-        setId(id);
+    public Schedule(String name){
         setName(name);
+    }
+
+    public Schedule(int id, String name){
+        this(name);
+        setId(id);
+    }
+
+    public Schedule(String name, String userEmail){
+        this(name);
+        setUserEmail(userEmail);
     }
     public Schedule(int id, String name, ArrayList<Lesson> lessons){
         this(id, name);
@@ -57,5 +67,13 @@ public class Schedule {
 
     public void setWeek(ArrayList<String> week) {
         this.week = week;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String emailUser) {
+        this.userEmail = emailUser;
     }
 }

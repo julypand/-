@@ -8,7 +8,6 @@ import model.User;
 import service.ScheduleService;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public class ScheduleServiceImpl implements ScheduleService {
@@ -47,5 +46,10 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
     public  ArrayList<String> getWeek(){return  scheduleDAO.getWeek();}
     public  int  addLesson(Lesson lesson){return  scheduleDAO.addLesson(lesson);}
+
+    @Override
+    public int addSchedule(Schedule schedule) {
+        return scheduleDAO.addSchedule(schedule);
+    }
 
 }

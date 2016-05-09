@@ -39,11 +39,25 @@ public class Connector {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM user");
             while(rs.next())
-                list.add(new User(rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7)));
+                list.add(new User(rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7),new ArrayList<Schedule>()));
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list;
+    }
+    public int getIdUser(String email){
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            rs = st.executeQuery("SELECT id FROM user WHERE email = \'" + email + "\'");
+            while(rs.next()) {
+                return  rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
     }
 
     public String getPassword(String email){
@@ -194,8 +208,6 @@ public class Connector {
 
         return schedules;
     }
-
-
     public  ArrayList<String> getWeek(){
         ArrayList<String> week = new ArrayList<>();
         Statement st;
@@ -261,6 +273,43 @@ public class Connector {
             e.printStackTrace();
         }
         return getLessonId(lesson, name_id, type_id, schedule_id);
+    }
+    public int addSchedule(Schedule schedule){
+        String name = schedule.getName();
+        int user_id = -1;
+        int schedule_id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+
+            st.executeUpdate("INSERT INTO schedule (name) VALUES ('" +name + "')");
+            user_id = getIdUser(schedule.getUserEmail());
+            schedule_id = getIdSchedule(name);
+            st.executeUpdate("INSERT INTO user_has_schedule (user_id,schedule_id) " +
+                    "VALUES ('" + user_id + "\', \'"  + schedule_id + "')");
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return schedule_id;
+    }
+    public String getType(int id){
+        String type = "lecture";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            String query = "SELECT * FROM type WHERE  id=\'" + id + "\'";
+            rs = st.executeQuery(query);
+            while(rs.next()){
+                type = rs.getString(2);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return type;
     }
     private int getLessonId(Lesson lesson, int name_id, int type_id, int schedule_id){
         int id = -1;
@@ -346,22 +395,6 @@ public class Connector {
         }
         return id;
     }
-    public String getType(int id){
-        String type = "lecture";
-        Statement st;
-        ResultSet rs;
-        try{
-            st = con.createStatement();
-            String query = "SELECT * FROM type WHERE  id=\'" + id + "\'";
-            rs = st.executeQuery(query);
-            while(rs.next()){
-                type = rs.getString(2);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return type;
-    }
     private int addType(String name){
         int id = -1;
         Statement st;
@@ -377,7 +410,6 @@ public class Connector {
         }
         return getIdType(name);
     }
-
     private String getNameDay(int id){
         String name = "";
         Statement st;

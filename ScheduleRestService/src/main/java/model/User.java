@@ -1,11 +1,8 @@
 package model;
 
-
 import java.util.ArrayList;
 
-
 public class User {
-
     private String name;
     private String surname;
     private int course;
@@ -14,31 +11,38 @@ public class User {
     private String password;
     private ArrayList<Schedule> schedules = new ArrayList<>();
 
+    public User() {
+    }
 
-    public User(){}
-
-
-    public User(String name, String surname, int course, int group, String email, String password){
+    public User(String name, String surname, int course, int group, String email, String password, ArrayList<Schedule> schedules) {
         setName(name);
         setSurname(surname);
         setCourse(course);
         setGroup(group);
         setEmail(email);
         setPassword(password);
-    }
-    public User(String name, String surname, int course, int group, String email, String password,ArrayList<Schedule> schedules){
-        this(name,surname,course,group,email,password);
         setSchedules(schedules);
     }
-    public User(String email){
+
+    public User(String email) {
         setEmail(email);
     }
 
-    public String toString(){
-        return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +
-                + this.getCourse() + ", group: " + this.getGroup() + ", email: " + this.getEmail());
+    public User(String email, ArrayList<Schedule> schedules) {
+        this(email);
+        setSchedules(schedules);
     }
 
+    public User(String email, Schedule schedules) {
+        this(email);
+        setSchedules(new ArrayList<Schedule>());
+        getSchedules().add(schedules);
+    }
+
+    public String toString() {
+        return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +
+                +this.getCourse() + ", group: " + this.getGroup() + ", email: " + this.getEmail());
+    }
 
 
     public String getName() {
@@ -96,10 +100,8 @@ public class User {
     public void setSchedules(ArrayList<Schedule> schedules) {
         this.schedules = schedules;
     }
-
     public void weekSet(ArrayList<String> week){
-        for(Schedule s : schedules)
-            s.setWeek(week);
+        this.schedules.get(0).setWeek(week);
     }
 
 }

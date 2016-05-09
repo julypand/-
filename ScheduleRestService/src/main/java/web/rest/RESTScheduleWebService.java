@@ -7,7 +7,6 @@ import service.ScheduleService;
 import service.impl.ScheduleServiceImpl;
 import web.ScheduleWebService;
 import java.util.ArrayList;
-import java.util.HashMap;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -61,7 +60,7 @@ public class RESTScheduleWebService implements ScheduleWebService {
         user.weekSet(week);
         return user;
     }
-    @Path("/classes/addLesson")
+    @Path("/classes/add")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -69,5 +68,14 @@ public class RESTScheduleWebService implements ScheduleWebService {
     public int addLesson(Lesson lesson){
         int lessonId = scheduleService.addLesson(lesson);
         return lessonId;
+    }
+    @Path("/schedules/add")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public int addSchedule(Schedule schedule){
+        int scheduleId = scheduleService.addSchedule(schedule);
+        return scheduleId;
     }
 }

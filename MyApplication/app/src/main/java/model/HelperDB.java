@@ -226,9 +226,11 @@ public class HelperDB extends SQLiteOpenHelper {
             db.insert(TABLE_LESSON, null, cv);
 
         }
-        public void addSchedule(String name){
-            SQLiteDatabase db = this.getReadableDatabase();
-            String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_NAME + ") VALUES ('" + name + "\')";
+        public void addSchedule(Schedule schedule){
+            SQLiteDatabase db = this.getWritableDatabase();
+            String name = schedule.getName();
+            int id = schedule.getId();
+            String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_ID+ "," + KEY_NAME + ") VALUES (" +id + ",'" + name + "\')";
             db.execSQL(query);
         }
 
@@ -254,10 +256,10 @@ public class HelperDB extends SQLiteOpenHelper {
 
         public boolean isNameScheduleExist(String name){
                 SQLiteDatabase db = this.getReadableDatabase();
-                String query = "SELECT FROM " + TABLE_SCHEDULE +" WHERE " +KEY_NAME + " = '" + name;
-                String q = "SELECT " + KEY_ID + " FROM " + TABLE_SCHEDULE  + " WHERE " + KEY_NAME + " = '" + name + "' LIMIT 1";
-                Cursor c = db.rawQuery(q,null);
-                if (!c.moveToFirst()){
+                String query = "SELECT * FROM " + TABLE_SCHEDULE +" WHERE " + KEY_NAME + " = '" + name + "'";
+                //String q = "SELECT " + KEY_ID + " FROM " + TABLE_SCHEDULE  + " WHERE " + KEY_NAME + " = '" + name + "' LIMIT 1";
+                Cursor c = db.rawQuery(query,null);
+                if (c.moveToFirst()){
                         return true;
                 }
                 return false;

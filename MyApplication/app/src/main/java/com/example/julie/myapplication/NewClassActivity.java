@@ -108,7 +108,7 @@ public class NewClassActivity extends AppCompatActivity {
         }
         Lesson lesson = new Lesson(day_id,name,name_schedule,room,stime,etime,type);
         ip =  getResources().getString(R.string.ip);
-        new RequestTaskNewClass(NewClassActivity.this, getBaseContext(), lesson, name_schedule).execute(ip + "/users/classes/addLesson");
+        new RequestTaskNewClass(NewClassActivity.this, getBaseContext(), lesson, name_schedule).execute(ip + "/users/classes/add");
 
 
     }

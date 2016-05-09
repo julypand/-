@@ -7,7 +7,6 @@ import model.Schedule;
 import model.User;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class ScheduleDAOImpl implements ScheduleDAO{
 
@@ -54,6 +53,10 @@ public class ScheduleDAOImpl implements ScheduleDAO{
         return conn.addLesson(lesson);
     }
 
+    @Override
+    public int addSchedule(Schedule schedule) {
+        return conn.addSchedule(schedule);
+    }
 
 
 }

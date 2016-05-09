@@ -4,7 +4,6 @@ import model.Lesson;
 import model.Schedule;
 import model.User;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public interface ScheduleDAO {
@@ -17,4 +16,5 @@ public interface ScheduleDAO {
     int getGroupID(String email);
     ArrayList<String> getWeek();
     int addLesson(Lesson lesson);
+    int addSchedule(Schedule schedule);
 }
