@@ -70,6 +70,8 @@
     <string name="success_rename">Successful rename!</string>
     <string name="delete_wait">Deleting...</string>
     <string name="schedule_exist">This name already exists!</string>
+    <string name="edit_wait">Edit...</string>
+    <string name="success_edit">Successful edit!</string>
 
 
     <string name="load_schedule">Load schedule...</string>
@@ -85,14 +87,16 @@
     <string name="not_deleting">This schedule must not delete!</string>
     <string name="not_editable">This schedule must not edit!</string>
 
+    <!--  New Class  -->
+    <!--  Edit Class  -->
     <string name="new_class">New class: </string>
+    <string name="edit_class">Edit class: </string>
     <string name="class_name">Name</string>
     <string name="class_room">Room</string>
     <string name="class_stime">Start Time</string>
     <string name="class_etime">End Time</string>
     <string name="class_type">Type</string>
     <string name="saveButton">Save</string>
-
 
 </resources>
 

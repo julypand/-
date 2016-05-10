@@ -253,7 +253,6 @@ public class Connector {
         int type_id = -1;
         int schedule_id = -1;
         Statement st;
-        ResultSet rs;
         try{
             st = con.createStatement();
             name_id = getIdClass(name);
@@ -275,6 +274,34 @@ public class Connector {
             e.printStackTrace();
         }
         return getLessonId(lesson, name_id, type_id, schedule_id);
+    }
+    public boolean editLesson(Lesson lesson){
+        String name = lesson.getName();
+        String type = lesson.getType();
+        int name_id;
+        int type_id;
+        Statement st;
+        try{
+            st = con.createStatement();
+            name_id = getIdClass(name);
+            if(name_id == -1){
+                name_id = addClass(name);
+            }
+            type_id = getIdType(type);
+            if(type_id == -1){
+                type_id = addType(type);
+            }
+            String query = "UPDATE lesson " + " SET name_id = " + name_id+ ", room = '" + lesson.getRoom() + "', type_id =  " + type_id
+                    +" WHERE id = " + lesson.getId();
+            st.executeUpdate(query);
+            query = "UPDATE lesson " + " SET time_start = '" + lesson.getTimeStart() + "', time_end = '" + lesson.getTimeEnd() + "' WHERE id = " + lesson.getId();
+            st.executeUpdate(query);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
     public int addSchedule(Schedule schedule){
         String name = schedule.getName();

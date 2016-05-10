@@ -13,9 +13,11 @@ public interface ScheduleWebService {
     User getUser(User user);
     boolean checkEmail(User user);
     User getSchedules(User user);
-    public int addLesson(Lesson lesson);
-    public int addSchedule(Schedule schedule);
-    public boolean deleteSchedule(Schedule schedule);
-    public boolean renameSchedule(Pair pairNames);
+    int addLesson(Lesson lesson);
+    boolean editLesson(Lesson lesson);
+    int addSchedule(Schedule schedule);
+    boolean deleteSchedule(Schedule schedule);
+    boolean renameSchedule(Pair pairNames);
+
 
 }

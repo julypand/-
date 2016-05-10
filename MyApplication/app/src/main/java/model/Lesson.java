@@ -31,14 +31,9 @@ public class Lesson {
     }
 
     public Lesson(int id, int day, String name, String schedule_name, String room, String timeStart, String timeEnd, String type) {
-        setId(id);
+        this(id,name,room,timeStart,timeEnd,type);
         setDay(day);
         setSchedule(schedule_name);
-        setName(name);
-        setRoom(room);
-        setTimeStart(convert(timeStart));
-        setTimeEnd(convert(timeEnd));
-        setType(type);
     }
     public Lesson(int day, String name,String schedule_name, String room, String timeStart, String timeEnd, String type) {
         setDay(day);
@@ -49,7 +44,14 @@ public class Lesson {
         setTimeEnd(convert(timeEnd));
         setType(type);
     }
-
+    public Lesson(int id, String name, String room, String timeStart, String timeEnd, String type){
+        setId(id);
+        setName(name);
+        setRoom(room);
+        setTimeStart(convert(timeStart));
+        setTimeEnd(convert(timeEnd));
+        setType(type);
+    }
     public String toString() {
         return new String("Day: " + this.getDay() + "Name: " + this.getName() + ", room: " + this.getRoom() + ", timeStart: " +
                 this.getTimeStart() + ", timeEnd: " + this.getTimeEnd() + ", type: " + this.getType());
