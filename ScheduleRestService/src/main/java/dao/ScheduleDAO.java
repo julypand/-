@@ -18,4 +18,7 @@ public interface ScheduleDAO {
     int addLesson(Lesson lesson);
     int addSchedule(Schedule schedule);
     boolean deleteSchedule(Schedule schedule);
+    boolean renameSchedule(String name, String newName);
+
+
 }

@@ -1,6 +1,7 @@
 package web.rest;
 
 import model.Lesson;
+import model.Pair;
 import model.Schedule;
 import model.User;
 import service.ScheduleService;
@@ -85,6 +86,16 @@ public class RESTScheduleWebService implements ScheduleWebService {
     @Override
     public boolean deleteSchedule(Schedule schedule){
         boolean isSuccessful = scheduleService.deleteSchedule(schedule);
+        return isSuccessful;
+    }
+
+    @Path("/schedules/edit")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public boolean renameSchedule(model.Pair pairNames){
+        boolean isSuccessful = scheduleService.renameSchedule(pairNames);
         return isSuccessful;
     }
 }

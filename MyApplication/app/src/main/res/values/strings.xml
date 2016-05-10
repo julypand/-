@@ -67,6 +67,7 @@
     <string name="add_wait">Adding..</string>
     <string name="success_adding">Successful adding!</string>
     <string name="success_deleting">Successful delete!</string>
+    <string name="success_rename">Successful rename!</string>
     <string name="delete_wait">Deleting...</string>
     <string name="schedule_exist">This name already exists!</string>
 
@@ -82,7 +83,7 @@
     <string name="yousure">Are you sure?</string>
     <string name="delete_schedule">Delete schedule: </string>
     <string name="not_deleting">This schedule must not delete!</string>
-
+    <string name="not_editable">This schedule must not edit!</string>
 
     <string name="new_class">New class: </string>
     <string name="class_name">Name</string>

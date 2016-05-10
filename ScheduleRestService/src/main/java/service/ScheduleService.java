@@ -1,6 +1,7 @@
 package service;
 
 import model.Lesson;
+import model.Pair;
 import model.Schedule;
 import model.User;
 
@@ -18,4 +19,5 @@ public interface ScheduleService {
     int addLesson(Lesson lesson);
     int addSchedule(Schedule schedule);
     boolean deleteSchedule(Schedule schedule);
+    boolean renameSchedule(Pair pairNames);
 }

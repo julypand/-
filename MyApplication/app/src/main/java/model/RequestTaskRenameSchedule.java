@@ -5,10 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Pair;
 import android.widget.Toast;
 
-import com.example.julie.myapplication.ClassesListActivity;
 import com.example.julie.myapplication.R;
 import com.example.julie.myapplication.ScheduleListActivity;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,21 +21,20 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.ArrayList;
 
-public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
+public class RequestTaskRenameSchedule extends AsyncTask<String, Void, Void> {
     private ProgressDialog pDialog;
     private Context context;
     private Activity activity;
     private HelperDB dbHelper;
     private String error = null;
-    private Schedule schedule;
+    private model.Pair pairNames;
 
-    public RequestTaskNewSchedule(Activity activity,Context context,String schedule_name, String email){
+    public RequestTaskRenameSchedule(Activity activity,Context context,model.Pair pair){
         this.setActivity(activity);
         this.setpDialog();
         this.setContext(context);
-        this.setSchedule(new Schedule(schedule_name, email));
+        this.setPairNames(pair);
     }
 
     @Override
@@ -60,16 +57,14 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             ObjectMapper mapper = new ObjectMapper();
 
-            mapper.writeValue(bw, schedule);
+            mapper.writeValue(bw, pairNames);
 
             bw.close();
             os.close();
 
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            int idSchedule = mapper.readValue(br,int.class);
-            schedule.setId(idSchedule);
-            schedule.setIsEditable(true);
+            boolean isSuccessful = mapper.readValue(br,boolean.class);
             br.close();
 
         } catch (MalformedURLException e) {
@@ -104,11 +99,8 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
         }
         else{
             dbHelper = new HelperDB(getContext());
-            dbHelper.addSchedule(schedule);
-            Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
-            getActivity().finish();
-            getActivity().startActivity(intent);
-            Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_adding), Toast.LENGTH_LONG).show();
+            dbHelper.renameSchedule(getPairNames().getSecond(),getPairNames().getFirst());
+            Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_rename), Toast.LENGTH_LONG).show();
 
         }
     }
@@ -140,15 +132,13 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
         this.context = context;
     }
 
-    public Schedule getSchedule() {
-        return schedule;
+    public Pair getPairNames() {
+        return pairNames;
     }
 
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
+    public void setPairNames(Pair pairNames) {
+        this.pairNames = pairNames;
     }
-
-
 }
 
 

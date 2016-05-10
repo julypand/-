@@ -300,10 +300,9 @@ public class Connector {
     public boolean deleteSchedule(Schedule schedule){
         String name = schedule.getName();
         String email = schedule.getUserEmail();
-        int user_id = -1;
-        int schedule_id = -1;
+        int user_id;
+        int schedule_id;
         Statement st;
-        ResultSet rs;
         try{
             st = con.createStatement();
             schedule_id = getIdSchedule(name);
@@ -320,7 +319,6 @@ public class Connector {
     }
     public void deleteLessonsOfSchedule(int schedule_id){
         Statement st;
-        ResultSet rs;
         try{
             st = con.createStatement();
             st.executeUpdate("DELETE FROM lesson WHERE schedule_id = "  + schedule_id + "");
@@ -328,6 +326,19 @@ public class Connector {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public boolean renameSchedule(String name,String newName){
+        int schedule_id;
+        Statement st;
+        try{
+            st = con.createStatement();
+            schedule_id = getIdSchedule(name);
+            st.executeUpdate("UPDATE schedule SET name  = '"  + newName + "' WHERE id = " + schedule_id);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
     }
     public String getType(int id){
         String type = "lecture";

@@ -13,7 +13,7 @@ import java.util.List;
 public class HelperDB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
-    private static final String DATABASE_NAME = "schedule3";
+    private static final String DATABASE_NAME = "schedule";
 
     private static final String TABLE_LESSON = "lesson";
     private static final String TABLE_DAY = "day";
@@ -262,7 +262,6 @@ public class HelperDB extends SQLiteOpenHelper {
         public boolean isNameScheduleExist(String name){
                 SQLiteDatabase db = this.getReadableDatabase();
                 String query = "SELECT * FROM " + TABLE_SCHEDULE +" WHERE " + KEY_NAME + " = '" + name + "'";
-                //String q = "SELECT " + KEY_ID + " FROM " + TABLE_SCHEDULE  + " WHERE " + KEY_NAME + " = '" + name + "' LIMIT 1";
                 Cursor c = db.rawQuery(query,null);
                 if (c.moveToFirst()){
                         return true;
@@ -277,11 +276,17 @@ public class HelperDB extends SQLiteOpenHelper {
     public boolean isEditableSchedule(String name){
         boolean isEditable = false;
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT "+ KEY_EDIT +" FROM " + TABLE_SCHEDULE +" WHERE " + KEY_NAME + " = '" + name + "'";
-        Cursor c = db.rawQuery(query, null);
+        Cursor c = db.query(TABLE_SCHEDULE, null, null , null, null, null, null);
         if (c.moveToFirst()) {
             int isEditableColIndex = c.getColumnIndex(KEY_EDIT);
-            isEditable = c.getInt(isEditableColIndex) != 0;
+            int nameColIndex = c.getColumnIndex(KEY_NAME);
+            do {
+                String nameschedule = c.getString(nameColIndex);
+                if (c.getString(nameColIndex).equals(name)) {
+                    isEditable = c.getInt(isEditableColIndex) != 0;
+                    break;
+                }
+            } while (c.moveToNext());
             c.close();
         }
         return isEditable;

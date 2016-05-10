@@ -3,6 +3,7 @@ package service.impl;
 import dao.ScheduleDAO;
 import dao.impl.ScheduleDAOImpl;
 import model.Lesson;
+import model.Pair;
 import model.Schedule;
 import model.User;
 import service.ScheduleService;
@@ -54,6 +55,11 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public boolean deleteSchedule(Schedule schedule){
         return scheduleDAO.deleteSchedule(schedule);
+    }
+
+    @Override
+    public boolean renameSchedule(Pair pair) {
+        return scheduleDAO.renameSchedule(pair.getFirst(), pair.getSecond());
     }
 
 }

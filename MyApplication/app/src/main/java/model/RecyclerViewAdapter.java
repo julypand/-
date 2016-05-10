@@ -139,14 +139,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                                             SharedPreferences loginPreferences = activity.getSharedPreferences("loginPrefs", activity.MODE_PRIVATE);
                                             String email = loginPreferences.getString("email", "");
                                             new RequestTaskDeleteSchedule(activity, activity.getBaseContext(), name_schedule, email).execute(ip + "/users/schedules/delete");
+                                            rv.deleteItem(position);
                                             dialog.dismiss();
                                         }
                                         else
                                             Toast.makeText(activity, activity.getResources().getString(R.string.not_deleting), Toast.LENGTH_LONG).show();
-                                        //HelperDB dbHelper = new HelperDB(activity.getBaseContext());
-                                        //dbHelper.deleteSchedule(name_schedule);
-                                        //rv.deleteItem(position);
-
 
                                     }
                                 });
@@ -160,15 +157,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         .setNegativeButton(activity.getResources().getString(R.string.ok),
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
+                                        String ip = activity.getResources().getString(R.string.ip);
                                         HelperDB dbHelper = new HelperDB(activity.getBaseContext());
                                         TextView tv = (TextView) linearlayout.findViewById(R.id.etNewNameSchedule);
                                         String new_name_schedule = tv.getText().toString();
-                                        if (!dbHelper.isNameScheduleExist(name_schedule)) {
-                                            dbHelper.renameSchedule(new_name_schedule, name_schedule);
-                                            tvname_schedule.setText(new_name_schedule);
+
+                                        if (dbHelper.isEditableSchedule(name_schedule)) {
+                                            if (!dbHelper.isNameScheduleExist(new_name_schedule)) {
+                                                new RequestTaskRenameSchedule(activity, activity.getBaseContext(), new Pair(name_schedule, new_name_schedule)).execute(ip + "/users/schedules/edit");
+                                                tvname_schedule.setText(new_name_schedule);
+                                                dialog.dismiss();
+                                            } else
+                                                Toast.makeText(activity, activity.getResources().getString(R.string.schedule_exist), Toast.LENGTH_LONG).show();
+                                        } else {
+                                            Toast.makeText(activity, activity.getResources().getString(R.string.not_editable), Toast.LENGTH_LONG).show();
+                                            dialog.dismiss();
                                         }
-                                        dialog.dismiss();
+
                                     }
+
+
                                 });
                 break;
 

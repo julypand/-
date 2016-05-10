@@ -63,5 +63,11 @@ public class ScheduleDAOImpl implements ScheduleDAO{
         return conn.deleteSchedule(schedule);
     }
 
+    @Override
+    public boolean renameSchedule(String name, String newName) {
+        return conn.renameSchedule(name,newName);
+
+    }
+
 
 }

@@ -1,6 +1,7 @@
 package web;
 
 import model.Lesson;
+import model.Pair;
 import model.Schedule;
 import model.User;
 
@@ -15,5 +16,6 @@ public interface ScheduleWebService {
     public int addLesson(Lesson lesson);
     public int addSchedule(Schedule schedule);
     public boolean deleteSchedule(Schedule schedule);
+    public boolean renameSchedule(Pair pairNames);
 
 }
