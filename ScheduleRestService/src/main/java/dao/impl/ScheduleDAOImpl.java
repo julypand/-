@@ -54,6 +54,11 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     }
 
     @Override
+    public boolean editLesson(Lesson lesson) {
+        return conn.editLesson(lesson);
+    }
+
+    @Override
     public int addSchedule(Schedule schedule) {
         return conn.addSchedule(schedule);
     }
@@ -65,7 +70,7 @@ public class ScheduleDAOImpl implements ScheduleDAO{
 
     @Override
     public boolean renameSchedule(String name, String newName) {
-        return conn.renameSchedule(name,newName);
+        return conn.renameSchedule(name, newName);
 
     }
 

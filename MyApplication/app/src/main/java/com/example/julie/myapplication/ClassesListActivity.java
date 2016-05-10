@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -68,11 +69,16 @@ public class ClassesListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int day_id = mViewPager.getCurrentItem();
-                Intent intent = new Intent(ClassesListActivity.this, NewClassActivity.class);
-                intent.putExtra("day_id", day_id);
-                ClassesListActivity.this.finish();
-                startActivity(intent);
+                if(dbHelper.isEditableSchedule(name_schedule)) {
+                    int day_id = mViewPager.getCurrentItem();
+                    Intent intent = new Intent(ClassesListActivity.this, NewClassActivity.class);
+                    intent.putExtra("day_id", day_id);
+                    ClassesListActivity.this.finish();
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getBaseContext(), ClassesListActivity.this.getResources().getString(R.string.not_editable), Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -154,13 +160,12 @@ public class ClassesListActivity extends AppCompatActivity {
         }
 
         void addLessons(ArrayList<Lesson> lessons) {
-            for(Lesson les : lessons) {
+            for(final Lesson les : lessons) {
                 TableRow row = new TableRow(new ContextThemeWrapper(getActivity(), R.style.Table));
                 TextView timeText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
                 TextView nameText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
                 TextView roomText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
                 TextView typeText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
-
                 timeText.setText(les.convert(les.getTimeStart()) + " - " + les.convert(les.getTimeEnd()));
                 nameText.setText(les.getName());
                 roomText.setText(les.getRoom());
@@ -169,6 +174,24 @@ public class ClassesListActivity extends AppCompatActivity {
                 row.addView(nameText);
                 row.addView(roomText);
                 row.addView(typeText);
+                row.setClickable(true);
+                final int id = les.getId();
+                row.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        if(helperDB.isEditableSchedule(name_schedule)) {
+                            final Intent intentEditClass = new Intent(getActivity(), EditClassActivity.class);
+                            intentEditClass.putExtra("class_id", id);
+                            intentEditClass.putExtra("day_id", day_id);
+                            getActivity().finish();
+                            startActivity(intentEditClass);
+                            return true;
+                        }
+                        Toast.makeText(getActivity().getBaseContext(), getActivity().getResources().getString(R.string.not_editable), Toast.LENGTH_LONG).show();
+                        return false;
+                    }
+
+                });
                 tableClasses.addView(row);
             }
         }

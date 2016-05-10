@@ -281,7 +281,6 @@ public class HelperDB extends SQLiteOpenHelper {
             int isEditableColIndex = c.getColumnIndex(KEY_EDIT);
             int nameColIndex = c.getColumnIndex(KEY_NAME);
             do {
-                String nameschedule = c.getString(nameColIndex);
                 if (c.getString(nameColIndex).equals(name)) {
                     isEditable = c.getInt(isEditableColIndex) != 0;
                     break;
@@ -290,6 +289,36 @@ public class HelperDB extends SQLiteOpenHelper {
             c.close();
         }
         return isEditable;
+    }
+    public Lesson getLesson(int id){
+        Lesson lesson = new Lesson();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.query(TABLE_LESSON, null, null , null, null, null, null);
+        if (c.moveToFirst()) {
+            int idColIndex = c.getColumnIndex(KEY_ID);
+            int nameColIndex = c.getColumnIndex(KEY_NAME);
+            int roomColIndex = c.getColumnIndex(KEY_ROOM);
+            int timestartColIndex = c.getColumnIndex(KEY_ST_TIME);
+            int timeendColIndex = c.getColumnIndex(KEY_E_TIME);
+            int typeColIndex = c.getColumnIndex(KEY_TYPE);
+            do {
+                if (c.getInt(idColIndex) == id) {
+                    lesson = new Lesson(id,c.getString(nameColIndex),c.getString(roomColIndex),c.getString(timestartColIndex),c.getString(timeendColIndex),c.getString(typeColIndex));
+                    break;
+                }
+            } while (c.moveToNext());
+            c.close();
+        }
+        return lesson;
+    }
+    public void editLesson(Lesson lesson){
+        int id = lesson.getId();
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("UPDATE " + TABLE_LESSON + " SET "+ KEY_NAME + " = '" +  lesson.getName() + "' WHERE "+ KEY_ID + " = " + id );
+        db.execSQL("UPDATE " + TABLE_LESSON + " SET "+ KEY_ROOM + " = '" +  lesson.getRoom() + "' WHERE "+ KEY_ID + " = " + id );
+        db.execSQL("UPDATE " + TABLE_LESSON + " SET "+ KEY_ST_TIME + " = '" +  lesson.convert(lesson.getTimeStart()) + "' WHERE "+ KEY_ID + " = " + id );
+        db.execSQL("UPDATE " + TABLE_LESSON + " SET "+ KEY_E_TIME + " = '" +  lesson.convert(lesson.getTimeEnd()) + "' WHERE "+ KEY_ID + " = " + id );
+        db.execSQL("UPDATE " + TABLE_LESSON + " SET "+ KEY_TYPE + " = '" +  lesson.getType() + "' WHERE "+ KEY_ID + " = " + id );
     }
 }
 

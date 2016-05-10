@@ -16,6 +16,7 @@ public interface ScheduleDAO {
     int getGroupID(String email);
     ArrayList<String> getWeek();
     int addLesson(Lesson lesson);
+    boolean editLesson(Lesson lesson);
     int addSchedule(Schedule schedule);
     boolean deleteSchedule(Schedule schedule);
     boolean renameSchedule(String name, String newName);

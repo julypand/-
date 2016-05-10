@@ -49,6 +49,11 @@ public class ScheduleServiceImpl implements ScheduleService {
     public  int  addLesson(Lesson lesson){return  scheduleDAO.addLesson(lesson);}
 
     @Override
+    public boolean editLesson(Lesson lesson) {
+        return scheduleDAO.editLesson(lesson);
+    }
+
+    @Override
     public int addSchedule(Schedule schedule) {
         return scheduleDAO.addSchedule(schedule);
     }
