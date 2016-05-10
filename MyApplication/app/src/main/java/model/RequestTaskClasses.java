@@ -5,6 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 import com.example.julie.myapplication.R;
 import com.example.julie.myapplication.ScheduleListActivity;
@@ -20,6 +22,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
 
@@ -92,17 +95,24 @@ public class RequestTaskClasses extends AsyncTask<String, Void, Void> {
     @Override
     protected void onPostExecute(Void result){
         super.onPostExecute(result);
-        //pDialog.dismiss();
+        pDialog.dismiss();
 
         if(error != null){
             Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
         }
         else{
             dbHelper = new HelperDB(getContext());
+            dbHelper.clear();
             dbHelper.addToLocalDB(user);
-            Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
-            getActivity().finish();
-            getActivity().startActivity(intent);
+            ArrayList<Schedule> schedules = dbHelper.getSchedules();
+            RecyclerView mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view);
+            mRecyclerView.setHasFixedSize(true);
+            ArrayList<String> names = new ArrayList<>();
+            for(Schedule schedule: schedules){
+                names.add(schedule.getName());
+            }
+            RecyclerView.Adapter mAdapter = new RecyclerViewAdapter(names,getActivity());
+            mRecyclerView.setAdapter(mAdapter);
             Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_schedule), Toast.LENGTH_LONG).show();
 
         }

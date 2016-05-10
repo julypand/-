@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 import android.widget.Toast;
 
@@ -33,8 +34,9 @@ public class RequestTaskDeleteSchedule extends AsyncTask<String, Void, Void> {
     private String error = null;
     private Schedule schedule;
     private boolean isSuccessful;
+    private int position;
 
-    public RequestTaskDeleteSchedule(Activity activity,Context context,String schedule_name, String userEmail){
+    public RequestTaskDeleteSchedule(Activity activity,Context context,String schedule_name, String userEmail, int position){
         this.setActivity(activity);
         this.setpDialog();
         this.setContext(context);
@@ -104,9 +106,15 @@ public class RequestTaskDeleteSchedule extends AsyncTask<String, Void, Void> {
         else{
             dbHelper = new HelperDB(getContext());
             dbHelper.deleteSchedule(schedule.getName());
-            Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
-            getActivity().finish();
-            getActivity().startActivity(intent);
+            ArrayList<Schedule> schedules = dbHelper.getSchedules();
+            RecyclerView mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view);
+            mRecyclerView.setHasFixedSize(true);
+            ArrayList<String> names = new ArrayList<>();
+            for(Schedule schedule: schedules){
+                names.add(schedule.getName());
+            }
+            RecyclerView.Adapter mAdapter = new RecyclerViewAdapter(names,getActivity());
+            mRecyclerView.setAdapter(mAdapter);
             Toast.makeText(getContext(), getActivity().getResources().getString(R.string.success_deleting), Toast.LENGTH_LONG).show();
         }
     }
@@ -119,10 +127,6 @@ public class RequestTaskDeleteSchedule extends AsyncTask<String, Void, Void> {
 
     public void setActivity(Activity activity) {
         this.activity = activity;
-    }
-
-    public ProgressDialog getpDialog() {
-        return pDialog;
     }
 
     public void setpDialog() {
@@ -138,8 +142,8 @@ public class RequestTaskDeleteSchedule extends AsyncTask<String, Void, Void> {
         this.context = context;
     }
 
-    public Schedule getSchedule() {
-        return schedule;
+    public void setPosition(int position) {
+        this.position = position;
     }
 
     public void setSchedule(Schedule schedule) {

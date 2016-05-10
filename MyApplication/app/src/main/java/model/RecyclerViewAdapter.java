@@ -138,9 +138,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                                         if(dbHelper.isEditableSchedule(name_schedule)) {
                                             SharedPreferences loginPreferences = activity.getSharedPreferences("loginPrefs", activity.MODE_PRIVATE);
                                             String email = loginPreferences.getString("email", "");
-                                            new RequestTaskDeleteSchedule(activity, activity.getBaseContext(), name_schedule, email).execute(ip + "/users/schedules/delete");
-                                            rv.deleteItem(position);
-                                            dialog.dismiss();
+                                            new RequestTaskDeleteSchedule(activity, activity.getBaseContext(), name_schedule, email, position).execute(ip + "/users/schedules/delete");
                                         }
                                         else
                                             Toast.makeText(activity, activity.getResources().getString(R.string.not_deleting), Toast.LENGTH_LONG).show();

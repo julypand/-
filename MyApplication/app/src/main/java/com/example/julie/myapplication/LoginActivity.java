@@ -22,9 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     Button loginBtn;
     TextView singupText;
     EditText emailText, passwordText;
-    CheckBox saveLoginCheckBox;
     String email, password;
-    boolean isSaveLogin;
     String ip;
 
     @Override
@@ -92,15 +90,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void onLoginFailed(){
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), getResources().getString(R.string.login_failed), Toast.LENGTH_LONG).show();
         loginBtn.setEnabled(true);
-    }
-
-    private void onLoginSuccess(){
-        loginBtn.setEnabled(true);
-        setResult(RESULT_OK, null);
-        LoginActivity.this.finish();
-        startActivity(new Intent(this, ViewActivity.class));
     }
 
 

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             dbHelper = new HelperDB(getApplicationContext());
             dbHelper.clear();
-                    }
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

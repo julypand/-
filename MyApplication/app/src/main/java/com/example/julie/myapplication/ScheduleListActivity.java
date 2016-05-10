@@ -59,6 +59,7 @@ public class ScheduleListActivity extends AppCompatActivity {
 
 
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,9 +90,6 @@ public class ScheduleListActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         }
         if(id == R.id.refresh){
-            HelperDB dbHelper = new HelperDB(getApplicationContext());
-            dbHelper.getWritableDatabase();
-            dbHelper.clear();
             String email = loginPreferences.getString("email", "");
             ip = getResources().getString(R.string.ip);
             new RequestTaskClasses(ScheduleListActivity.this,getBaseContext(),new User(email)).execute(ip + "/users/classes");
