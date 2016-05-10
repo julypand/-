@@ -98,5 +98,7 @@
     <string name="class_type">Type</string>
     <string name="saveButton">Save</string>
 
+    <string name="delete_class">Delete lesson?</string>
+
 </resources>
 

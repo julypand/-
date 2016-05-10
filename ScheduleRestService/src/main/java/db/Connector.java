@@ -303,6 +303,17 @@ public class Connector {
         }
         return true;
     }
+    public boolean deleteLesson(int id){
+        Statement st;
+        try{
+            st = con.createStatement();
+            st.executeUpdate("DELETE FROM lesson WHERE id = " + id);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
     public int addSchedule(Schedule schedule){
         String name = schedule.getName();
         int user_id = -1;

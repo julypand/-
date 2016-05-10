@@ -13,17 +13,32 @@
         android:layout_height="wrap_content"
         android:paddingTop="56dp"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit_class"
-            android:textSize="80px"
-            android:id="@+id/tvClassTittle" />
+        android:paddingRight="24dp"
+        android:weightSum="1">
 
 
         <!-- Name Label -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_class"
+                android:textSize="80px"
+                android:id="@+id/tvClassTittle" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_trash"
+                android:id="@+id/btnDelete"
+                android:layout_weight="0.13" />
+        </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

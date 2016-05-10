@@ -156,7 +156,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.3.0.M1</version>
                 <configuration>
-                    <contextPath>/</contextPath>
+
                     <webApp>
                         <contextPath>/</contextPath>
                         <webInfIncludeJarPattern>.*/.*jersey-[^/]\.jar$</webInfIncludeJarPattern>

@@ -2,13 +2,16 @@ package com.example.julie.myapplication;
 
 
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -16,15 +19,19 @@ import java.util.Calendar;
 
 import model.HelperDB;
 import model.Lesson;
+import model.Pair;
+import model.RequestTaskDeleteClass;
+import model.RequestTaskDeleteSchedule;
 import model.RequestTaskEditClass;
 import model.RequestTaskLogin;
 import model.RequestTaskNewClass;
+import model.RequestTaskRenameSchedule;
 
 public class EditClassActivity extends AppCompatActivity {
     int class_id, day_id;
     Lesson lesson;
     String name_schedule;
-    Button saveBtn, cancelBtn;
+    Button saveBtn, cancelBtn, deleteBtn;
     SharedPreferences loginPreferences;
     EditText nameText, roomText,sTimeText,eTimeText,typeText;
     boolean isStart = true;
@@ -57,6 +64,8 @@ public class EditClassActivity extends AppCompatActivity {
         saveBtn = (Button)findViewById(R.id.btnSave);
         cancelBtn = (Button)findViewById(R.id.btnCancel);
 
+        deleteBtn = (Button)findViewById(R.id.btnDelete);
+
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +81,31 @@ public class EditClassActivity extends AppCompatActivity {
                 intent.putExtra("day_id", day_id);
                 startActivity(intent);
             }
+        });
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               AlertDialog.Builder dialog = new AlertDialog.Builder(EditClassActivity.this);
+                dialog.setCancelable(false);
+
+                dialog.setPositiveButton(EditClassActivity.this.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+                dialog.setTitle(EditClassActivity.this.getResources().getString(R.string.yousure))
+                        .setMessage(EditClassActivity.this.getResources().getString(R.string.delete_class))
+                        .setNegativeButton(EditClassActivity.this.getResources().getString(R.string.ok),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        String ip = EditClassActivity.this.getResources().getString(R.string.ip);
+                                            new RequestTaskDeleteClass(EditClassActivity.this, EditClassActivity.this.getBaseContext(), class_id).execute(ip + "/users/classes/delete");
+                                    }
+                                });
+                dialog.create();
+                dialog.show();
+            }
+
         });
 
         sTimeText.setOnClickListener(new View.OnClickListener() {

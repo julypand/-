@@ -71,12 +71,21 @@ public class RESTScheduleWebService implements ScheduleWebService {
         return lessonId;
     }
     @Path("/classes/edit")
+      @POST
+      @Consumes(MediaType.APPLICATION_JSON)
+      @Produces(MediaType.APPLICATION_JSON)
+      @Override
+      public boolean editLesson(Lesson lesson){
+        boolean isSuccessful = scheduleService.editLesson(lesson);
+        return isSuccessful;
+    }
+    @Path("/classes/delete")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Override
-    public boolean editLesson(Lesson lesson){
-        boolean isSuccessful = scheduleService.editLesson(lesson);
+    public boolean deleteLesson(int id){
+        boolean isSuccessful = scheduleService.deleteLesson(id);
         return isSuccessful;
     }
     @Path("/schedules/add")
