@@ -30,10 +30,9 @@ import model.RequestTaskRenameSchedule;
 public class EditClassActivity extends AppCompatActivity {
     int class_id, day_id;
     Lesson lesson;
-    String name_schedule;
-    Button saveBtn, cancelBtn, deleteBtn;
-    SharedPreferences loginPreferences;
+    Button saveBtn, cancelBtn;
     EditText nameText, roomText,sTimeText,eTimeText,typeText;
+    TextView deleteText;
     boolean isStart = true;
     String name, room,stime,etime, type;
     Calendar dateAndTime = Calendar.getInstance();
@@ -64,7 +63,7 @@ public class EditClassActivity extends AppCompatActivity {
         saveBtn = (Button)findViewById(R.id.btnSave);
         cancelBtn = (Button)findViewById(R.id.btnCancel);
 
-        deleteBtn = (Button)findViewById(R.id.btnDelete);
+        deleteText = (TextView)findViewById(R.id.tvDeleteLesson);
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,10 +81,10 @@ public class EditClassActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        deleteBtn.setOnClickListener(new View.OnClickListener() {
+        deleteText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               AlertDialog.Builder dialog = new AlertDialog.Builder(EditClassActivity.this);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(EditClassActivity.this);
                 dialog.setCancelable(false);
 
                 dialog.setPositiveButton(EditClassActivity.this.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
@@ -99,7 +98,7 @@ public class EditClassActivity extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         String ip = EditClassActivity.this.getResources().getString(R.string.ip);
-                                            new RequestTaskDeleteClass(EditClassActivity.this, EditClassActivity.this.getBaseContext(), class_id).execute(ip + "/users/classes/delete");
+                                        new RequestTaskDeleteClass(EditClassActivity.this, EditClassActivity.this.getBaseContext(), class_id).execute(ip + "/users/classes/delete");
                                     }
                                 });
                 dialog.create();

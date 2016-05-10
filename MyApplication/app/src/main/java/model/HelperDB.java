@@ -250,6 +250,11 @@ public class HelperDB extends SQLiteOpenHelper {
                 db.execSQL("DELETE FROM " + TABLE_LESSON + " WHERE "+ KEY_SCH_ID + " = " + id_schedule);
 
         }
+        public void deleteLesson(int id){
+            SQLiteDatabase db = this.getWritableDatabase();
+            db.execSQL("DELETE FROM " + TABLE_LESSON + " WHERE "+ KEY_ID + " = " + id);
+
+        }
         public void clear(){
                 SQLiteDatabase db = this.getWritableDatabase();
                 db.execSQL("DELETE FROM "+ TABLE_SCHEDULE);

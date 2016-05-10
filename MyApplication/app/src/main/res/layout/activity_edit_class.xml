@@ -32,12 +32,6 @@
                 android:textSize="80px"
                 android:id="@+id/tvClassTittle" />
 
-            <Button
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/ic_trash"
-                android:id="@+id/btnDelete"
-                android:layout_weight="0.13" />
         </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -133,6 +127,16 @@
                 android:layout_width="165dp"
                 android:layout_marginLeft="5dp" />
         </LinearLayout>
+        <TextView android:id="@+id/tvDeleteLesson"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/deleteclasstext"
+            android:gravity="center"
+            android:textSize="16dip"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:clickable="true" />
 
         <!-- Cancel Button -->
 
