@@ -26,63 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b7f4b79-5a18-46c0-b576-cc9c8ba66f4b" name="Default" comment="">
-<<<<<<< Updated upstream
-      <change type="DELETED" beforePath="C:\Users\Julie\Documents\kursovaya\MyApplication\.idea\inspectionProfiles\Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Julie\Documents\kursovaya\MyApplication\.idea\inspectionProfiles\profiles_settings.xml" afterPath="" />
-=======
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/model/RequestTaskDeleteClass.java" />
->>>>>>> Stashed changes
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/db/Connector.class" afterPath="$PROJECT_DIR$/target/classes/db/Connector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/db/Connector.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/db/Connector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Lesson.class" afterPath="$PROJECT_DIR$/target/classes/model/Lesson.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Lesson.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/Lesson.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/web/rest/RESTScheduleWebService.class" afterPath="$PROJECT_DIR$/target/classes/web/rest/RESTScheduleWebService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/rest/RESTScheduleWebService.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/rest/RESTScheduleWebService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ScheduleDAO.class" afterPath="$PROJECT_DIR$/target/classes/dao/ScheduleDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/dao/ScheduleDAO.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/dao/ScheduleDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/ScheduleDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/ScheduleDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/dao/impl/ScheduleDAOImpl.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/dao/impl/ScheduleDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ScheduleService.class" afterPath="$PROJECT_DIR$/target/classes/service/ScheduleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/ScheduleService.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/ScheduleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/ScheduleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/ScheduleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/impl/ScheduleServiceImpl.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/service/impl/ScheduleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/web/ScheduleWebService.class" afterPath="$PROJECT_DIR$/target/classes/web/ScheduleWebService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/ScheduleWebService.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/web/ScheduleWebService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/User.class" afterPath="$PROJECT_DIR$/target/classes/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT.war" />
-<<<<<<< Updated upstream
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/MyApplication.iml" afterPath="$PROJECT_DIR$/../MyApplication/MyApplication.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScheduleRestService.iml" afterPath="$PROJECT_DIR$/ScheduleRestService.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/app.iml" afterPath="$PROJECT_DIR$/../MyApplication/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/misc.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/modules.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/modules.xml" />
-=======
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/db/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/db/Connector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/EditClassActivity.java" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/java/com/example/julie/myapplication/EditClassActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" afterPath="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" afterPath="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" afterPath="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/res/layout/activity_edit_class.xml" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/res/layout/activity_edit_class.xml" />
->>>>>>> Stashed changes
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties" afterPath="$PROJECT_DIR$/target/schedule-1.0-SNAPSHOT/META-INF/maven/schedule/schedule/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/runConfigurations.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/runConfigurations.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../MyApplication/app/src/main/res/values/strings.xml" />
-<<<<<<< Updated upstream
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MyApplication/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../MyApplication/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-=======
->>>>>>> Stashed changes
     </list>
     <ignored path="ScheduleRestService.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,22 +61,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-<<<<<<< Updated upstream
-              <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
-=======
-              <caret line="309" column="58" selection-start-line="309" selection-start-column="58" selection-end-line="309" selection-end-column="58" />
->>>>>>> Stashed changes
+              <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-                <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
                 <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
                 <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
                 <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-                <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
                 <element signature="method#getType#0;class#Connector#0" expanded="false" />
                 <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
                 <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -143,76 +78,28 @@
                 <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
                 <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
                 <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-                <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-                <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-                <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-                <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-                <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-                <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-                <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-                <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-                <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-                <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-                <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-                <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-                <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-                <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-                <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-                <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-                <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-                <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-                <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-                <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-                <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-                <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-                <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-                <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-                <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-                <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-                <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-                <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RESTScheduleWebService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="62" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
-                <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
->>>>>>> Stashed changes
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< Updated upstream
       <file leaf-file-name="ScheduleDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5653207">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-=======
-      <file leaf-file-name="ScheduleWebService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1581#1582#0" expanded="true" />
+                <element signature="e#1630#1631#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,34 +109,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
->>>>>>> Stashed changes
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1362#1363#0" expanded="true" />
-                <element signature="e#1415#1416#0" expanded="true" />
-                <element signature="e#1472#1473#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-<<<<<<< Updated upstream
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1608#1609#0" expanded="true" />
-                <element signature="e#1692#1693#0" expanded="true" />
-=======
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
->>>>>>> Stashed changes
+                <element signature="e#1831#1832#0" expanded="true" />
+                <element signature="e#1915#1916#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -259,62 +123,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-<<<<<<< Updated upstream
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+                <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
                 <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
                 <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
-=======
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
-                <element signature="e#1470#1471#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
->>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< Updated upstream
-=======
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServletContainer.class" pinned="false" current-in-tab="true">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/containers/jersey-container-servlet-core/2.17/jersey-container-servlet-core-2.17.jar!/org/glassfish/jersey/servlet/ServletContainer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1085715">
-              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
->>>>>>> Stashed changes
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -350,14 +169,9 @@
         <option value="$PROJECT_DIR$/src/main/java/db/Connector.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java" />
-<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java" />
         <option value="$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Pair.java" />
-=======
-        <option value="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/Connector.java" />
->>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java" />
       </list>
     </option>
@@ -1099,12 +913,8 @@
       <workItem from="1462702949478" duration="13190000" />
       <workItem from="1462736423515" duration="2247000" />
       <workItem from="1462784875780" duration="32093000" />
-<<<<<<< Updated upstream
       <workItem from="1462881845312" duration="5795000" />
       <workItem from="1462889805892" duration="3512000" />
-=======
-      <workItem from="1462881845312" duration="12524000" />
->>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Edit nessasery">
       <created>1450379436559</created>
@@ -1116,11 +926,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="229676000" />
-=======
-    <option name="totallyTimeSpent" value="232893000" />
->>>>>>> Stashed changes
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1132,27 +938,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-<<<<<<< Updated upstream
     <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-=======
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
->>>>>>> Stashed changes
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-<<<<<<< Updated upstream
-=======
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
->>>>>>> Stashed changes
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27895597" sideWeight="0.38653556" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16414523" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-<<<<<<< Updated upstream
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26872963" sideWeight="0.6134645" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1165,19 +961,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306189" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4493192" sideWeight="0.505618" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16414523" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4493192" sideWeight="0.49438202" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26966292" sideWeight="0.6134645" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
->>>>>>> Stashed changes
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1210,17 +993,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-<<<<<<< Updated upstream
           <url>file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java</url>
-          <line>97</line>
+          <line>116</line>
           <properties />
           <option name="timeStamp" value="94" />
-=======
-          <url>file://$PROJECT_DIR$/src/main/java/db/Connector.java</url>
-          <line>284</line>
-          <properties />
-          <option name="timeStamp" value="101" />
->>>>>>> Stashed changes
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="97" />
@@ -1232,7 +1008,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< Updated upstream
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1247,30 +1022,22 @@
           <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-=======
->>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1282,43 +1049,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1329,7 +1059,7 @@
           <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1342,15 +1072,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1362,43 +1086,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1409,7 +1096,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1422,15 +1109,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1442,43 +1123,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1489,7 +1133,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1502,15 +1146,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1522,43 +1160,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1569,7 +1170,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1582,15 +1183,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1602,43 +1197,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1649,7 +1207,7 @@
           <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1662,15 +1220,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1682,43 +1234,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1729,7 +1244,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1742,15 +1257,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1762,43 +1271,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1809,7 +1281,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1822,15 +1294,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1842,43 +1308,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1889,7 +1318,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1902,15 +1331,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -1922,43 +1345,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1969,7 +1355,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
@@ -1982,15 +1368,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
->>>>>>> Stashed changes
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -2002,43 +1382,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-<<<<<<< Updated upstream
-=======
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
->>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -2049,10 +1392,17 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
             <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5017361">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -2193,7 +1543,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2225,8 +1574,6 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> Stashed changes
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2237,13 +1584,8 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.3327645">
           <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
-=======
-        <state vertical-scroll-proportion="0.21541156">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
->>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
@@ -2259,118 +1601,15 @@
         </state>
       </provider>
     </entry>
-<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/db/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+          <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
-            <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-            <element signature="method#getType#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
-            <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
-            <element signature="method#getIdClass#0;class#Connector#0" expanded="false" />
-            <element signature="method#addClass#0;class#Connector#0" expanded="false" />
-            <element signature="method#getIdType#0;class#Connector#0" expanded="false" />
-            <element signature="method#addType#0;class#Connector#0" expanded="false" />
-            <element signature="method#getNameDay#0;class#Connector#0" expanded="false" />
-            <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
-            <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
-            <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-=======
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.17/jersey-server-2.17.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19964974">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="62" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
-            <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
->>>>>>> Stashed changes
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/ScheduleWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-<<<<<<< Updated upstream
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-            <element signature="e#1692#1693#0" expanded="true" />
-=======
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> Stashed changes
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< Updated upstream
-    <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addLesson#0;class#RESTScheduleWebService#0" expanded="false" />
-            <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
-            <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> Stashed changes
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state vertical-scroll-proportion="0.5653207">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-=======
-        <state vertical-scroll-proportion="0.0">
-          <caret line="309" column="58" selection-start-line="309" selection-start-column="58" selection-end-line="309" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getSchedules#0;class#Connector#0" expanded="false" />
-            <element signature="method#getWeek#0;class#Connector#0" expanded="false" />
-            <element signature="method#getLessons#0;class#Connector#0" expanded="false" />
             <element signature="method#addLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#editLesson#0;class#Connector#0" expanded="false" />
             <element signature="method#addSchedule#0;class#Connector#0" expanded="false" />
-            <element signature="method#deleteLessonsOfSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getType#0;class#Connector#0" expanded="false" />
             <element signature="method#getLessonId#0;class#Connector#0" expanded="false" />
             <element signature="method#getNameClass#0;class#Connector#0" expanded="false" />
@@ -2382,40 +1621,6 @@
             <element signature="method#getNameSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#getIdSchedule#0;class#Connector#0" expanded="false" />
             <element signature="method#IsEditableSchedule#0;class#Connector#0" expanded="false" />
-            <marker date="1462903771142" expanded="true" signature="1183:1201" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="1668:1719" placeholder="SELECT id FR..user..." />
-            <marker date="1462903771142" expanded="true" signature="2086:2143" placeholder="SELECT passw..user..." />
-            <marker date="1462903771142" expanded="true" signature="2536:2593" placeholder="SELECT group..user..." />
-            <marker date="1462903771142" expanded="true" signature="3039:3061" placeholder="SELECT email..user..." />
-            <marker date="1462903771142" expanded="true" signature="3514:3648" placeholder="SELECT * FRO..student_group..." />
-            <marker date="1462903771142" expanded="true" signature="3844:4104" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="4240:4370" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="5062:5110" placeholder="SELECT * FRO..user..." />
-            <marker date="1462903771142" expanded="true" signature="5679:5743" placeholder="SELECT * FRO..user_has_schedule..." />
-            <marker date="1462903771142" expanded="true" signature="6759:6776" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="7248:7311" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="8393:8720" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="9400:9542" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="9620:9742" placeholder="UPDATE lesso..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10107" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10077:10113" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="10495:10545" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="10684:10813" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="11359:11439" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11528:11560" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="11846:11885" placeholder="DELETE FROM ..." />
-            <marker date="1462903771142" expanded="true" signature="12234:12292" placeholder="UPDATE sched..." />
-            <marker date="1462903771142" expanded="true" signature="12609:12652" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="13119:13395" placeholder="SELECT * FRO..lesson..." />
-            <marker date="1462903771142" expanded="true" signature="13816:13865" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14284:14334" placeholder="SELECT * FRO..class..." />
-            <marker date="1462903771142" expanded="true" signature="14743:14792" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="15136:15183" placeholder="SELECT * FRO..type..." />
-            <marker date="1462903771142" expanded="true" signature="15591:15664" placeholder="INSERT INTO ..." />
-            <marker date="1462903771142" expanded="true" signature="16011:16053" placeholder="SELECT * FRO..day..." />
-            <marker date="1462903771142" expanded="true" signature="16495:16550" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="16939:16989" placeholder="SELECT * FRO..schedule..." />
-            <marker date="1462903771142" expanded="true" signature="17390:17438" placeholder="SELECT * FRO..schedule..." />
           </folding>
         </state>
       </provider>
@@ -2423,45 +1628,45 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ScheduleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1831#1832#0" expanded="true" />
+            <element signature="e#1915#1916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/web/rest/RESTScheduleWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#deleteLesson#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#addSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
+            <element signature="method#deleteSchedule#0;class#RESTScheduleWebService#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ScheduleDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.5653207">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1413#1414#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
->>>>>>> Stashed changes
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/containers/jersey-container-servlet-core/2.17/jersey-container-servlet-core-2.17.jar!/org/glassfish/jersey/servlet/ServletContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1085715">
-          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
