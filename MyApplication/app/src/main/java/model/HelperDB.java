@@ -27,6 +27,7 @@ public class HelperDB extends SQLiteOpenHelper {
     private static final String KEY_TYPE = "type";
     private static final String KEY_ST_TIME = "stime";
     private static final String KEY_E_TIME = "etime";
+    private static final String KEY_EDIT = "iseditable";
 
 
         public HelperDB(Context context) {
@@ -48,12 +49,13 @@ public class HelperDB extends SQLiteOpenHelper {
 
                 db.execSQL("CREATE TABLE " + TABLE_SCHEDULE + " ( "
                         + KEY_ID + " integer, "
-                        + KEY_NAME + " text "
+                        + KEY_NAME + " text, "
+                        + KEY_EDIT + " integer"
                         + ");");
 
                 db.execSQL("CREATE TABLE " + TABLE_DAY + " ( "
                         + KEY_ID + " integer, "
-                        + KEY_NAME +" text "
+                        + KEY_NAME + " text "
                         + ");");
 
 
@@ -86,7 +88,8 @@ public class HelperDB extends SQLiteOpenHelper {
                 for (Schedule schedule: schedules) {
                         String name_schedule = schedule.getName();
                         int schedule_id = schedule.getId();
-                        String query = "INSERT INTO " + TABLE_SCHEDULE + "(" +KEY_ID +"," + KEY_NAME +") VALUES ("+ schedule_id+ ",'"+ name_schedule + "\')";
+                        int isEditable  = schedule.getIsEditable()? 1:0;
+                        String query = "INSERT INTO " + TABLE_SCHEDULE + " (" +KEY_ID +"," + KEY_NAME + ","+ KEY_EDIT + ") VALUES ("+ schedule_id+ ",'"+ name_schedule + "'," + isEditable + ")";
                         db.execSQL(query);
 
                         List<Lesson> lessons = schedule.getLessons();
@@ -129,21 +132,22 @@ public class HelperDB extends SQLiteOpenHelper {
 
         }
 
-        public ArrayList<String> getNameSchedules(){
-                ArrayList<String> names = new ArrayList<>();
-
+        public ArrayList<Schedule> getSchedules(){
+                ArrayList<Schedule> schedules = new ArrayList<>();
                 SQLiteDatabase db = this.getReadableDatabase();
                 Cursor c = db.query(TABLE_SCHEDULE, null, null, null, null, null, null);
                 if (c.moveToFirst()) {
                         int nameColIndex = c.getColumnIndex(KEY_NAME);
+                        int isEditableIndex = c.getColumnIndex(KEY_EDIT);
                         do {
                                 String name = c.getString(nameColIndex);
-                                names.add(name);
+                                boolean isEditable = c.getInt(isEditableIndex) != 0;
+                                schedules.add(new Schedule(name,isEditable));
 
                         } while (c.moveToNext());
                         c.close();
                 }
-                return names;
+                return schedules;
         }
         public ArrayList<String> getWeek(){
                 ArrayList<String> week = new ArrayList<>();
@@ -230,7 +234,8 @@ public class HelperDB extends SQLiteOpenHelper {
             SQLiteDatabase db = this.getWritableDatabase();
             String name = schedule.getName();
             int id = schedule.getId();
-            String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_ID+ "," + KEY_NAME + ") VALUES (" +id + ",'" + name + "\')";
+            int isEditable = schedule.getIsEditable()?1:0;
+            String query = "INSERT INTO " + TABLE_SCHEDULE + "(" + KEY_ID+ "," + KEY_NAME +"," + KEY_EDIT+ ") VALUES (" +id + ",'" + name + "', "+ isEditable +")";
             db.execSQL(query);
         }
 
@@ -269,6 +274,18 @@ public class HelperDB extends SQLiteOpenHelper {
                 int id = getIdSchedule(name);
                 db.execSQL("UPDATE " + TABLE_SCHEDULE + " SET "+ KEY_NAME + " = '" +  new_name + "' WHERE "+ KEY_ID + " = " + id );
         }
+    public boolean isEditableSchedule(String name){
+        boolean isEditable = false;
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT "+ KEY_EDIT +" FROM " + TABLE_SCHEDULE +" WHERE " + KEY_NAME + " = '" + name + "'";
+        Cursor c = db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            int isEditableColIndex = c.getColumnIndex(KEY_EDIT);
+            isEditable = c.getInt(isEditableColIndex) != 0;
+            c.close();
+        }
+        return isEditable;
+    }
 }
 
 

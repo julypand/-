@@ -14,5 +14,6 @@ public interface ScheduleWebService {
     User getSchedules(User user);
     public int addLesson(Lesson lesson);
     public int addSchedule(Schedule schedule);
+    public boolean deleteSchedule(Schedule schedule);
 
 }

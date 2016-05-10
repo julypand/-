@@ -17,4 +17,5 @@ public interface ScheduleDAO {
     ArrayList<String> getWeek();
     int addLesson(Lesson lesson);
     int addSchedule(Schedule schedule);
+    boolean deleteSchedule(Schedule schedule);
 }

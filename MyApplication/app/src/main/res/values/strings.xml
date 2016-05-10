@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Main-->
     <string name="app_name">Schedule</string>
     <string name="title_activity_login">Activity Login</string>
@@ -67,8 +66,9 @@
     <string name="change_email">Somebody has that e-mail. Change it!</string>
     <string name="add_wait">Adding..</string>
     <string name="success_adding">Successful adding!</string>
-
-    <string name="schedule_exist">This name has already exist!</string>
+    <string name="success_deleting">Successful delete!</string>
+    <string name="delete_wait">Deleting...</string>
+    <string name="schedule_exist">This name already exists!</string>
 
 
     <string name="load_schedule">Load schedule...</string>
@@ -81,6 +81,7 @@
     <string name="cancel">Cancel</string>
     <string name="yousure">Are you sure?</string>
     <string name="delete_schedule">Delete schedule: </string>
+    <string name="not_deleting">This schedule must not delete!</string>
 
 
     <string name="new_class">New class: </string>

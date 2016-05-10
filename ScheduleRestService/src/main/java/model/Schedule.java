@@ -6,37 +6,47 @@ public class Schedule {
     private int id;
     private String name;
     private String userEmail;
-    private ArrayList<Lesson> lessons = new ArrayList<>();
+    private boolean isEditable = true;
+    private ArrayList<Lesson> lessons  = new ArrayList<>();
     private ArrayList<String> week = new ArrayList<>();
 
-    public Schedule() {
-    }
+    public Schedule(){}
 
-    public Schedule(String name) {
+    public Schedule(String name){
         setName(name);
     }
 
-    public Schedule(int id, String name) {
+    public Schedule(int id, String name){
         this(name);
         setId(id);
     }
 
-    public Schedule(String name, String userEmail) {
+    public Schedule(String name, String userEmail){
         this(name);
         setUserEmail(userEmail);
     }
-
-    public Schedule(int id, String name, ArrayList<Lesson> lessons) {
+    public Schedule(String name, boolean isEditable){
+        this(name);
+        setIsEditable(isEditable);
+    }
+    public Schedule(int id, String name, ArrayList<Lesson> lessons){
         this(id, name);
         setLessons(lessons);
     }
-
-    public Schedule(int id, String name, ArrayList<Lesson> lessons, ArrayList<String> week) {
-        this(id, name, lessons);
+    public Schedule(int id, String name, ArrayList<Lesson> lessons,ArrayList<String> week){
+        this(id, name,lessons);
         setWeek(week);
     }
 
-    public void addLesson(Lesson lesson) {
+    public Schedule(int id, String name, boolean isEditable, ArrayList<Lesson> lessons) {
+        this(id, name,lessons);
+        setIsEditable(isEditable);
+    }
+    public Schedule(int id, String name, boolean isEditable, ArrayList<Lesson> lessons,ArrayList<String> week) {
+        this(id, name,isEditable,lessons);
+        setWeek(week);
+    }
+    public void addLesson(Lesson lesson){
         lessons.add(lesson);
     }
 
@@ -79,5 +89,13 @@ public class Schedule {
 
     public void setUserEmail(String emailUser) {
         this.userEmail = emailUser;
+    }
+
+    public boolean getIsEditable() {
+        return isEditable;
+    }
+
+    public void setIsEditable(boolean isEditable) {
+        this.isEditable = isEditable;
     }
 }

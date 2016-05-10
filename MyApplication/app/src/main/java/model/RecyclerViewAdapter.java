@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.julie.myapplication.R;
 import com.example.julie.myapplication.ViewActivity;
@@ -132,10 +133,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         .setNegativeButton(activity.getResources().getString(R.string.ok),
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
+                                        String ip = activity.getResources().getString(R.string.ip);
                                         HelperDB dbHelper = new HelperDB(activity.getBaseContext());
-                                        dbHelper.deleteSchedule(name_schedule);
-                                        rv.deleteItem(position);
-                                        dialog.dismiss();
+                                        if(dbHelper.isEditableSchedule(name_schedule)) {
+                                            SharedPreferences loginPreferences = activity.getSharedPreferences("loginPrefs", activity.MODE_PRIVATE);
+                                            String email = loginPreferences.getString("email", "");
+                                            new RequestTaskDeleteSchedule(activity, activity.getBaseContext(), name_schedule, email).execute(ip + "/users/schedules/delete");
+                                            dialog.dismiss();
+                                        }
+                                        else
+                                            Toast.makeText(activity, activity.getResources().getString(R.string.not_deleting), Toast.LENGTH_LONG).show();
+                                        //HelperDB dbHelper = new HelperDB(activity.getBaseContext());
+                                        //dbHelper.deleteSchedule(name_schedule);
+                                        //rv.deleteItem(position);
+
 
                                     }
                                 });

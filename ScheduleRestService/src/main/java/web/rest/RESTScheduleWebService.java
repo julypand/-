@@ -78,4 +78,13 @@ public class RESTScheduleWebService implements ScheduleWebService {
         int scheduleId = scheduleService.addSchedule(schedule);
         return scheduleId;
     }
+    @Path("/schedules/delete")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public boolean deleteSchedule(Schedule schedule){
+        boolean isSuccessful = scheduleService.deleteSchedule(schedule);
+        return isSuccessful;
+    }
 }

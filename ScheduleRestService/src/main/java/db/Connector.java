@@ -185,9 +185,11 @@ public class Connector {
 
             while(rs.next()){
                 int schedule_id = rs.getInt(2);
+                boolean isEditable = IsEditableSchedule(schedule_id);
                 name = getNameSchedule(schedule_id);
+
                 ArrayList<Lesson> lessons = getLessons(schedule_id);
-                schedules.add(new Schedule(schedule_id,name, lessons));
+                schedules.add(new Schedule(schedule_id,name, isEditable, lessons));
                 }
             }
 
@@ -294,6 +296,38 @@ public class Connector {
             e.printStackTrace();
         }
         return schedule_id;
+    }
+    public boolean deleteSchedule(Schedule schedule){
+        String name = schedule.getName();
+        String email = schedule.getUserEmail();
+        int user_id = -1;
+        int schedule_id = -1;
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            schedule_id = getIdSchedule(name);
+            user_id = getId(email);
+            deleteLessonsOfSchedule(schedule_id);
+            st.executeUpdate("DELETE FROM user_has_schedule WHERE user_id = " + user_id + " AND schedule_id = "  + schedule_id);
+            st = con.createStatement();
+            st.executeUpdate("DELETE FROM schedule WHERE id = " +schedule_id);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+    public void deleteLessonsOfSchedule(int schedule_id){
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            st.executeUpdate("DELETE FROM lesson WHERE schedule_id = "  + schedule_id + "");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     public String getType(int id){
         String type = "lecture";
@@ -457,6 +491,22 @@ public class Connector {
             e.printStackTrace();
         }
         return id;
+
+    }
+    private boolean IsEditableSchedule(int id){
+        boolean isEditable = false;
+        Statement st;
+        ResultSet rs;
+        try {
+            st = con.createStatement();
+            rs = st.executeQuery("SELECT * FROM schedule WHERE  id = '" + id + "\'");
+            if(rs.next()) {
+                isEditable = rs.getBoolean(3);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isEditable;
 
     }
 }

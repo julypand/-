@@ -51,5 +51,9 @@ public class ScheduleServiceImpl implements ScheduleService {
     public int addSchedule(Schedule schedule) {
         return scheduleDAO.addSchedule(schedule);
     }
+    @Override
+    public boolean deleteSchedule(Schedule schedule){
+        return scheduleDAO.deleteSchedule(schedule);
+    }
 
 }

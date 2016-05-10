@@ -6,6 +6,7 @@ public class Schedule {
     private int id;
     private String name;
     private String userEmail;
+    private boolean isEditable = true;
     private ArrayList<Lesson> lessons  = new ArrayList<>();
     private ArrayList<String> week = new ArrayList<>();
 
@@ -24,12 +25,25 @@ public class Schedule {
         this(name);
         setUserEmail(userEmail);
     }
+    public Schedule(String name, boolean isEditable){
+        this(name);
+        setIsEditable(isEditable);
+    }
     public Schedule(int id, String name, ArrayList<Lesson> lessons){
         this(id, name);
         setLessons(lessons);
     }
     public Schedule(int id, String name, ArrayList<Lesson> lessons,ArrayList<String> week){
         this(id, name,lessons);
+        setWeek(week);
+    }
+
+    public Schedule(int id, String name, boolean isEditable, ArrayList<Lesson> lessons) {
+        this(id, name,lessons);
+        setIsEditable(isEditable);
+    }
+    public Schedule(int id, String name, boolean isEditable, ArrayList<Lesson> lessons,ArrayList<String> week) {
+        this(id, name,isEditable,lessons);
         setWeek(week);
     }
     public void addLesson(Lesson lesson){
@@ -75,5 +89,13 @@ public class Schedule {
 
     public void setUserEmail(String emailUser) {
         this.userEmail = emailUser;
+    }
+
+    public boolean getIsEditable() {
+        return isEditable;
+    }
+
+    public void setIsEditable(boolean isEditable) {
+        this.isEditable = isEditable;
     }
 }

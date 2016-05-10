@@ -32,6 +32,7 @@ import model.User;
 public class ScheduleListActivity extends AppCompatActivity {
     SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
+    ArrayList<Schedule> schedules;
     String ip;
     HelperDB dbHelper;
     private RecyclerView mRecyclerView;
@@ -49,11 +50,13 @@ public class ScheduleListActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager= new LinearLayoutManager(this);
 
+        dbHelper = new HelperDB(getApplicationContext());
+        schedules = dbHelper.getSchedules();
+
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new RecyclerViewAdapter(getDataSet(),ScheduleListActivity.this);
         mRecyclerView.setAdapter(mAdapter);
 
-        dbHelper = new HelperDB(getApplicationContext());
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -96,8 +99,11 @@ public class ScheduleListActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private ArrayList<String> getDataSet() {
-        dbHelper = new HelperDB(getBaseContext());
-        return dbHelper.getNameSchedules();
+        ArrayList<String> names = new ArrayList<>();
+        for(Schedule schedule: schedules){
+            names.add(schedule.getName());
+        }
+        return names;
 
     }
 

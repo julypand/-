@@ -17,4 +17,5 @@ public interface ScheduleService {
     ArrayList<String> getWeek();
     int addLesson(Lesson lesson);
     int addSchedule(Schedule schedule);
+    boolean deleteSchedule(Schedule schedule);
 }

@@ -58,5 +58,10 @@ public class ScheduleDAOImpl implements ScheduleDAO{
         return conn.addSchedule(schedule);
     }
 
+    @Override
+    public boolean deleteSchedule(Schedule schedule) {
+        return conn.deleteSchedule(schedule);
+    }
+
 
 }
