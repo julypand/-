@@ -16,14 +16,42 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `class`
+--
+
+DROP TABLE IF EXISTS `class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `class` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `class`
 --
 
 LOCK TABLES `class` WRITE;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
-INSERT INTO `class` VALUES (1,'ДГС'),(2,'СУБД'),(3,'ЭСУПК'),(4,'ИИС'),(5,'с/к'),(6,'с/л'),(7,'ИСМ'),(8,'Экология'),(13,'tata'),(14,'rar'),(15,'Lemonad');
+INSERT INTO `class` VALUES (1,'ДГС'),(2,'СУБД'),(3,'ЭСУПК'),(4,'ИИС'),(5,'с/к'),(6,'с/л'),(7,'ИСМ'),(8,'Экология'),(13,'tata'),(14,'rar'),(15,'Lemonad'),(16,'tatu');
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `day`
+--
+
+DROP TABLE IF EXISTS `day`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `day` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `day`
@@ -36,6 +64,34 @@ INSERT INTO `day` VALUES (0,'Monday'),(1,'Tuesday'),(2,'Wednesday'),(3,'Thursday
 UNLOCK TABLES;
 
 --
+-- Table structure for table `lesson`
+--
+
+DROP TABLE IF EXISTS `lesson`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lesson` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name_id` int(11) NOT NULL,
+  `room` varchar(45) DEFAULT '0',
+  `time_start` time DEFAULT NULL,
+  `time_end` time DEFAULT NULL,
+  `schedule_id` int(11) NOT NULL,
+  `type_id` int(11) NOT NULL,
+  `day_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`,`schedule_id`,`day_id`),
+  KEY `fk_class_schedule1_idx` (`schedule_id`),
+  KEY `fk_class_day1_idx` (`day_id`),
+  KEY `fk_class_type1_idx` (`type_id`),
+  KEY `fk_class_name1_idx` (`name_id`),
+  CONSTRAINT `fk_class_day1` FOREIGN KEY (`day_id`) REFERENCES `day` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_class_name1` FOREIGN KEY (`name_id`) REFERENCES `class` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_class_schedule1` FOREIGN KEY (`schedule_id`) REFERENCES `schedule` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_class_type1` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `lesson`
 --
 
@@ -46,14 +102,46 @@ INSERT INTO `lesson` VALUES (2,2,'506','14:30:00','15:50:00',13,2,0),(3,2,'521',
 UNLOCK TABLES;
 
 --
+-- Table structure for table `schedule`
+--
+
+DROP TABLE IF EXISTS `schedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `schedule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `isEditable` tinyint(1) NOT NULL DEFAULT '1',
+  `group_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_schedule_group1_idx` (`group_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `schedule`
 --
 
 LOCK TABLES `schedule` WRITE;
 /*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
-INSERT INTO `schedule` VALUES (2,'1 course 2 group',1,2),(3,'1 course 3 group',1,3),(4,'1 course 4 group',1,4),(5,'2 course 1 group',1,5),(6,'2 course 2 group',1,6),(7,'2 course 3 group',1,7),(8,'2 course 4 group',1,8),(9,'3 course 1 group',1,9),(10,'3 course 2 group',1,10),(11,'3 course 3 group',1,11),(12,'3 course 4 group',1,12),(13,'4 course 1 group',1,13),(14,'4 course 2 group',1,14),(15,'4 course 3 group',1,15),(16,'4 course 4 group',1,16),(17,'5 course 1 group',1,17),(18,'5 course 2 group',1,18),(19,'5 course 3 group',1,19),(20,'5 course 4 group',1,20);
+INSERT INTO `schedule` VALUES (2,'1 course 2 group',0,2),(3,'1 course 3 group',0,3),(4,'1 course 4 group',0,4),(5,'2 course 1 group',0,5),(6,'2 course 2 group',0,6),(7,'2 course 3 group',0,7),(8,'2 course 4 group',0,8),(9,'3 course 1 group',0,9),(10,'3 course 2 group',0,10),(11,'3 course 3 group',0,11),(12,'3 course 4 group',0,12),(13,'4 course 1 group',0,13),(14,'4 course 2 group',0,14),(15,'4 course 3 group',0,15),(16,'4 course 4 group',0,16),(17,'5 course 1 group',0,17),(18,'5 course 2 group',0,18),(19,'5 course 3 group',0,19),(20,'5 course 4 group',0,20),(21,'хуй',1,NULL);
 /*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `student_group`
+--
+
+DROP TABLE IF EXISTS `student_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student_group` (
+  `id` int(11) NOT NULL,
+  `name_group` varchar(45) NOT NULL,
+  `course` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `student_group`
@@ -66,14 +154,48 @@ INSERT INTO `student_group` VALUES (1,'1',1),(2,'2',1),(3,'3',1),(4,'4',1),(5,'1
 UNLOCK TABLES;
 
 --
+-- Table structure for table `type`
+--
+
+DROP TABLE IF EXISTS `type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `type`
 --
 
 LOCK TABLES `type` WRITE;
 /*!40000 ALTER TABLE `type` DISABLE KEYS */;
-INSERT INTO `type` VALUES (1,'lecture'),(2,'practice'),(3,'seminar'),(6,'gghh'),(7,'ram'),(8,'cass');
+INSERT INTO `type` VALUES (1,'lecture'),(2,'practice'),(3,'seminar'),(6,'gghh'),(7,'ram'),(8,'cass'),(9,' cvh');
 /*!40000 ALTER TABLE `type` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `surname` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`group_id`),
+  KEY `fk_user_group_idx` (`group_id`),
+  CONSTRAINT `fk_user_group` FOREIGN KEY (`group_id`) REFERENCES `student_group` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `user`
@@ -86,12 +208,30 @@ INSERT INTO `user` VALUES (1,'Natalie','Pakki','fecit@inbox.ru','wXwgAWh6YVeq8d8
 UNLOCK TABLES;
 
 --
+-- Table structure for table `user_has_schedule`
+--
+
+DROP TABLE IF EXISTS `user_has_schedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_has_schedule` (
+  `user_id` int(11) NOT NULL,
+  `schedule_id` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`,`schedule_id`),
+  KEY `fk_user_has_schedule_schedule1_idx` (`schedule_id`),
+  KEY `fk_user_has_schedule_user1_idx` (`user_id`),
+  CONSTRAINT `fk_user_has_schedule_schedule1` FOREIGN KEY (`schedule_id`) REFERENCES `schedule` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_user_has_schedule_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `user_has_schedule`
 --
 
 LOCK TABLES `user_has_schedule` WRITE;
 /*!40000 ALTER TABLE `user_has_schedule` DISABLE KEYS */;
-INSERT INTO `user_has_schedule` VALUES (5,9),(6,10),(1,13),(4,13),(8,14),(1,15),(7,15);
+INSERT INTO `user_has_schedule` VALUES (5,9),(6,10),(1,13),(4,13),(8,14),(1,15),(7,15),(7,21);
 /*!40000 ALTER TABLE `user_has_schedule` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -104,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-10  1:39:35
+-- Dump completed on 2016-05-10 17:28:09
