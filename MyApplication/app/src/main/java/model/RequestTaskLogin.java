@@ -24,8 +24,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
-
-
     private ProgressDialog pDialog;
     private Context context;
     private Activity activity;
@@ -33,16 +31,14 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     private User user;
     public SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
-    private boolean isSaveLogin;
     String error = null;
 
 
-    public RequestTaskLogin(Activity activity, Context context, String email, String password, boolean isSaveLogin){
+    public RequestTaskLogin(Activity activity, Context context, String email, String password){
         this.setActivity(activity);
         this.setpDialog();
         this.setEmail(email);
         this.setPassword(password);
-        this.setIsSaveLogin(isSaveLogin);
         this.setContext(context);
     }
 
@@ -52,7 +48,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         BufferedReader br;
         OutputStream os;
         BufferedWriter bw;
-        StringBuilder sb = new StringBuilder();
         URL url;
 
         try{
@@ -72,7 +67,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             mapper.writeValue(bw, new User(getEmail()));
             bw.close();
             os.close();
-
 
 
             connection.getInputStream();
@@ -114,12 +108,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                 loginPreferences = context.getSharedPreferences("loginPrefs", context.MODE_PRIVATE);
                 loginPrefEditor = loginPreferences.edit();
                 loginPrefEditor.putString("email",email);
-                if(isSaveLogin) {
-                    loginPrefEditor.putBoolean("saveLogin", true);
-                }
-                else {
-                    loginPrefEditor.putBoolean("saveLogin", false);
-                }
+                loginPrefEditor.putBoolean("saveLogin", true);
                 loginPrefEditor.commit();
                 RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), user);
                 rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
@@ -168,7 +157,4 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
         this.context = context;
     }
 
-    public void setIsSaveLogin(boolean isSaveLogin) {
-        this.isSaveLogin = isSaveLogin;
-    }
 }

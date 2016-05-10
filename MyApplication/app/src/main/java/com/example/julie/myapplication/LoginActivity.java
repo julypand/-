@@ -37,8 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         singupText = (TextView)findViewById(R.id.tvLoginSingup);
         emailText = (EditText)findViewById(R.id.etLoginEmail);
         passwordText = (EditText)findViewById(R.id.etLoginPassword);
-        saveLoginCheckBox = (CheckBox)findViewById(R.id.cbSaveLogin);
-
 
         final Intent intent = new Intent(this, SignupActivity.class);
 
@@ -66,9 +64,8 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        isSaveLogin = saveLoginCheckBox.isSaveEnabled();
         ip =  getResources().getString(R.string.ip);
-        new RequestTaskLogin(LoginActivity.this, getBaseContext(), email,password,isSaveLogin).execute(ip + "/users/login");
+        new RequestTaskLogin(LoginActivity.this, getBaseContext(), email,password).execute(ip + "/users/login");
 
     }
 
