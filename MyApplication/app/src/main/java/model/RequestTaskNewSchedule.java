@@ -80,8 +80,7 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
             error = e.getMessage().toString();
         } catch (IOException e) {
             e.printStackTrace();
-            error = e.getMessage().toString();
-        }
+            error = getActivity().getResources().getString(R.string.offline);        }
         return null;
     }
 

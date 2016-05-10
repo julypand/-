@@ -80,9 +80,8 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             e.printStackTrace();
             error = e.getMessage().toString();
         } catch (IOException e) {
-
             e.printStackTrace();
-            error = e.getMessage().toString();
+            error = getActivity().getResources().getString(R.string.offline);
         }
 
         return null;
@@ -98,26 +97,29 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     }
 
     @Override
-    protected void onPostExecute(Void result){
+    protected void onPostExecute(Void result) {
         super.onPostExecute(result);
         pDialog.dismiss();
-
-            AES.setKey(getPassword());
-            AES.decrypt(user.getPassword().trim());
-            if(AES.getDecryptedString().equals(getPassword())){
-                loginPreferences = context.getSharedPreferences("loginPrefs", context.MODE_PRIVATE);
-                loginPrefEditor = loginPreferences.edit();
-                loginPrefEditor.putString("email",email);
-                loginPrefEditor.putBoolean("saveLogin", true);
-                loginPrefEditor.commit();
-                RequestTaskClasses rtc = new RequestTaskClasses(getActivity(),getContext(), user);
-                rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
-
-            }
-            else{
+        if (error != null) {
+            Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
+        } else {
+            if (user.getPassword() != null) {
+                AES.setKey(getPassword());
+                AES.decrypt(user.getPassword().trim());
+                if (AES.getDecryptedString().equals(getPassword())) {
+                    loginPreferences = context.getSharedPreferences("loginPrefs", context.MODE_PRIVATE);
+                    loginPrefEditor = loginPreferences.edit();
+                    loginPrefEditor.putString("email", email);
+                    loginPrefEditor.putBoolean("saveLogin", true);
+                    loginPrefEditor.commit();
+                    RequestTaskClasses rtc = new RequestTaskClasses(getActivity(), getContext(), user);
+                    rtc.execute(getActivity().getResources().getString(R.string.ip) + "/users/classes");
+                } else
+                    Toast.makeText(getContext(), getActivity().getResources().getString(R.string.incorrent_password), Toast.LENGTH_LONG).show();
+            } else
                 Toast.makeText(getContext(), getActivity().getResources().getString(R.string.incorrent_email), Toast.LENGTH_LONG).show();
-            }
         }
+    }
 
 
 
@@ -149,6 +151,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public Context getContext() {
         return context;
     }

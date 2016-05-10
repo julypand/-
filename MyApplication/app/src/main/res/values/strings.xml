@@ -60,7 +60,8 @@
     <!-- Dialog Windows -->
     <string name="wait">Please, wait..</string>
     <string name="login_wait">Login..</string>
-    <string name="incorrent_email">Incorrect e-mail or password. Try again!</string>
+    <string name="incorrent_email">Incorrect e-mail. Try again!</string>
+    <string name="incorrent_password">Incorrect password. Try again!</string>
     <string name="signup_wait">SignUp...</string>
     <string name="success_signup">Successful signing!</string>
     <string name="change_email">Somebody has that e-mail. Change it!</string>
@@ -72,6 +73,8 @@
     <string name="schedule_exist">This name already exists!</string>
     <string name="edit_wait">Edit...</string>
     <string name="success_edit">Successful edit!</string>
+    <string name="offline">You are offline!</string>
+    <string name="login_failed">Login failed</string>
 
 
     <string name="load_schedule">Load schedule...</string>

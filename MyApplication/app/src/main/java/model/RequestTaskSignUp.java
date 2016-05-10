@@ -84,7 +84,7 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
             error = e.getMessage().toString();
         } catch (IOException e) {
             e.printStackTrace();
-            error = e.getMessage().toString();
+            error = getActivity().getResources().getString(R.string.offline);;
         }
         return null;
     }
@@ -139,16 +139,8 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
         this.context = context;
     }
 
-    public User getUser() {
-        return user;
-    }
-
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public ProgressDialog getpDialog() {
-        return pDialog;
     }
 
     public void setpDialog() {
