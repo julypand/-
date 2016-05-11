@@ -30,11 +30,12 @@ public class Connector {
             e.printStackTrace();
         }
     }
+
     // Login
     public ArrayList<User> getAllUsers(){
         ArrayList<User> list = new ArrayList<>();
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM user");
@@ -42,12 +43,24 @@ public class Connector {
                 list.add(new User(rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7),new ArrayList<Schedule>()));
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return list;
     }
+
     public int getIdUser(String email){
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             rs = st.executeQuery("SELECT id FROM user WHERE email = \'" + email + "\'");
@@ -56,13 +69,24 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return -1;
     }
 
     public String getPassword(String email){
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             rs = st.executeQuery("SELECT password FROM user WHERE email = \'" + email + "\'");
@@ -72,12 +96,24 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
+
     public boolean isPrefect(String email){
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM user WHERE email = \'" + email + "\'");
@@ -87,13 +123,24 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return false;
     }
 
     public int getGroupID(String email){
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         int result = 0;
         try{
             st = con.createStatement();
@@ -103,16 +150,27 @@ public class Connector {
                 System.out.println(rs.getInt(1));
             }
 
-        } catch (SQLException e1) {
-            e1.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return result;
     }
 
     //SignUp
     public boolean isUserContainedAndAdding(User user){
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             rs = st.executeQuery("SELECT email FROM user");
@@ -122,12 +180,21 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         addUser(user);
         return false;
     }
-
-
 
     private void addUser (User user){
         Statement st = null;
@@ -151,7 +218,6 @@ public class Connector {
             } else {
                 //TODO handle the case, when such group and course doesn't exist
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -170,8 +236,8 @@ public class Connector {
 
     private int getId(String email){
         int id = 1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM user WHERE  email='" + email + "\'");
@@ -180,11 +246,21 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return id;
 
     }
-
 
     // Schedule
     public ArrayList<Schedule> getSchedules(User user){
@@ -225,10 +301,11 @@ public class Connector {
 
         return schedules;
     }
+
     public  ArrayList<String> getWeek(){
         ArrayList<String> week = new ArrayList<>();
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM day";
@@ -236,16 +313,27 @@ public class Connector {
             while(rs.next()){
                 week.add(rs.getString(2));
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return week;
     }
+
     public ArrayList<Lesson> getLessons(int schedule_id){
         ArrayList<Lesson> list = new ArrayList<>();
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM lesson WHERE  schedule_id=\'" + schedule_id + "\'";
@@ -257,9 +345,21 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return list;
     }
+
     public int addLesson(Lesson lesson){
         String name = lesson.getName();
         String type = lesson.getType();
@@ -267,7 +367,7 @@ public class Connector {
         int name_id = -1;
         int type_id = -1;
         int schedule_id = -1;
-        Statement st;
+        Statement st = null;
         try{
             st = con.createStatement();
             name_id = getIdClass(name);
@@ -284,12 +384,20 @@ public class Connector {
                     "VALUES ('" + name_id + "\', \'"+lesson.getRoom()+ "\', \'" + lesson.getTimeStart() + "\', \'"
                     + lesson.getTimeEnd() + "\', \'" + schedule_id + "\', \'" + type_id + "\', \'"+ lesson.getDay() + "')");
 
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return getLessonId(lesson, name_id, type_id, schedule_id);
     }
+
     public boolean editLesson(Lesson lesson){
         String name = lesson.getName();
         String type = lesson.getType();
@@ -318,23 +426,31 @@ public class Connector {
         }
         return true;
     }
+
     public boolean deleteLesson(int id){
-        Statement st;
+        Statement st = null;
         try{
             st = con.createStatement();
             st.executeUpdate("DELETE FROM lesson WHERE id = " + id);
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return true;
     }
+
     public int addSchedule(Schedule schedule){
         String name = schedule.getName();
         int user_id = -1;
         int schedule_id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
         try{
             st = con.createStatement();
 
@@ -343,19 +459,26 @@ public class Connector {
             schedule_id = getIdSchedule(name);
             st.executeUpdate("INSERT INTO user_has_schedule (user_id,schedule_id) " +
                     "VALUES ('" + user_id + "\', \'"  + schedule_id + "')");
-
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return schedule_id;
     }
+
     public boolean deleteSchedule(Schedule schedule){
         String name = schedule.getName();
         String email = schedule.getUserEmail();
         int user_id;
         int schedule_id;
-        Statement st;
+        Statement st = null;
         try{
             st = con.createStatement();
             schedule_id = getIdSchedule(name);
@@ -367,22 +490,39 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return true;
     }
+
     public void deleteLessonsOfSchedule(int schedule_id){
-        Statement st;
+        Statement st = null;
         try{
             st = con.createStatement();
             st.executeUpdate("DELETE FROM lesson WHERE schedule_id = "  + schedule_id + "");
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
+
     public boolean renameSchedule(String name,String newName){
         int schedule_id;
-        Statement st;
+        Statement st = null;
         try{
             st = con.createStatement();
             schedule_id = getIdSchedule(name);
@@ -390,13 +530,22 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return true;
     }
+
     public String getType(int id){
         String type = "lecture";
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM type WHERE  id=\'" + id + "\'";
@@ -406,13 +555,25 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return type;
     }
+
     private int getLessonId(Lesson lesson, int name_id, int type_id, int schedule_id){
         int id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = " SELECT * FROM lesson WHERE name_id = '" + name_id + "\' AND time_start=\'" + lesson.getTimeStart() + "\' AND time_end=\'" + lesson.getTimeEnd()
@@ -424,13 +585,25 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return id;
     }
+
     private String getNameClass(int name_id){
         String name = "";
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM class WHERE  id=\'" + name_id + "\'";
@@ -441,14 +614,25 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return name;
-
     }
+
     private int getIdClass(String name){
         int id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM class WHERE  name = \'" + name + "\'";
@@ -459,13 +643,24 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return id;
     }
+
     private int addClass(String name){
         int id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
         try{
             st = con.createStatement();
             String query = "INSERT INTO class (name) VALUES ('" + name +  "')";
@@ -473,13 +668,22 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return getIdClass(name);
     }
+
     private int getIdType(String name){
         int id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM type WHERE  name=\'" + name + "\'";
@@ -487,31 +691,48 @@ public class Connector {
             if(rs.next()){
                 id = rs.getInt(1);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return id;
     }
+
     private int addType(String name){
-        int id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
         try{
             st = con.createStatement();
             String query = "INSERT INTO type (name) " +
                     "VALUES ('" + name +  "')";
             st.executeUpdate(query);
-
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return getIdType(name);
     }
+
     private String getNameDay(int id){
         String name = "";
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try{
             st = con.createStatement();
             String query = "SELECT * FROM day WHERE  id=\'" + id + "\'";
@@ -522,13 +743,25 @@ public class Connector {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return name;
     }
+
     private String getNameSchedule(int schedule_id){
         String name = "";
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM schedule WHERE  id='" + schedule_id + "\'");
@@ -537,14 +770,26 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return name;
 
     }
+
     private int getIdSchedule(String name){
         int id = -1;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM schedule WHERE  name='" + name + "\'");
@@ -553,14 +798,25 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return id;
-
     }
+
     private boolean IsEditableSchedule(int id){
         boolean isEditable = false;
-        Statement st;
-        ResultSet rs;
+        Statement st = null;
+        ResultSet rs = null;
         try {
             st = con.createStatement();
             rs = st.executeQuery("SELECT * FROM schedule WHERE  id = '" + id + "\'");
@@ -569,8 +825,18 @@ public class Connector {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (st != null) {
+                    st.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return isEditable;
-
     }
 }

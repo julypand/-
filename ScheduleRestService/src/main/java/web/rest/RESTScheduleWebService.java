@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-
 @Path("/users")
 public class RESTScheduleWebService implements ScheduleWebService {
 
@@ -56,7 +55,6 @@ public class RESTScheduleWebService implements ScheduleWebService {
             return true;
         }
         return false;
-
     }
 
     @Path("/classes")
@@ -71,6 +69,7 @@ public class RESTScheduleWebService implements ScheduleWebService {
         user.weekSet(week);
         return user;
     }
+
     @Path("/classes/add")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -80,15 +79,17 @@ public class RESTScheduleWebService implements ScheduleWebService {
         int lessonId = scheduleService.addLesson(lesson);
         return lessonId;
     }
+
     @Path("/classes/edit")
-      @POST
-      @Consumes(MediaType.APPLICATION_JSON)
-      @Produces(MediaType.APPLICATION_JSON)
-      @Override
-      public boolean editLesson(Lesson lesson){
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public boolean editLesson(Lesson lesson){
         boolean isSuccessful = scheduleService.editLesson(lesson);
         return isSuccessful;
     }
+
     @Path("/classes/delete")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -98,16 +99,17 @@ public class RESTScheduleWebService implements ScheduleWebService {
         boolean isSuccessful = scheduleService.deleteLesson(id);
         return isSuccessful;
     }
+
     @Path("/schedules/add")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Override
-
     public int addSchedule(Schedule schedule){
         int scheduleId = scheduleService.addSchedule(schedule);
         return scheduleId;
     }
+
     @Path("/schedules/delete")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

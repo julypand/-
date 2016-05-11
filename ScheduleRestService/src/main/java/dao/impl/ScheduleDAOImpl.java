@@ -12,7 +12,7 @@ public class ScheduleDAOImpl implements ScheduleDAO{
 
     private Connector conn = new Connector("com.mysql.jdbc.Driver",
             "jdbc:mysql://localhost:3306/schedule",
-            "root", "root");
+            "root", "password");
 
     public ArrayList<User> getAllUsers() {
         return conn.getAllUsers();
@@ -81,8 +81,5 @@ public class ScheduleDAOImpl implements ScheduleDAO{
     @Override
     public boolean renameSchedule(String name, String newName) {
         return conn.renameSchedule(name, newName);
-
     }
-
-
 }

@@ -7,9 +7,7 @@ import model.Pair;
 import model.Schedule;
 import model.User;
 import service.ScheduleService;
-
 import java.util.ArrayList;
-
 
 public class ScheduleServiceImpl implements ScheduleService {
 
@@ -34,6 +32,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     public ArrayList<Lesson> getLessons(int schedule_id) {
         return scheduleDAO.getLessons(schedule_id);
     }
+
     @Override
     public ArrayList<Schedule> getSchedules(User user){
         return scheduleDAO.getSchedules(user);
@@ -43,6 +42,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     public int getGroupID(String email) {
         return scheduleDAO.getGroupID(email);
     }
+
     public String getType(int type_id) {
         return scheduleDAO.getType(type_id);
     }
@@ -50,8 +50,14 @@ public class ScheduleServiceImpl implements ScheduleService {
     public ArrayList<User> getAllUsers() {
         return scheduleDAO.getAllUsers();
     }
-    public  ArrayList<String> getWeek(){return  scheduleDAO.getWeek();}
-    public  int  addLesson(Lesson lesson){return  scheduleDAO.addLesson(lesson);}
+
+    public  ArrayList<String> getWeek(){
+        return  scheduleDAO.getWeek();
+    }
+
+    public  int  addLesson(Lesson lesson){
+        return  scheduleDAO.addLesson(lesson);
+    }
 
     @Override
     public boolean editLesson(Lesson lesson) {
@@ -67,6 +73,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     public int addSchedule(Schedule schedule) {
         return scheduleDAO.addSchedule(schedule);
     }
+
     @Override
     public boolean deleteSchedule(Schedule schedule){
         return scheduleDAO.deleteSchedule(schedule);
@@ -76,5 +83,4 @@ public class ScheduleServiceImpl implements ScheduleService {
     public boolean renameSchedule(Pair pair) {
         return scheduleDAO.renameSchedule(pair.getFirst(), pair.getSecond());
     }
-
 }
