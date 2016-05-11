@@ -32,6 +32,7 @@ import model.Lesson;
 public class ClassesListActivity extends AppCompatActivity {
     TableLayout tableClasses;
     int day_id;
+    boolean isPrefect;
     static String name_schedule;
     SharedPreferences loginPreferences;
     HelperDB dbHelper;
@@ -52,6 +53,7 @@ public class ClassesListActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         name_schedule = loginPreferences.getString("name_schedule", "");
 
+        isPrefect = loginPreferences.getBoolean("isPrefect",false);
 
         day_id = getIntent().getIntExtra("day_id", 0);
 
@@ -69,7 +71,7 @@ public class ClassesListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(dbHelper.isEditableSchedule(name_schedule)) {
+               if(dbHelper.isEditableSchedule(name_schedule) || isPrefect) {
                     int day_id = mViewPager.getCurrentItem();
                     Intent intent = new Intent(ClassesListActivity.this, NewClassActivity.class);
                     intent.putExtra("day_id", day_id);
@@ -160,6 +162,8 @@ public class ClassesListActivity extends AppCompatActivity {
         }
 
         void addLessons(ArrayList<Lesson> lessons) {
+            SharedPreferences loginPreferences = getActivity().getSharedPreferences("loginPrefs", MODE_PRIVATE);
+            final boolean isPrefect = loginPreferences.getBoolean("isPrefect", false);
             for(final Lesson les : lessons) {
                 TableRow row = new TableRow(new ContextThemeWrapper(getActivity(), R.style.Table));
                 TextView timeText = new TextView(new ContextThemeWrapper(getActivity(), R.style.CellSchedule));
@@ -179,7 +183,7 @@ public class ClassesListActivity extends AppCompatActivity {
                 row.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View v) {
-                        if(helperDB.isEditableSchedule(name_schedule)) {
+                        if(helperDB.isEditableSchedule(name_schedule) || isPrefect) {
                             final Intent intentEditClass = new Intent(getActivity(), EditClassActivity.class);
                             intentEditClass.putExtra("class_id", id);
                             intentEditClass.putExtra("day_id", day_id);

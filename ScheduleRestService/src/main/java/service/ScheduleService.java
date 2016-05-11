@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public interface ScheduleService {
     ArrayList<User> getAllUsers();
     String getPassword(String email);
+    boolean isPrefect(String email);
     boolean isUserContainedAndAdding(User user);
     String getType(int type_id);
     ArrayList<Schedule> getSchedules(User user);

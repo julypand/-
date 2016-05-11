@@ -9,6 +9,7 @@ public class User {
     private int group;
     private String email;
     private String password;
+    private boolean isPrefect;
     private ArrayList<Schedule> schedules = new ArrayList<>();
 
     public User() {
@@ -23,9 +24,25 @@ public class User {
         setPassword(password);
         setSchedules(schedules);
     }
+    public User(String name, String surname, int course, int group, String email, String password, ArrayList<Schedule> schedules, boolean isPrefect) {
+        this(name, surname, course, group, email, password, schedules);
+        setIsPrefect(isPrefect);
+    }
 
     public User(String email) {
         setEmail(email);
+    }
+    public User(String email, String password){
+        this(email);
+        setPassword(password);
+    }
+    public User(String email, String password, boolean isPrefect){
+        this(email, password);
+        setIsPrefect(isPrefect);
+    }
+    public User(String email, boolean isPrefect){
+        this(email);
+        setIsPrefect(isPrefect);
     }
 
     public User(String email, ArrayList<Schedule> schedules) {
@@ -104,4 +121,11 @@ public class User {
         this.schedules.get(0).setWeek(week);
     }
 
+    public boolean GetIsPrefect() {
+        return isPrefect;
+    }
+
+    public void setIsPrefect(boolean isPrefect) {
+        this.isPrefect = isPrefect;
+    }
 }

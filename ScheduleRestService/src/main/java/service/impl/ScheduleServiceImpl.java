@@ -21,6 +21,11 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
+    public boolean isPrefect(String email) {
+        return scheduleDAO.isPrefect(email);
+    }
+
+    @Override
     public boolean isUserContainedAndAdding(User user) {
         return scheduleDAO.isUserContainedAndAdding(user);
     }

@@ -34,6 +34,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
     public SharedPreferences loginPreferences;
     SharedPreferences.Editor loginPrefEditor;
     String error = null;
+    HelperDB helperDB;
 
 
     public RequestTaskLogin(Activity activity, Context context, String email, String password){
@@ -77,6 +78,53 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             br.close();
 
 
+            url = new URL("http://192.168.43.187:8080/users/classes");
+            connection = (HttpURLConnection)url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.connect();
+
+            //forward TO server
+            os = connection.getOutputStream();
+            bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+            mapper = new ObjectMapper();
+
+            mapper.writeValue(bw, user);
+            bw.close();
+            os.close();
+
+
+            connection.getInputStream();
+            br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            user = mapper.readValue(br,User.class);
+            br.close();
+
+            url = new URL("http://192.168.43.187:8080/users/isPrefect");
+            connection = (HttpURLConnection)url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setDoOutput(true);
+            connection.setDoInput(true);
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.connect();
+
+            //forward TO server
+            os = connection.getOutputStream();
+            bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+            mapper = new ObjectMapper();
+
+            mapper.writeValue(bw, user);
+            bw.close();
+            os.close();
+
+
+            connection.getInputStream();
+            br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            user.setIsPrefect(mapper.readValue(br,boolean.class));
+            br.close();
+
+
         } catch (MalformedURLException e) {
 
             e.printStackTrace();
@@ -113,7 +161,10 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                     loginPrefEditor = loginPreferences.edit();
                     loginPrefEditor.putString("email", email);
                     loginPrefEditor.putBoolean("saveLogin", true);
+                    loginPrefEditor.putBoolean("isPrefect", user.getIsPrefect());
                     loginPrefEditor.commit();
+                    helperDB = new HelperDB(getContext());
+                    helperDB.addToLocalDB(user);
                     Intent intent = new Intent(getActivity(), ScheduleListActivity.class);
                     getActivity().finish();
                     getActivity().startActivity(intent);

@@ -1,7 +1,6 @@
 package web.rest;
 
 import model.Lesson;
-import model.Pair;
 import model.Schedule;
 import model.User;
 import service.ScheduleService;
@@ -34,6 +33,17 @@ public class RESTScheduleWebService implements ScheduleWebService {
         String password = scheduleService.getPassword(email);
         user.setPassword(password);
         return user;
+    }
+
+    @Path("/isPrefect")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Override
+    public boolean isPrefect(User user) {
+        String email = user.getEmail();
+        boolean isPrefect = scheduleService.isPrefect(email);
+        return isPrefect;
     }
 
     @Path("/signup")

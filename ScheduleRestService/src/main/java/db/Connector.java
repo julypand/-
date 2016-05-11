@@ -75,6 +75,21 @@ public class Connector {
         }
         return null;
     }
+    public boolean isPrefect(String email){
+        Statement st;
+        ResultSet rs;
+        try{
+            st = con.createStatement();
+            rs = st.executeQuery("SELECT * FROM user WHERE email = \'" + email + "\'");
+            while(rs.next()) {
+                return  rs.getBoolean(7);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     public int getGroupID(String email){
         Statement st;
