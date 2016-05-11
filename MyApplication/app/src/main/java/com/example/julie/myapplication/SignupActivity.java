@@ -119,7 +119,7 @@ public class SignupActivity extends AppCompatActivity {
             groupText.setError("enter group");
             valid = false;
         }
-        else if (Integer.parseInt(group) > 4){
+        else if (Integer.parseInt(group) > 13){
             courseText.setError("enter right group");
             valid = false;
         }
