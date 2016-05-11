@@ -5,7 +5,7 @@
     <string name="hello">Hello!</string>
     <string name="create_account_text">If you are here for the first time, you can</string>
     <string name="login_text">or</string>
-    <string name="ip">http://192.168.100.4:8080</string>
+    <string name="ip">http://192.168.43.187:8080</string>
 
     <!-- Login -->
     <string name="login">Login, please!</string>
@@ -48,7 +48,6 @@
     <!--  Menu -->
     <string name="refresh">Refresh</string>
     <string name="logoff">Log off</string>
-    <string name="settings">Settings</string>
 
     <!--  Schedule List -->
     <string name="title_activity_schedule_list">List Schedules</string>
@@ -87,8 +86,8 @@
     <string name="cancel">Cancel</string>
     <string name="yousure">Are you sure?</string>
     <string name="delete_schedule">Delete schedule: </string>
-    <string name="not_deleting">This schedule must not delete!</string>
-    <string name="not_editable">This schedule must not edit!</string>
+    <string name="not_deleting">This schedule must not be deleted!</string>
+    <string name="not_editable">This schedule must not be edited!</string>
 
     <!--  New Class  -->
     <!--  Edit Class  -->
