@@ -93,6 +93,12 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), getResources().getString(R.string.login_failed), Toast.LENGTH_LONG).show();
         loginBtn.setEnabled(true);
     }
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        LoginActivity.this.finish();
+        startActivity(intent);
+    }
 
 
     public void onStart() {

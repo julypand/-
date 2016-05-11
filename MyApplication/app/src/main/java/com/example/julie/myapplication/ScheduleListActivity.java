@@ -104,10 +104,17 @@ public class ScheduleListActivity extends AppCompatActivity {
         return names;
 
     }
+    @Override
+    public void onBackPressed(){
 
-
-
-
-
+    }
 }
+
+
+
+
+
+
+
+
 

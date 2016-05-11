@@ -86,7 +86,7 @@ public class ClassesListActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(ClassesListActivity.this, ViewActivity.class);//
+        Intent intent = new Intent(ClassesListActivity.this, ViewActivity.class);
         ClassesListActivity.this.finish();
         startActivity(intent);
     }

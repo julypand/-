@@ -149,6 +149,13 @@ public class NewClassActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "Save class failed", Toast.LENGTH_LONG).show();
         saveBtn.setEnabled(true);
     }
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, ClassesListActivity.class);
+        intent.putExtra("day_id", day_id);
+        this.finish();
+        startActivity(intent);
+    }
 
 
 

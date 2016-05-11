@@ -30,10 +30,10 @@ public class NewScheduleActivity extends AppCompatActivity {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
 
 
-        nameText = (EditText)findViewById(R.id.etScheduleName);
+        nameText = (EditText) findViewById(R.id.etScheduleName);
 
-        saveBtn = (Button)findViewById(R.id.btnSave);
-        cancelBtn = (Button)findViewById(R.id.btnCancel);
+        saveBtn = (Button) findViewById(R.id.btnSave);
+        cancelBtn = (Button) findViewById(R.id.btnCancel);
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,17 +54,18 @@ public class NewScheduleActivity extends AppCompatActivity {
     }
 
 
-    void save(){
+    void save() {
         if (!validate()) {
             onSaveFailed();
             return;
         }
         String email = loginPreferences.getString("email", "");
-        ip =  getResources().getString(R.string.ip);
+        ip = getResources().getString(R.string.ip);
         new RequestTaskNewSchedule(NewScheduleActivity.this, getBaseContext(), nameSchedule, email).execute(ip + "/users/schedules/add");
 
 
     }
+
     public boolean validate() {
         boolean valid = true;
 
@@ -76,19 +77,28 @@ public class NewScheduleActivity extends AppCompatActivity {
         } else {
             nameText.setError(null);
         }
-        if(helperDB.isNameScheduleExist(nameSchedule)){
+        if (helperDB.isNameScheduleExist(nameSchedule)) {
             nameText.setError("this name already exists");
             valid = false;
         }
 
         return valid;
     }
+
     public void onSaveFailed() {
         Toast.makeText(getBaseContext(), "Save schedule failed", Toast.LENGTH_LONG).show();
         saveBtn.setEnabled(true);
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, ScheduleListActivity.class);
+        this.finish();
+        startActivity(intent);
+    }
 }
+
+
+
+
 
