@@ -78,51 +78,53 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             br.close();
 
 
-            url = new URL("http://192.168.43.187:8080/users/classes");
-            connection = (HttpURLConnection)url.openConnection();
-            connection.setRequestMethod("POST");
-            connection.setDoOutput(true);
-            connection.setDoInput(true);
-            connection.setRequestProperty("Content-Type", "application/json");
-            connection.connect();
+            if (user.getPassword() == null) {
+                url = new URL("http://192.168.1.5:8080/users/classes");
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setDoOutput(true);
+                connection.setDoInput(true);
+                connection.setRequestProperty("Content-Type", "application/json");
+                connection.connect();
 
-            //forward TO server
-            os = connection.getOutputStream();
-            bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-            mapper = new ObjectMapper();
+                //forward TO server
+                os = connection.getOutputStream();
+                bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                mapper = new ObjectMapper();
 
-            mapper.writeValue(bw, user);
-            bw.close();
-            os.close();
-
-
-            connection.getInputStream();
-            br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            user = mapper.readValue(br,User.class);
-            br.close();
-
-            url = new URL("http://192.168.43.187:8080/users/isPrefect");
-            connection = (HttpURLConnection)url.openConnection();
-            connection.setRequestMethod("POST");
-            connection.setDoOutput(true);
-            connection.setDoInput(true);
-            connection.setRequestProperty("Content-Type", "application/json");
-            connection.connect();
-
-            //forward TO server
-            os = connection.getOutputStream();
-            bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-            mapper = new ObjectMapper();
-
-            mapper.writeValue(bw, user);
-            bw.close();
-            os.close();
+                mapper.writeValue(bw, user);
+                bw.close();
+                os.close();
 
 
-            connection.getInputStream();
-            br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            user.setIsPrefect(mapper.readValue(br,boolean.class));
-            br.close();
+                connection.getInputStream();
+                br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                user = mapper.readValue(br, User.class);
+                br.close();
+
+                url = new URL("http://192.168.1.5:8080/users/isPrefect");
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setDoOutput(true);
+                connection.setDoInput(true);
+                connection.setRequestProperty("Content-Type", "application/json");
+                connection.connect();
+
+                //forward TO server
+                os = connection.getOutputStream();
+                bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                mapper = new ObjectMapper();
+
+                mapper.writeValue(bw, user);
+                bw.close();
+                os.close();
+
+
+                connection.getInputStream();
+                br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                user.setIsPrefect(mapper.readValue(br, boolean.class));
+                br.close();
+            }
 
 
         } catch (MalformedURLException e) {

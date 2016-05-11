@@ -146,7 +146,7 @@ public class SignupActivity extends AppCompatActivity {
             confirmPasswordText.setError("enter confirm password");
             valid = false;
         }
-        else if(confirmPassword != password) {
+        else if(!confirmPassword.equals(password)) {
             confirmPasswordText.setError("passwords don't match");
             valid = false;
         } else {
