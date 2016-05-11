@@ -28,7 +28,6 @@ public class ViewActivity extends AppCompatActivity {
     String ip;
     String name_schedule;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +57,6 @@ public class ViewActivity extends AppCompatActivity {
         btnThursday.setText(week.get(3));
         btnFriday.setText(week.get(4));
         btnSaturday.setText(week.get(5));
-
-
 
 
         btnMonday.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +95,6 @@ public class ViewActivity extends AppCompatActivity {
                 goDay(5);
             }
         });
-
     }
 
     @Override
@@ -112,6 +108,7 @@ public class ViewActivity extends AppCompatActivity {
         intent.putExtra("day_id", day_id);
         startActivity(intent);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
@@ -136,11 +133,9 @@ public class ViewActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public void onBackPressed() {
         ViewActivity.this.finish();
         startActivity(new Intent(this,ScheduleListActivity.class));
     }
 }
-

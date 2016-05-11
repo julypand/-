@@ -54,6 +54,7 @@ public class RequestTaskEditClass extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
+            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             ObjectMapper mapper = new ObjectMapper();
@@ -62,11 +63,11 @@ public class RequestTaskEditClass extends AsyncTask<String, Void, Void> {
             bw.close();
             os.close();
 
+            //FROM server
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             isSuccessful = mapper.readValue(br,boolean.class);
             br.close();
-
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -112,7 +113,6 @@ public class RequestTaskEditClass extends AsyncTask<String, Void, Void> {
     }
 
 
-
     public Activity getActivity() {
         return activity;
     }
@@ -137,7 +137,6 @@ public class RequestTaskEditClass extends AsyncTask<String, Void, Void> {
         this.lesson = lesson;
     }
 
-
     public Context getContext() {
         return context;
     }
@@ -146,5 +145,3 @@ public class RequestTaskEditClass extends AsyncTask<String, Void, Void> {
         this.context = context;
     }
 }
-
-

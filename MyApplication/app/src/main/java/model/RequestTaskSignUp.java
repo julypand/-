@@ -47,7 +47,6 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
         StringBuilder sb = new StringBuilder();
         URL url;
 
-
         try{
             url = new URL(params[0]);
             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
@@ -57,7 +56,7 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
-
+            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             ObjectMapper mapper = new ObjectMapper();
@@ -67,10 +66,10 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
             user.setPassword(AES.getEncryptedString());
 
             mapper.writeValue(bw, user);
-
             bw.close();
             os.close();
 
+            //FROM server
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             isSuccessfulSignUp = mapper.readValue(br, boolean.class);
@@ -112,15 +111,12 @@ public class RequestTaskSignUp extends AsyncTask<String, Void, Void> {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 getActivity().finish();
                 getActivity().startActivity(intent);
-
             }
             else{
                 Toast.makeText(getContext(), getActivity().getResources().getString(R.string.change_email), Toast.LENGTH_LONG).show();
             }
         }
     }
-
-
 
 
     public Activity getActivity() {

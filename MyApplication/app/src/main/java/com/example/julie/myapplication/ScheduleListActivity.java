@@ -57,9 +57,6 @@ public class ScheduleListActivity extends AppCompatActivity {
         mAdapter = new RecyclerViewAdapter(getDataSet(),ScheduleListActivity.this);
         mRecyclerView.setAdapter(mAdapter);
 
-
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,12 +68,12 @@ public class ScheduleListActivity extends AppCompatActivity {
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_view, menu);
         return true;
     }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         int id = item.getItemId();
@@ -96,25 +93,17 @@ public class ScheduleListActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     private ArrayList<String> getDataSet() {
         ArrayList<String> names = new ArrayList<>();
         for(Schedule schedule: schedules){
             names.add(schedule.getName());
         }
         return names;
-
     }
+
     @Override
     public void onBackPressed(){
 
     }
 }
-
-
-
-
-
-
-
-
-

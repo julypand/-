@@ -25,14 +25,17 @@ public class Schedule {
         this(name);
         setUserEmail(userEmail);
     }
+
     public Schedule(String name, boolean isEditable){
         this(name);
         setIsEditable(isEditable);
     }
+
     public Schedule(int id, String name, ArrayList<Lesson> lessons){
         this(id, name);
         setLessons(lessons);
     }
+
     public Schedule(int id, String name, ArrayList<Lesson> lessons,ArrayList<String> week){
         this(id, name,lessons);
         setWeek(week);
@@ -42,14 +45,15 @@ public class Schedule {
         this(id, name,lessons);
         setIsEditable(isEditable);
     }
+
     public Schedule(int id, String name, boolean isEditable, ArrayList<Lesson> lessons,ArrayList<String> week) {
         this(id, name,isEditable,lessons);
         setWeek(week);
     }
+
     public void addLesson(Lesson lesson){
         lessons.add(lesson);
     }
-
 
     public int getId() {
         return id;

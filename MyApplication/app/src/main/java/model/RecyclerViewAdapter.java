@@ -24,20 +24,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<String> mDataset;
     private static Activity activity;
 
-
-
     public RecyclerViewAdapter(ArrayList<String> myDataset, Activity _activity) {
         mDataset = myDataset;
         activity = _activity;
-
     }
 
     @Override
-    public RecyclerViewAdapter.DataObjectHolder onCreateViewHolder(ViewGroup parent,
-                                               int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recycle_item, parent, false);
-
+    public RecyclerViewAdapter.DataObjectHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_item, parent, false);
         return new DataObjectHolder(view,activity,this);
     }
 
@@ -46,39 +40,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.label.setText(mDataset.get(position));
     }
 
-    public void addItem(String dataObj, int index) {
-        mDataset.add(dataObj);
-        notifyItemInserted(index);
-    }
-
-    public void deleteItem(int index) {
-        mDataset.remove(index);
-        notifyItemRemoved(index);
-    }
-
-    @Override
-    public int getItemCount() {
-        return mDataset.size();
-    }
-
-
-
-
-    public static class DataObjectHolder extends RecyclerView.ViewHolder
-            implements View
-            .OnClickListener {
+    public static class DataObjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView label;
         Button btnEdit,btnDelete;
-
 
         public DataObjectHolder(final View itemView,Activity _activity, final RecyclerViewAdapter parent) {
             super(itemView);
             label = (TextView) itemView.findViewById(R.id.schedule_name);
             btnEdit = (Button)itemView.findViewById(R.id.btnEdit);
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
-
             activity = _activity;
-
 
             itemView.setOnClickListener(this);
             btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -95,10 +66,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
 
             });
-
         }
-
-
 
         @Override
         public void onClick(View v) {
@@ -113,6 +81,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             activity.startActivity(intent);
         }
     }
+
     private static void showDialog(String kind, final TextView tvname_schedule, final RecyclerViewAdapter rv, final int position){
 
         final String name_schedule = tvname_schedule.getText().toString();
@@ -183,4 +152,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         dialog.show();
     }
 
+    @Override
+    public int getItemCount() {
+        return mDataset.size();
+    }
+
+    public void addItem(String dataObj, int index) {
+        mDataset.add(dataObj);
+        notifyItemInserted(index);
+    }
+
+    public void deleteItem(int index) {
+        mDataset.remove(index);
+        notifyItemRemoved(index);
+    }
 }

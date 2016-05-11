@@ -57,15 +57,16 @@ public class RequestTaskDeleteClass extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
+            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             ObjectMapper mapper = new ObjectMapper();
 
             mapper.writeValue(bw, idClass);
-
             bw.close();
             os.close();
 
+            //FROM server
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             isSuccessful = mapper.readValue(br,boolean.class);
@@ -146,5 +147,3 @@ public class RequestTaskDeleteClass extends AsyncTask<String, Void, Void> {
         this.idClass = idClass;
     }
 }
-
-

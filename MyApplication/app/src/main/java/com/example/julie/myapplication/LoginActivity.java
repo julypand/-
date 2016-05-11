@@ -54,7 +54,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
     private void login(){
         Log.d("LoginActivity", "Login");
         if(!validate()){
@@ -64,7 +63,6 @@ public class LoginActivity extends AppCompatActivity {
 
         ip =  getResources().getString(R.string.ip);
         new RequestTaskLogin(LoginActivity.this, getBaseContext(), email,password).execute(ip + "/users/login");
-
     }
 
     private boolean validate(){
@@ -93,13 +91,13 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), getResources().getString(R.string.login_failed), Toast.LENGTH_LONG).show();
         loginBtn.setEnabled(true);
     }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         LoginActivity.this.finish();
         startActivity(intent);
     }
-
 
     public void onStart() {
         super.onStart();

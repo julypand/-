@@ -3,7 +3,9 @@ package model;
 public class Pair {
     private String first;
     private String second;
+
     public Pair(){}
+
     public Pair(String first, String second){
         this.setFirst(first);
         this.setSecond(second);

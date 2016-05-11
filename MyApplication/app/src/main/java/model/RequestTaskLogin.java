@@ -71,7 +71,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             bw.close();
             os.close();
 
-
+            //FROM server
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             user = mapper.readValue(br,User.class);
@@ -126,7 +126,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                 br.close();
             }
 
-
         } catch (MalformedURLException e) {
 
             e.printStackTrace();
@@ -176,8 +175,6 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                 Toast.makeText(getContext(), getActivity().getResources().getString(R.string.incorrent_email), Toast.LENGTH_LONG).show();
         }
     }
-
-
 
 
     public Activity getActivity() {

@@ -26,29 +26,36 @@ public class User {
         setPassword(password);
         setSchedules(schedules);
     }
+
     public User(String name, String surname, int course, int group, String email, String password, ArrayList<Schedule> schedules, boolean isPrefect) {
         this(name, surname, course, group, email, password, schedules);
         setIsPrefect(isPrefect);
     }
+
     public User(String email){
         setEmail(email);
     }
+
     public User(String email, String password){
         this(email);
         setPassword(password);
     }
+
     public User(String email, String password, boolean isPrefect){
         this(email, password);
         setIsPrefect(isPrefect);
     }
+
     public User(String email, boolean isPrefect){
         this(email);
         setIsPrefect(isPrefect);
     }
+
     public User(String email, ArrayList<Schedule> schedules){
         this(email);
         setSchedules(schedules);
     }
+
     public User(String email, Schedule schedules){
         this(email);
         setSchedules(new ArrayList<Schedule>());
@@ -59,7 +66,6 @@ public class User {
         return new String("Name: " + this.getName() + ", surname: " + this.getSurname() + ", course: " +
                 + this.getCourse() + ", group: " + this.getGroup() + ", email: " + this.getEmail());
     }
-
 
     public String getName() {
         return name;

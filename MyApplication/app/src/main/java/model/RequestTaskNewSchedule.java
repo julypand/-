@@ -56,15 +56,16 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
             connection.setRequestProperty("Content-Type", "application/json");
             connection.connect();
 
+            //forward TO server
             os = connection.getOutputStream();
             bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
             ObjectMapper mapper = new ObjectMapper();
 
             mapper.writeValue(bw, schedule);
-
             bw.close();
             os.close();
 
+            //FROM server
             connection.getInputStream();
             br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             int idSchedule = mapper.readValue(br,int.class);
@@ -113,7 +114,6 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
     }
 
 
-
     public Activity getActivity() {
         return activity;
     }
@@ -130,7 +130,6 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
         this.pDialog = new ProgressDialog(getActivity(), R.style.AppTheme);
     }
 
-
     public Context getContext() {
         return context;
     }
@@ -146,8 +145,4 @@ public class RequestTaskNewSchedule extends AsyncTask<String, Void, Void> {
     public void setSchedule(Schedule schedule) {
         this.schedule = schedule;
     }
-
-
 }
-
-

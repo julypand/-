@@ -50,9 +50,7 @@ public class NewScheduleActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-
 
     void save() {
         if (!validate()) {
@@ -62,8 +60,6 @@ public class NewScheduleActivity extends AppCompatActivity {
         String email = loginPreferences.getString("email", "");
         ip = getResources().getString(R.string.ip);
         new RequestTaskNewSchedule(NewScheduleActivity.this, getBaseContext(), nameSchedule, email).execute(ip + "/users/schedules/add");
-
-
     }
 
     public boolean validate() {
@@ -97,8 +93,3 @@ public class NewScheduleActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-
-
-
-
-

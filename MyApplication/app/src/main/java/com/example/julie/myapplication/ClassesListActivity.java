@@ -49,7 +49,6 @@ public class ClassesListActivity extends AppCompatActivity {
         dbHelper = new HelperDB(getApplicationContext());
         week = dbHelper.getWeek();
 
-
         loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         name_schedule = loginPreferences.getString("name_schedule", "");
 
@@ -84,7 +83,6 @@ public class ClassesListActivity extends AppCompatActivity {
             }
         });
     }
-
 
     @Override
     public void onBackPressed(){
@@ -142,6 +140,7 @@ public class ClassesListActivity extends AppCompatActivity {
             writeDaySchedule(day,name_schedule);
             return rootView;
         }
+
         public void goDay(int day_id){
             final Intent intent = new Intent(getActivity(), getActivity().getClass());
             intent.putExtra("day_id", day_id);
@@ -200,6 +199,7 @@ public class ClassesListActivity extends AppCompatActivity {
             }
         }
     }
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -234,7 +234,5 @@ public class ClassesListActivity extends AppCompatActivity {
             }
             return null;
         }
-
     }
-
 }

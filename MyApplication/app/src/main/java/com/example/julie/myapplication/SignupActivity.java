@@ -23,9 +23,10 @@ import model.User;
 public class SignupActivity extends AppCompatActivity {
     Button signUpBtn;
     TextView backText;
-    EditText nameText, surnameText,emailText,passwordText,confirmPasswordText,courseText,groupText;
-    String name, surname, email, password,confirmPassword, course, group;
+    EditText nameText, surnameText, emailText, passwordText, confirmPasswordText, courseText, groupText;
+    String name, surname, email, password, confirmPassword, course, group;
     String ip;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +68,6 @@ public class SignupActivity extends AppCompatActivity {
         new RequestTaskSignUp(SignupActivity.this, getBaseContext(), user).execute(ip + "/users/signup");
     }
 
-
     public void onSignupSuccess() {
         signUpBtn.setEnabled(true);
         setResult(RESULT_OK, null);
@@ -108,7 +108,6 @@ public class SignupActivity extends AppCompatActivity {
         if (course.isEmpty() ) {
             courseText.setError("enter course");
             valid = false;
-
         }
         else if (Integer.parseInt(course) > 5){
             courseText.setError("enter right course");

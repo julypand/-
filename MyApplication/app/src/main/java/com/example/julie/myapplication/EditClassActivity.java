@@ -31,10 +31,10 @@ public class EditClassActivity extends AppCompatActivity {
     int class_id, day_id;
     Lesson lesson;
     Button saveBtn, cancelBtn;
-    EditText nameText, roomText,sTimeText,eTimeText,typeText;
+    EditText nameText, roomText, sTimeText, eTimeText, typeText;
     TextView deleteText;
     boolean isStart = true;
-    String name, room,stime,etime, type;
+    String name, room, stime, etime, type;
     Calendar dateAndTime = Calendar.getInstance();
     HelperDB helperDB;
     String ip;
@@ -81,6 +81,7 @@ public class EditClassActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         deleteText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,6 +149,7 @@ public class EditClassActivity extends AppCompatActivity {
 
 
     }
+
     public boolean validate() {
         boolean valid = true;
 
@@ -156,7 +158,6 @@ public class EditClassActivity extends AppCompatActivity {
         stime = sTimeText.getText().toString();
         etime = eTimeText.getText().toString();
         type = typeText.getText().toString();
-
 
         if (name.isEmpty() || name.length() < 3) {
             nameText.setError("at least 3 characters");
@@ -181,10 +182,12 @@ public class EditClassActivity extends AppCompatActivity {
         }
         return valid;
     }
+
     public void onSaveFailed() {
         Toast.makeText(getBaseContext(), "Save class failed", Toast.LENGTH_LONG).show();
         saveBtn.setEnabled(true);
     }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(EditClassActivity.this, ClassesListActivity.class);
@@ -193,4 +196,3 @@ public class EditClassActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-

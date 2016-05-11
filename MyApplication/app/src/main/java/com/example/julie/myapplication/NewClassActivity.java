@@ -87,7 +87,6 @@ public class NewClassActivity extends AppCompatActivity {
     public void showTimeDialog(boolean _isStart){
         isStart = _isStart;
         new TimePickerDialog(NewClassActivity.this,t,dateAndTime.get(Calendar.HOUR_OF_DAY),dateAndTime.get(Calendar.MINUTE),true).show();
-
     }
 
     TimePickerDialog.OnTimeSetListener t = new TimePickerDialog.OnTimeSetListener(){
@@ -109,9 +108,8 @@ public class NewClassActivity extends AppCompatActivity {
         Lesson lesson = new Lesson(day_id,name,name_schedule,room,stime,etime,type);
         ip =  getResources().getString(R.string.ip);
         new RequestTaskNewClass(NewClassActivity.this, getBaseContext(), lesson, name_schedule).execute(ip + "/users/classes/add");
-
-
     }
+
     public boolean validate() {
         boolean valid = true;
 
@@ -120,7 +118,6 @@ public class NewClassActivity extends AppCompatActivity {
         stime = sTimeText.getText().toString();
         etime = eTimeText.getText().toString();
         type = typeText.getText().toString();
-
 
         if (name.isEmpty() || name.length() < 3) {
             nameText.setError("at least 3 characters");
@@ -145,10 +142,12 @@ public class NewClassActivity extends AppCompatActivity {
         }
         return valid;
     }
+
     public void onSaveFailed() {
         Toast.makeText(getBaseContext(), "Save class failed", Toast.LENGTH_LONG).show();
         saveBtn.setEnabled(true);
     }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(this, ClassesListActivity.class);
@@ -156,8 +155,4 @@ public class NewClassActivity extends AppCompatActivity {
         this.finish();
         startActivity(intent);
     }
-
-
-
 }
-
