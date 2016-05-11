@@ -23,8 +23,8 @@ import model.User;
 public class SignupActivity extends AppCompatActivity {
     Button signUpBtn;
     TextView backText;
-    EditText nameText, surnameText,emailText,passwordText,courseText,groupText;
-    String name, surname, email, password, course, group;
+    EditText nameText, surnameText,emailText,passwordText,confirmPasswordText,courseText,groupText;
+    String name, surname, email, password,confirmPassword, course, group;
     String ip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class SignupActivity extends AppCompatActivity {
         groupText = (EditText)findViewById(R.id.etSignUpGroup);
         emailText = (EditText)findViewById(R.id.etSignUpEmail);
         passwordText = (EditText)findViewById(R.id.etSignUpPassword);
+        confirmPasswordText = (EditText)findViewById(R.id.etSignUpConfirmPassword);
 
         final Intent intent = new Intent(this, LoginActivity.class);
 
@@ -89,6 +90,7 @@ public class SignupActivity extends AppCompatActivity {
         group = groupText.getText().toString();
         email = emailText.getText().toString();
         password = passwordText.getText().toString();
+        confirmPassword = confirmPasswordText.getText().toString();
 
         if (name.isEmpty() || name.length() < 3) {
             nameText.setError("at least 3 characters");
@@ -120,7 +122,7 @@ public class SignupActivity extends AppCompatActivity {
             valid = false;
         }
         else if (Integer.parseInt(group) > 13){
-            courseText.setError("enter right group");
+            groupText.setError("enter right group");
             valid = false;
         }
         else {
@@ -139,6 +141,16 @@ public class SignupActivity extends AppCompatActivity {
             valid = false;
         } else {
             passwordText.setError(null);
+        }
+        if (confirmPassword.isEmpty()){
+            confirmPasswordText.setError("enter confirm password");
+            valid = false;
+        }
+        else if(confirmPassword != password) {
+            confirmPasswordText.setError("passwords don't match");
+            valid = false;
+        } else {
+            confirmPasswordText.setError(null);
         }
 
         return valid;
