@@ -78,8 +78,9 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
             br.close();
 
 
-            if (user.getPassword() == null) {
-                url = new URL("http://192.168.1.5:8080/users/classes");
+            if (user.getPassword() != null) {
+                String ip = getActivity().getResources().getString(R.string.ip);
+                url = new URL(ip+"/users/classes");
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setDoOutput(true);
@@ -102,7 +103,7 @@ public class RequestTaskLogin extends AsyncTask<String, Void, Void> {
                 user = mapper.readValue(br, User.class);
                 br.close();
 
-                url = new URL("http://192.168.1.5:8080/users/isPrefect");
+                url = new URL(ip + "/users/isPrefect");
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setDoOutput(true);
